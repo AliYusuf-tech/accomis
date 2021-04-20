@@ -16,7 +16,11 @@ class DatabaseSeeder extends Seeder
         // \App\Models\User::factory(10)->create();
         $this->call([
             StateTableSeeder::class,
-            // LgaTableSeeder::class,
+            Lgas_1_TableSeeder::class,
+            Lgas_2_TableSeeder::class,
+            Lgas_3_TableSeeder::class,
+            Lgas_4_TableSeeder::class,
+            UserSeeder::class,
         ]);
     }
 }

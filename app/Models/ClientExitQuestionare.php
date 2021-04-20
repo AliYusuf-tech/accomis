@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class ClientExitQuestionare extends Model
 {
     use HasFactory;
+    protected $table = 'client_exit_questionare';
+
 }
