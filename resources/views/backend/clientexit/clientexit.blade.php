@@ -236,6 +236,7 @@
                                             Immunization)</option>
                                         <option value="Mass Campaign (Community)">Mass Campaign (Community)</option>
                                         <option value="" class="llin_others1">Others</option><br>
+
                                         <p class="llin_others2">
                                             <Label>Other</Label>
                                             <input type="text" name="llin_recieve_location2"

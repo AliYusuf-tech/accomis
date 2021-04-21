@@ -94,8 +94,9 @@ $(document).ready(function() {
         ) {
             $(".llin_others2").show();
         } else {
-            $(".llin_others2").hide();
             $(".field5").val("");
+
+            $(".llin_others2").hide();
         }
     });
 
@@ -138,7 +139,7 @@ $(document).ready(function() {
     $(".malaria_test_yes").click(function() {
         $(".malaria_test_no_input").hide();
         $(".malaria_false").show();
-                    $(".field7").val("");
+        $(".field7").val("");
     });
     $(".malaria_test_no").click(function() {
         $(".malaria_test_no_input").show();
@@ -147,8 +148,7 @@ $(document).ready(function() {
     $(".malaria_test_not_sure").click(function() {
         $(".malaria_test_no_input").hide();
         $(".malaria_false").hide();
-                    $(".field7").val("");
-
+        $(".field7").val("");
     });
 
     //malaria_test section
@@ -171,25 +171,21 @@ $(document).ready(function() {
     $(".arthemisinin_no").click(function() {
         $(".arthemisinin_therapy_true").hide();
         $(".arthemisinin_therapy_false").show();
-                    $(".field8").val("");
-            $(".field9").val("");
-
+        $(".field8").val("");
+        $(".field9").val("");
     });
     //arthemisinin_therapy section2
     $(".arthemisinin_drug_finish_yes").click(function() {
         $(".arthemisinin_therapy_show").show();
         $(".arthemisinin_therapy_show_yes").show();
         $(".arthemisinin_therapy_show_no").hide();
-                    $(".field9").val("");
-
+        $(".field9").val("");
     });
     $(".arthemisinin_drug_finish_no").click(function() {
         $(".field8").val("");
         $(".arthemisinin_therapy_show").show();
         $(".arthemisinin_therapy_show_no").show();
         $(".arthemisinin_therapy_show_yes").hide();
-
-
     });
 
     $('.satisfaction_level select[name="satisfaction_level"]').change(
