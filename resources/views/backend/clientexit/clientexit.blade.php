@@ -323,7 +323,7 @@
 
                             <div class="col-md-8 swallow_false">
                                 <div class="form-group">
-                                    <label>Services (Show Question if Prv Q is NO) </label>
+                                    <label>Reasons (Show Question if Prv Q is NO) </label>
                                     <select multiple="" class="form-control" name="services">
                                         <option
                                             value="The Health worker did not ask me to swallow the drug in his/her presence">
@@ -527,7 +527,7 @@
                                 <p></p>
                                 <div class="form-group">
                                     <label>If Satisfied, What might have helped you to be more satisfied with the service
-                                        tou received today?</label>
+                                        you received today?</label>
                                     <textarea name="customer_help" id="" cols="30" rows="2" class="form-control"></textarea>
                                 </div>
                             </div>
