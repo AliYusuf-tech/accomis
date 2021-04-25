@@ -1,3 +1,7 @@
+jQuery.expr[":"].focus = function(elem) {
+    return elem === document.activeElement && (elem.type || elem.href);
+};
+
 $(".other_occupation2").hide();
 $(".other_education2").hide();
 $(".other_reasons2").hide();
@@ -86,16 +90,11 @@ $(document).ready(function() {
         $(".llin_true").hide();
     });
 
-    $('.llin_true select[name="llin_recieve_location"]').change(function() {
-        if (
-            $(
-                '.llin_true select[name="llin_recieve_location"] option:selected'
-            ).val() == ""
-        ) {
+    $(".llin_recieve_location").on("change", function() {
+        if ($(".llin_recieve_location option:selected").val() == "") {
             $(".llin_others2").show();
         } else {
             $(".field5").val("");
-
             $(".llin_others2").hide();
         }
     });
@@ -132,6 +131,7 @@ $(document).ready(function() {
         $(".malaria_true").show();
     });
     $(".smc2").click(function() {
+        $(".smc_reception_age").val("selectedIndex", 0);
         $(".malaria_true").hide();
     });
 
@@ -142,6 +142,7 @@ $(document).ready(function() {
         $(".field7").val("");
     });
     $(".malaria_test_no").click(function() {
+        $(".malaria_test_period").prop("selectedIndex", 0);
         $(".malaria_test_no_input").show();
         $(".malaria_false").hide();
     });
@@ -204,6 +205,345 @@ $(document).ready(function() {
         } else {
             $(".other_causes").hide();
             $(".field10").val("");
+        }
+    });
+
+    //form data collection
+    var res_name = "";
+    $(".res_name").on("input", function() {
+        res_name = $(this).val();
+    });
+
+    var child_name = $(".child_name").val();
+    $(".child_name").on("input", function() {
+        child_name = $(this).val();
+    });
+
+    var res_category = "";
+    $(".res_category").on("change", function() {
+        res_category = $(".res_category option:selected").val();
+    });
+
+    var address = "";
+    $(".address").on("input", function() {
+        address = $(this).val();
+    });
+
+    var phone_no = "";
+    $(".phone_no").on("input", function() {
+        phone_no = $(this).val();
+    });
+
+    var health_facility_of_interview = "";
+    $(".health_facility_of_interview").on("input", function() {
+        health_facility_of_interview = $(this).val();
+    });
+
+    //occupation
+    var occupation = "";
+    $(".occupation").on("change", function() {
+        occupation = $(".occupation option:selected").val();
+    });
+
+    //conditional statement
+    $(".other_occupation").on("input", function() {
+        occupation = $(this).val();
+    });
+
+    //educational_bg
+    var educational_bg = "";
+    $(".education").on("change", function() {
+        educational_bg = $(".education option:selected").val();
+    });
+
+    $(".educational_bg2").on("input", function() {
+        educational_bg = $(this).val();
+    });
+
+    //what_did_you_come_for
+    var what_did_you_come_for = "";
+    $(".what_did_you_come_for").on("change", function() {
+        what_did_you_come_for = $(
+            ".what_did_you_come_for option:selected"
+        ).val();
+    });
+
+    $(".what_did_you_come_for2").on("input", function() {
+        what_did_you_come_for = $(this).val();
+    });
+
+    //what_treatment_did_you_recieve
+    var what_treatment_did_you_recieve = "";
+    $(".what_treatment_did_you_recieve").on("change", function() {
+        what_treatment_did_you_recieve = $(
+            ".what_treatment_did_you_recieve option:selected"
+        ).val();
+    });
+
+    //conditional statement
+    $(".what_treatment_did_you_recieve2").on("input", function() {
+        what_treatment_did_you_recieve = $(this).val();
+    });
+
+    //frequency_of_visit
+    var frequency_of_visit = "";
+    $(".frequency_of_visit").on("change", function() {
+        frequency_of_visit = $(".frequency_of_visit option:selected").val();
+    });
+
+    //llin_recieve
+    var recieve_llin = "";
+    $('#llin_recieve input[name="recieve_llin"]').change(function() {
+        recieve_llin = $(
+            '#llin_recieve input[name="recieve_llin"]:checked'
+        ).val();
+    });
+    var llin_recieve_location = "not applicable";
+    var llin_frequency = "not applicable";
+
+    $(".llin_recieve_location").on("change", function() {
+        llin_recieve_location = $(
+            ".llin_recieve_location option:selected"
+        ).val();
+    });
+
+    $(".llin_frequency").on("change", function() {
+        llin_frequency = $(".llin_frequency option:selected").val();
+    });
+
+    //ipt
+    var recieve_ipt = "";
+
+    $('#recieve_ipt input[name="recieve_ipt"]').change(function() {
+        recieve_ipt = $('#recieve_ipt input[name="recieve_ipt"]:checked').val();
+    });
+
+    var ipt_frequency = "not applicable";
+
+    $(".ipt_frequency").on("change", function() {
+        ipt_frequency = $(".ipt_frequency option:selected").val();
+    });
+
+    //swallow_sp_sulfadoxin
+    var swallow_sp_sulfadoxin = "";
+    $('#swallow_sp_sulfadoxin input[name="swallow_sp_sulfadoxin"]').change(
+        function() {
+            swallow_sp_sulfadoxin = $(
+                '#swallow_sp_sulfadoxin input[name="swallow_sp_sulfadoxin"]:checked'
+            ).val();
+        }
+    );
+
+    var services = "not applicable";
+
+    $(".services").on("change", function() {
+        services = $(".services option:selected").val();
+    });
+
+    $(".services2").on("input", function() {
+        services = $(this).val();
+    });
+
+    //smc
+    var smc = "";
+
+    $('#smc input[name="smc"]').change(function() {
+        smc = $('#smc input[name="smc"]:checked').val();
+    });
+
+    var smc_reception_age = "not applicable";
+
+    $(".smc_reception_age").on("change", function() {
+        smc_reception_age = $(".smc_reception_age option:selected").val();
+    });
+
+    //malaria_test
+    var malaria_test = "";
+    var malaria_reason = "not applicable";
+    var malaria_test_period = "not applicable";
+
+    $('#malaria_test input[name="malaria_test"]').change(function() {
+        malaria_test = $(
+            '#malaria_test input[name="malaria_test"]:checked'
+        ).val();
+    });
+
+    $(".malaria_reason").on("input", function() {
+        malaria_reason = $(this).val();
+    });
+
+    $(".malaria_test_period").on("change", function() {
+        malaria_test_period = $(".malaria_test_period option:selected").val();
+    });
+
+    //arthemisinin_based_therapy
+    var arthemisinin_based_therapy = "";
+
+    var arthemisinin_therapy_false = "not applicable";
+    var arthemisinin_drug_finish = "not applicable";
+    var abc_input_details = "not applicable";
+
+    $(
+        '#arthemisinin_based_therapy input[name="arthemisinin_based_therapy"]'
+    ).change(function() {
+        arthemisinin_based_therapy = $(
+            '#arthemisinin_based_therapy input[name="arthemisinin_based_therapy"]:checked'
+        ).val();
+    });
+
+    $(".field200").on("input", function() {
+        arthemisinin_therapy_false = $(this).val();
+    });
+
+    $(
+        '#arthemisinin_drug_finish input[name="arthemisinin_drug_finish"]'
+    ).change(function() {
+        arthemisinin_drug_finish = $(
+            '#arthemisinin_drug_finish input[name="arthemisinin_drug_finish"]:checked'
+        ).val();
+    });
+
+    $(".arthemisinin_therapy_show_yes").on("input", function() {
+        abc_input_details = $(this).val();
+    });
+
+    $(".arthemisinin_therapy_show_no").on("input", function() {
+        abc_input_details = $(this).val();
+    });
+
+    //satisfaction_level
+    var satisfaction_level = "";
+
+    $(".satisfaction_level").on("change", function() {
+        satisfaction_level = $(".satisfaction_level option:selected").val();
+    });
+
+    var insatisfaction_cause = "";
+
+    $(".insatisfaction_cause").on("change", function() {
+        insatisfaction_cause = $(".insatisfaction_cause option:selected").val();
+    });
+
+    $(".insatisfaction_cause_others2").on("input", function() {
+        insatisfaction_cause = $(this).val();
+    });
+
+    //feedback
+    var customer_help = "";
+
+    $(".customer_help").on("input", function() {
+        customer_help = $(this).val();
+    });
+
+    var customer_help_improve = "";
+
+    $(".customer_help_improve").on("input", function() {
+        customer_help_improve = $(this).val();
+    });
+
+    $("#submit_form").click(function() {
+        //heavy validation
+        var validate = [
+            res_name,
+            child_name,
+            res_category,
+            address,
+            phone_no,
+            health_facility_of_interview,
+            occupation,
+            educational_bg,
+            what_did_you_come_for,
+            what_treatment_did_you_recieve,
+            frequency_of_visit,
+            recieve_llin,
+            recieve_ipt,
+            swallow_sp_sulfadoxin,
+            smc,
+            malaria_test,
+            arthemisinin_based_therapy,
+            satisfaction_level,
+            insatisfaction_cause,
+            customer_help,
+            customer_help_improve
+        ];
+
+        if (validate.includes("")) {
+            swal.fire({
+                title: "Error",
+                text: "Please fill all required fields",
+                icon: "warning",
+                button: {
+                    text: "close"
+                }
+            });
+        } else {
+            submitData();
+        }
+
+        function submitData() {
+            $.ajax({
+                url: "/clientexit/",
+                type: "post",
+                data: {
+                    id: 1,
+                    res_name: res_name,
+                    child_name: child_name,
+                    res_category: res_category,
+                    address: address,
+                    phone_no: phone_no,
+                    health_facility_of_interview: health_facility_of_interview,
+                    occupation: occupation,
+                    educational_bg: educational_bg,
+                    what_did_you_come_for: what_did_you_come_for,
+                    what_treatment_did_you_recieve: what_treatment_did_you_recieve,
+                    frequency_of_visit: frequency_of_visit,
+                    recieve_llin: recieve_llin,
+                    llin_recieve_location: llin_recieve_location,
+                    llin_frequency: llin_frequency,
+                    recieve_ipt: recieve_ipt,
+                    ipt_frequency: ipt_frequency,
+                    swallow_sp_sulfadoxin: swallow_sp_sulfadoxin,
+                    services: services,
+                    smc: smc,
+                    smc_reception_age: smc_reception_age,
+                    malaria_test: malaria_test,
+                    malaria_reason: malaria_reason,
+                    malaria_test_period: malaria_test_period,
+                    arthemisinin_based_therapy: arthemisinin_based_therapy,
+                    arthemisinin_therapy_false: arthemisinin_therapy_false,
+                    arthemisinin_drug_finish: arthemisinin_drug_finish,
+                    abc_input_details: abc_input_details,
+                    satisfaction_level: satisfaction_level,
+                    insatisfaction_cause: insatisfaction_cause,
+                    customer_help: customer_help,
+                    customer_help_improve: customer_help_improve
+                },
+                success: function(response) {
+                    swal.fire({
+                        title: "Success",
+                        text: response,
+                        icon: "success",
+                        button: {
+                            text: "close"
+                        }
+                    });
+                    setInterval('location.reload()', 3000);
+                },
+                error: function(err) {
+                    console.log(err);
+                    swal.fire({
+                        title: "Error",
+                        text: err.statusText,
+                        icon: "error",
+                        button: {
+                            text: "close"
+                        }
+                    });
+                },
+                headers: {
+                    "X-CSRF-Token": $('meta[name="csrf-token"]').attr("content")
+                }
+            });
         }
     });
 });

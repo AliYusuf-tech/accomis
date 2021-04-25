@@ -1,7 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-
     <div class="content-wrapper">
         <!-- Content Header (Page header) -->
         <section class="content-header">
@@ -42,22 +41,22 @@
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label>Name of Respondant</label>
-                                    <input type="text" name="res_name" class="form-control" placeholder="">
+                                    <input type="text" name="res_name" class="form-control res_name" placeholder="">
 
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label>Child's Name (Where Applicable)</label>
-                                    <input type="text" name="child_name" class="form-control" placeholder="">
+                                    <input type="text" name="child_name" class="form-control child_name" placeholder="">
 
                                 </div>
                             </div>
                             <div class="col-md-4">
-                                <div class="form-group">
+                                <div class="form-group" id="res_category">
                                     <label>Respondant Category</label>
-                                    <select class="form-control select2" style="width: 100%;" name="res_category">
-                                        <option selected="selected" style="display: none">Select Category</option>
+                                    <select class="form-control res_category" style="width: 100%;" name="res_category">
+                                        <option value="" style="display: none">Select Category</option>
                                         <option value="Male 18-25">Male 18-25</option>
                                         <option value="Male 26-45">Male 26-45</option>
                                         <option value="Male 45 and Above">Male 45 and Above</option>
@@ -76,21 +75,21 @@
                             <div class="col-md-3">
                                 <div class="form-group">
                                     <label>Address(Detailed Address):</label>
-                                    <input type="text" name="address" class="form-control" placeholder="">
+                                    <input type="text" name="address" class="form-control address" placeholder="">
 
                                 </div>
                             </div>
                             <div class="col-md-3">
                                 <div class="form-group">
                                     <label>Telephone Number</label>
-                                    <input type="text" name="phone_no" class="form-control" placeholder="">
+                                    <input type="tel" name="phone_no" class="form-control phone_no" placeholder="">
 
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label>Name of Health Facility where interview is conducted</label>
-                                    <input type="text" name="in_health_facility_name" class="form-control" placeholder="">
+                                    <input type="text" name="" class="form-control health_facility_of_interview" placeholder="">
 
                                 </div>
                             </div>
@@ -98,8 +97,8 @@
                             <div class="col-md-6">
                                 <div class="form-group" id="occupation">
                                     <label>Occupation</label>
-                                    <select class="form-control select2" style="width: 100%;" name="occupation">
-                                        <option selected="selected" style="display: none">Select Category</option>
+                                    <select class="form-control select2 occupation" style="width: 100%;" name="occupation">
+                                        <option value="" style="display: none">Select</option>
                                         <option value="Government/Civil Servant">Government/Civil Servant</option>
                                         <option value="Professional Worker">Professional Worker</option>
                                         <option value="Self-Employed Trader">Self-Employed Trader</option>
@@ -113,7 +112,7 @@
                                     </select><br>
                                     <div class="other_occupation2">
                                         <Label>Other</Label>
-                                        <input type="text" name="occupation2" class="form-control field1"
+                                        <input type="text" name="occupation2" class="form-control other_occupation field1"
                                             placeholder="kindly specify">
                                     </div>
                                 </div>
@@ -122,8 +121,8 @@
                             <div class="col-md-6">
                                 <div class="form-group" id="education">
                                     <label>Educational Background</label>
-                                    <select class="form-control select2" style="width: 100%;" name="educational_bg">
-                                        <option selected="selected" style="display: none">Select Category</option>
+                                    <select class="form-control education select2" style="width: 100%;" name="educational_bg">
+                                        <option value="" style="display: none">Select</option>
                                         <option value="No Formal Education">No Formal Education</option>
                                         <option value="Primary Education (Uncompleted)">Primary Education (Uncompleted)
                                         </option>
@@ -138,7 +137,7 @@
                                     </select><br>
                                     <div class="other_education2">
                                         <Label>Other</Label>
-                                        <input type="text" name="educational_bg2" class="form-control field2"
+                                        <input type="text" name="" class="form-control educational_bg2 field2"
                                             placeholder="kindly specify">
                                     </div>
                                 </div>
@@ -146,13 +145,14 @@
                             <hr>
                         </div>
                         <div class="row">
-                            <div class="col-md-12">
+                            <div class="col-md-12" id="reason_for_comming">
                                 <p style="text-align: center; font-size: large;">Question Section 1</p>
                             </div>
                             <div class="col-md-4">
                                 <div class="form-group" id="what_did_you_come_for">
                                     <label>Which One you came for?</label>
-                                    <select multiple="" class="form-control" name="what_did_you_come_for" required>
+                                    <select  class="form-control what_did_you_come_for" name="what_did_you_come_for" required>
+                                        <option value="" style="display: none">Select</option>
                                         <option value="Maternal and Newborn Care">Maternal and Newborn Care</option>
                                         <option value="Antenatal Care">Antenatal Care</option>
                                         <option value="Malaria Services">Malaria Services</option>
@@ -161,7 +161,7 @@
                                     </select><br>
                                     <div class="other_reasons2">
                                         <Label>Other</Label>
-                                        <input type="text" name="what_did_you_come_for2" class="form-control field3"
+                                        <input type="text" name="" class="form-control what_did_you_come_for2 field3"
                                             placeholder="Kindly Specify">
                                     </div>
                                 </div>
@@ -169,7 +169,8 @@
                             <div class="col-md-4">
                                 <div class="form-group" id="what_treatment_did_you_recieve">
                                     <label>Which One you received?</label>
-                                    <select multiple="" class="form-control" name="what_treatment_did_you_recieve">
+                                    <select class="form-control what_treatment_did_you_recieve" name="what_treatment_did_you_recieve">
+                                        <option value="" style="display: none">Select</option>
                                         <option value="Maternal and Newborn Care">Maternal and Newborn Care</option>
                                         <option value="Antenatal Care">Antenatal Care</option>
                                         <option value="Malaria Services">Malaria Services</option>
@@ -178,15 +179,16 @@
                                     </select><br>
                                     <div class="other_treatment2">
                                         <Label>Other</Label>
-                                        <input type="text" name="what_treatment_did_you_recieve2" class="form-control field4"
+                                        <input type="text" name="" class="form-control what_treatment_did_you_recieve2 field4"
                                             placeholder="Kindly Specify">
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-4">
-                                <div class="form-group">
+                                <div class="form-group" id="frequency_of_visit">
                                     <label>Frequency of Visit within 3 Months?</label>
-                                    <select multiple="" class="form-control">
+                                    <select class="form-control frequency_of_visit" name="frequency_of_visit">
+                                        <option value="" style="display: none">Select</option>
                                         <option value="Have not been to the facility in the last 3 Months">Have not been to
                                             the facility in the last 3 Months</option>
                                         <option value="0-2 Times">0-2 Times</option>
@@ -206,7 +208,7 @@
                                 <p>Did You Receive LLIN?</p>
                                 <div class="form-group clearfix" id="recieve_llin">
                                     <div class="icheck-primary d-inline">
-                                        <input type="radio" id="radioPrimary4" class="llin_recieve_yes" name="recieve_llin"
+                                        <input type="radio" id="radioPrimary4" class="llin_recieve_yes " name="recieve_llin"
                                             value="yes">
                                         <label for="radioPrimary4">
                                             YES
@@ -229,26 +231,26 @@
                             <div class="col-md-4 llin_true">
                                 <div class="form-group">
                                     <label>Where did you Receive the LLIN?</label>
-                                    <select multiple="" class="form-control" name="llin_recieve_location">
+                                    <select class="form-control llin_recieve_location" name="llin_recieve_location">
+                                        <option value="" style="display: none">Select</option>
                                         <option value="Facility (During 1st ANC Attendance)">Facility (During 1st ANC
                                             Attendance)</option>
                                         <option value="Facility (During 9 Months Immunization)">Facility (During 9 Months
                                             Immunization)</option>
                                         <option value="Mass Campaign (Community)">Mass Campaign (Community)</option>
                                         <option value="" class="llin_others1">Others</option><br>
-
-                                        <p class="llin_others2">
-                                            <Label>Other</Label>
-                                            <input type="text" name="llin_recieve_location2"
-                                                class="form-control field5" placeholder="Kindly Specify">
-                                        </p>
                                     </select>
+                                    <p class="llin_others2">
+                                        <Label>Other</Label>
+                                        <input type="text" class="form-control llin_recieve_location2 field5" placeholder="Kindly Specify">
+                                    </p>
                                 </div>
                             </div>
                             <div class="col-md-4 llin_true">
-                                <div class="form-group">
+                                <div class="form-group" id="llin_frequency">
                                     <label>(If Response is YES) Frequency</label>
-                                    <select multiple="" class="form-control" name="llin_frequency">
+                                    <select class="form-control llin_frequency" name="llin_frequency">
+                                        <option value="" style="display: none">Select</option>
                                         <option value="Once">Once</option>
                                         <option value="Twice">Twice</option>
                                         <option value="Three Times">Three Times</option>
@@ -260,9 +262,9 @@
                         </div>
 
                         <div class="row">
-                            <div class="col-md-4">
+                            <div class="col-md-4" id="recieve_ipt">
                                 <p>Did You Receive IPT (3 White Tablets)?</p>
-                                <div class="form-group clearfix">
+                                <div class="form-group clearfix ">
                                     <div class="icheck-primary d-inline">
                                         <input type="radio" id="ipt1" class="ipt_recieve_yes" name="recieve_ipt"
                                             value="yes">
@@ -285,9 +287,10 @@
                             </div>
 
                             <div class="col-md-4 ipt_true">
-                                <div class="form-group">
+                                <div class="form-group" id="ipt_frequency">
                                     <label>Frequency of IPT Administration</label>
-                                    <select multiple="" class="form-control">
+                                    <select class="form-control ipt_frequency" name="ipt_frequency">
+                                        <option value="" style="display: none">Select</option>
                                         <option value="After 13 Weeks (Quickening)">After 13 Weeks (Quickening)</option>
                                         <option value="Once Every Month">Once Every</option>
                                         <option value="Once Every 2 Months">Once Every 2 Months</option>
@@ -296,7 +299,7 @@
                                 </div>
                             </div>
 
-                            <div class="col-md-4 ">
+                            <div class="col-md-4 " id="swallow_sp_sulfadoxin">
                                 <p>Did You Swallow the (SP-Sulfadoxin-Pyrimethamine 3 White tabs)?</p>
                                 <div class="form-group clearfix">
                                     <div class="icheck-primary d-inline">
@@ -322,9 +325,10 @@
                             </div>
 
                             <div class="col-md-8 swallow_false">
-                                <div class="form-group">
+                                <div class="form-group" id="services">
                                     <label>Reasons (Show Question if Prv Q is NO) </label>
-                                    <select multiple="" class="form-control" name="services">
+                                    <select class="form-control services" name="services">
+                                        <option value="" style="display: none">Select</option>
                                         <option
                                             value="The Health worker did not ask me to swallow the drug in his/her presence">
                                             The Health worker did not ask me to swallow the drug in his/her presence
@@ -337,14 +341,14 @@
                                     </select>
 
                                     <p class="other_services">
-                                        <input type="text" name="services2" class="form-control field6"
+                                        <input type="text" name="" class="form-control services2 field6"
                                             placeholder="Kindly Specify">
                                     </p>
 
                                 </div>
                             </div>
 
-                            <div class="col-md-4">
+                            <div class="col-md-4" id="smc">
                                 <label>Was your Child given Seasonal Malaria Chemoprevention (SMC)?</label>
                                 <div class="form-group clearfix">
                                     <div class="icheck-primary d-inline">
@@ -367,9 +371,10 @@
                             </div>
 
                             <div class="col-md-4 malaria_true">
-                                <div class="form-group">
+                                <div class="form-group" id="smc_reception_age">
                                     <label>If Yes to Prv Qs: How old was the child when given?</label>
-                                    <select multiple="" class="form-control">
+                                    <select class="form-control smc_reception_age" name="smc_reception_age">
+                                        <option value="" style="display: none">Select</option>
                                         <option value="3-12 Months">3-12 Months</option>
                                         <option value="13-24 Months">13-24 Months</option>
                                         <option value="25-36 months">25-36 months</option>
@@ -380,7 +385,7 @@
                                     </select>
                                 </div>
                             </div>
-                            <div class="col-md-4">
+                            <div class="col-md-4" id="malaria_test">
                                 <label>Were You Tested for Malaria?</label>
                                 <div class="form-group clearfix">
                                     <div class="icheck-primary d-inline">
@@ -408,14 +413,15 @@
                                     </div>
                                 </div>
                                 <p class="malaria_test_no_input">
-                                <input type="text" name="malaria_reason" class="form-control field7"
+                                <input type="text" name="" class="form-control malaria_reason field7"
                                     placeholder="Why (If No to Above)">
                                 </p>
                             </div>
                             <div class="col-md-4 malaria_false">
-                                <div class="form-group">
+                                <div class="form-group" id="malaria_test_period">
                                     <label>If Yes to Prv Qs:When were you tested for Malaria?</label>
-                                    <select multiple="" class="form-control" name="malaria_test_period">
+                                    <select class="form-control malaria_test_period" name="malaria_test_period">
+                                        <option value="" style="display: none">Select</option>
                                         <option value="First Antenatal Visit">First Antenatal Visit</option>
                                         <option value="When I was Sick">When I was Sick</option>
                                         <option value="Don't Know">Don't Know</option>
@@ -423,7 +429,7 @@
                                 </div>
                             </div>
 
-                            <div class="col-md-4">
+                            <div class="col-md-4" id="arthemisinin_based_therapy">
                                 <label>Were You given Arthemisinin-based-Combination Therapy</label>
                                 <div class="form-group clearfix">
                                     <div class="icheck-primary d-inline">
@@ -442,16 +448,17 @@
                                         <label for="arthemisinin_based2">
                                             NO
                                         </label>
-                                        <p class="arthemisinin_therapy_false">
-                                        <input type="text" class="form-control field200" name="arthemisinin_therapy_false" class="form-control"
-                                            placeholder="If No, Specify Drug Received">
-                                        </p>
+
                                     </div>
+                                    <p class="arthemisinin_therapy_false">
+                                        <input type="text" class="form-control arthemisinin_therapy_false field200" name=""
+                                            placeholder="If No, Specify Drug Received">
+                                    </p>
                                 </div>
 
                             </div>
 
-                            <div class="col-md-4 arthemisinin_therapy_true">
+                            <div class="col-md-4 arthemisinin_therapy_true" id="arthemisinin_drug_finish">
                                 <label>IF Yes to Prv Q, Did You Finish the Drug?</label>
                                 <div class="form-group clearfix">
                                     <div class="icheck-primary d-inline">
@@ -473,6 +480,7 @@
                                     </div>
                                 </div>
                             </div>
+
                             <div class="col-md-4 arthemisinin_therapy_show">
                                 <label>Please Fill The Field Below</label>
                                 <div class="form-group clearfix">
@@ -492,7 +500,8 @@
                             <div class="col-md-8">
                                 <div class="form-group satisfaction_level">
                                     <label>How satisfied are you with the service(s) you received today?</label>
-                                    <select multiple="" class="form-control" name="satisfaction_level">
+                                    <select class="form-control satisfaction_level" name="satisfaction_level">
+                                        <option value="" style="display: none">Select</option>
                                         <option value="Very dissatisfied">Very dissatisfied</option>
                                         <option value="Somewhat dissatisfied">Somewhat dissatisfied</option>
                                         <option value="Neither dissatisfied nor satisfied">Neither dissatisfied nor
@@ -508,7 +517,8 @@
                                 <p></p>
                                 <div class="form-group choice_cause">
                                     <label>What is responsible for your choice above?</label>
-                                    <select multiple="" class="form-control" name="insatisfaction_cause">
+                                    <select class="form-control insatisfaction_cause" name="insatisfaction_cause">
+                                        <option value="" style="display: none">Select</option>
                                         <option value="Poor Facility Worker Attitude">Poor Facility Worker Attitude</option>
                                         <option value="Long Waiting Time">Long Waiting Time</option>
                                         <option value="Lack of Drugs">Lack of Drugs</option>
@@ -517,7 +527,7 @@
                                         <option value="" class="in-satisfaction_cause_others1">Others</option>
                                     </select>
                                     <p class="other_causes">
-                                    <input type="text" name="insatisfaction_cause_others2" class="form-control field10"
+                                    <input type="text" name="" class="form-control insatisfaction_cause_others2 field10"
                                         placeholder="Kindly Specify">
                                     </p>
                                 </div>
@@ -528,7 +538,7 @@
                                 <div class="form-group">
                                     <label>If Satisfied, What might have helped you to be more satisfied with the service
                                         you received today?</label>
-                                    <textarea name="customer_help" id="" cols="30" rows="2" class="form-control"></textarea>
+                                    <textarea name="customer_help" id="" cols="30" rows="2" class="form-control customer_help"></textarea>
                                 </div>
                             </div>
 
@@ -538,16 +548,18 @@
                                     <label>If you could make at least one suggestion for improving services at this health
                                         facility, what would?</label>
                                     <textarea name="customer_help_improve" id="" cols="30" rows="2"
-                                        class="form-control"></textarea>
+                                        class="form-control customer_help_improve"></textarea>
                                 </div>
                             </div>
 
+
                         </div>
+
 
                         <div class="col-md-6">
                             <p></p>
                             <div class="form-group">
-                                <button class="btn btn-primary">Submit Client Exit</button>
+                                <button class="btn btn-primary submit_form" id="submit_form">Submit Client Exit</button>
                             </div>
                         </div>
 

@@ -23,7 +23,7 @@ class UserSeeder extends Seeder
 
                 'name' => 'Super Admin',
 
-                'email' => 'superadmin@acomis.com',
+                'email' => 'superadmin@accomis.com',
 
                 'email_verified_at' => now(),
 
@@ -43,13 +43,13 @@ class UserSeeder extends Seeder
             [
                 'id' => '10002',
 
-                'name' => 'delight',
+                'name' => 'Admin',
 
-                'email' => 'delightiworima19@gmail.com',
+                'email' => 'admin@accomis.com',
 
                 'email_verified_at' => now(),
 
-                'password' =>  Hash::make('12345678'),
+                'password' =>  Hash::make('secret'),
 
                 'email_verified_at' => now(),
 
