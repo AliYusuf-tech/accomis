@@ -25,7 +25,10 @@ class ClientExitController extends Controller
 
     public function client_exit()
     {
-        return view('backend.clientexit.clientexit')->with([]);
+        $clients = ClientExitQuestionare::all();
+        return view('backend.clientexit.clientexit')->with([
+            'clients' => $clients
+        ]);
     }
 
     public function client_exit_add(Request $request)
@@ -73,6 +76,6 @@ class ClientExitController extends Controller
             'day' => $day,
         ]);
 
-        return ("Client exit data added successfully");
+        return;
     }
 }

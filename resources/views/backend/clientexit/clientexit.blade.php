@@ -89,7 +89,8 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label>Name of Health Facility where interview is conducted</label>
-                                    <input type="text" name="" class="form-control health_facility_of_interview" placeholder="">
+                                    <input type="text" name="" class="form-control health_facility_of_interview"
+                                        placeholder="">
 
                                 </div>
                             </div>
@@ -121,7 +122,8 @@
                             <div class="col-md-6">
                                 <div class="form-group" id="education">
                                     <label>Educational Background</label>
-                                    <select class="form-control education select2" style="width: 100%;" name="educational_bg">
+                                    <select class="form-control education select2" style="width: 100%;"
+                                        name="educational_bg">
                                         <option value="" style="display: none">Select</option>
                                         <option value="No Formal Education">No Formal Education</option>
                                         <option value="Primary Education (Uncompleted)">Primary Education (Uncompleted)
@@ -151,7 +153,8 @@
                             <div class="col-md-4">
                                 <div class="form-group" id="what_did_you_come_for">
                                     <label>Which One you came for?</label>
-                                    <select  class="form-control what_did_you_come_for" name="what_did_you_come_for" required>
+                                    <select class="form-control what_did_you_come_for" name="what_did_you_come_for"
+                                        required>
                                         <option value="" style="display: none">Select</option>
                                         <option value="Maternal and Newborn Care">Maternal and Newborn Care</option>
                                         <option value="Antenatal Care">Antenatal Care</option>
@@ -169,7 +172,8 @@
                             <div class="col-md-4">
                                 <div class="form-group" id="what_treatment_did_you_recieve">
                                     <label>Which One you received?</label>
-                                    <select class="form-control what_treatment_did_you_recieve" name="what_treatment_did_you_recieve">
+                                    <select class="form-control what_treatment_did_you_recieve"
+                                        name="what_treatment_did_you_recieve">
                                         <option value="" style="display: none">Select</option>
                                         <option value="Maternal and Newborn Care">Maternal and Newborn Care</option>
                                         <option value="Antenatal Care">Antenatal Care</option>
@@ -179,7 +183,8 @@
                                     </select><br>
                                     <div class="other_treatment2">
                                         <Label>Other</Label>
-                                        <input type="text" name="" class="form-control what_treatment_did_you_recieve2 field4"
+                                        <input type="text" name=""
+                                            class="form-control what_treatment_did_you_recieve2 field4"
                                             placeholder="Kindly Specify">
                                     </div>
                                 </div>
@@ -242,7 +247,8 @@
                                     </select>
                                     <p class="llin_others2">
                                         <Label>Other</Label>
-                                        <input type="text" class="form-control llin_recieve_location2 field5" placeholder="Kindly Specify">
+                                        <input type="text" class="form-control llin_recieve_location2 field5"
+                                            placeholder="Kindly Specify">
                                     </p>
                                 </div>
                             </div>
@@ -314,8 +320,8 @@
                                 </div>
                                 <div class="form-group clearfix">
                                     <div class="icheck-danger d-inline">
-                                        <input type="radio" id="swallow2" class="sp_swallow_no"
-                                            name="swallow_sp_sulfadoxin" value="no">
+                                        <input type="radio" id="swallow2" class="sp_swallow_no" name="swallow_sp_sulfadoxin"
+                                            value="no">
                                         <label for="swallow2">
                                             NO
                                         </label>
@@ -389,7 +395,8 @@
                                 <label>Were You Tested for Malaria?</label>
                                 <div class="form-group clearfix">
                                     <div class="icheck-primary d-inline">
-                                        <input type="radio" id="malaria_test1" class="malaria_test_yes" value="yes" name="malaria_test">
+                                        <input type="radio" id="malaria_test1" class="malaria_test_yes" value="yes"
+                                            name="malaria_test">
                                         <label for="malaria_test1">
                                             YES
                                         </label>
@@ -398,7 +405,8 @@
                                 </div>
                                 <div class="form-group clearfix">
                                     <div class="icheck-danger d-inline">
-                                        <input type="radio" id="malaria_test2" class="malaria_test_no" value="no" name="malaria_test">
+                                        <input type="radio" id="malaria_test2" class="malaria_test_no" value="no"
+                                            name="malaria_test">
                                         <label for="malaria_test2">
                                             NO
                                         </label>
@@ -406,15 +414,16 @@
                                 </div>
                                 <div class="form-group clearfix">
                                     <div class="icheck-danger d-inline">
-                                        <input type="radio" id="malaria_test3" value="not sure" class="malaria_test_not_sure" name="malaria_test">
+                                        <input type="radio" id="malaria_test3" value="not sure"
+                                            class="malaria_test_not_sure" name="malaria_test">
                                         <label for="malaria_test3">
                                             NOT SURE
                                         </label>
                                     </div>
                                 </div>
                                 <p class="malaria_test_no_input">
-                                <input type="text" name="" class="form-control malaria_reason field7"
-                                    placeholder="Why (If No to Above)">
+                                    <input type="text" name="" class="form-control malaria_reason field7"
+                                        placeholder="Why (If No to Above)">
                                 </p>
                             </div>
                             <div class="col-md-4 malaria_false">
@@ -484,11 +493,12 @@
                             <div class="col-md-4 arthemisinin_therapy_show">
                                 <label>Please Fill The Field Below</label>
                                 <div class="form-group clearfix">
-                                    <input type="text" name="arthemisinin_drug_finish_yes" class="form-control arthemisinin_therapy_show_yes field8"
+                                    <input type="text" name="arthemisinin_drug_finish_yes"
+                                        class="form-control arthemisinin_therapy_show_yes field8"
                                         placeholder="Kindly State Type of tablet, timing accuracy and adherance, 24 or 6 tablets 3 days">
                                     <br>
-                                    <input type="text" name="arthemisinin_drug_finish_no" class="form-control arthemisinin_therapy_show_no field9"
-                                        placeholder="If No, Why?">
+                                    <input type="text" name="arthemisinin_drug_finish_no"
+                                        class="form-control arthemisinin_therapy_show_no field9" placeholder="If No, Why?">
 
                                 </div>
                             </div>
@@ -527,8 +537,8 @@
                                         <option value="" class="in-satisfaction_cause_others1">Others</option>
                                     </select>
                                     <p class="other_causes">
-                                    <input type="text" name="" class="form-control insatisfaction_cause_others2 field10"
-                                        placeholder="Kindly Specify">
+                                        <input type="text" name="" class="form-control insatisfaction_cause_others2 field10"
+                                            placeholder="Kindly Specify">
                                     </p>
                                 </div>
                             </div>
@@ -538,7 +548,8 @@
                                 <div class="form-group">
                                     <label>If Satisfied, What might have helped you to be more satisfied with the service
                                         you received today?</label>
-                                    <textarea name="customer_help" id="" cols="30" rows="2" class="form-control customer_help"></textarea>
+                                    <textarea name="customer_help" id="" cols="30" rows="2"
+                                        class="form-control customer_help"></textarea>
                                 </div>
                             </div>
 
@@ -569,7 +580,7 @@
                     <!-- /.card-body -->
                     <div class="card-footer">
                         <!-- Visit <a href="https://select2.github.io/">Select2 documentation</a> for more examples and information about
-    the plugin. -->
+        the plugin. -->
                     </div>
                 </div>
                 <!-- /.card -->
@@ -601,13 +612,20 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>001</td>
-                                    <td>10/04/2021</td>
-                                    <td>Apo PHC</td>
-                                    <td><span class="badge bg-warning">Very dissatisfied</span></td>
-                                    <td>James Onuh</td>
-                                </tr>
+                                @if (count($clients) > 0)
+
+                                    @foreach ($clients as $client)
+                                        <tr>
+                                            <td>{{ $loop->iteration }}</td>
+                                            <td>{{ $client->day . '/' . $client->month . '/' . $client->year }}</td>
+                                            <td>{{ $client->health_facility_of_interview }}</td>
+                                            <td><span
+                                                    class="badge bg-warning">{{ $client->service_satisfaction_level }}</span>
+                                            </td>
+                                            <td>{{ $client->respondant_name }}</td>
+                                        </tr>
+                                    @endforeach
+                                @endif
                             </tbody>
                             <tfoot>
                                 <tr>
@@ -649,13 +667,21 @@
                                 </tr>
                             </thead>
                             <tbody>
+
+                                @if (count($clients) > 0)
+                                @foreach ($clients as $client)
                                 <tr>
-                                    <td>001</td>
-                                    <td>10/04/2021</td>
-                                    <td>Apo PHC</td>
-                                    <td><span class="badge bg-warning">Very dissatisfied</span></td>
+                                    <td>{{ $loop->iteration }}</td>
+                                    <td>{{ $client->day . '/' . $client->month . '/' . $client->year }}</td>
+                                    <td>{{ $client->health_facility_of_interview }}</td>
+                                    <td><span
+                                            class="badge bg-warning">{{ $client->service_satisfaction_level }}</span>
+                                    </td>
                                     <td>CBO1</td>
                                 </tr>
+                            @endforeach
+                            @endif
+
 
                             <tfoot>
                                 <tr>

@@ -521,7 +521,7 @@ $(document).ready(function() {
                 success: function(response) {
                     swal.fire({
                         title: "Success",
-                        text: response,
+                        text: "Client exit data added successfully",
                         icon: "success",
                         button: {
                             text: "close"
