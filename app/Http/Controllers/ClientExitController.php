@@ -76,6 +76,5 @@ class ClientExitController extends Controller
             'day' => $day,
         ]);
 
-        return;
     }
 }
