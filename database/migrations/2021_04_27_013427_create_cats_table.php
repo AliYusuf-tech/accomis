@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateStatesTable extends Migration
+class CreateCatsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,14 @@ class CreateStatesTable extends Migration
      */
     public function up()
     {
-        Schema::create('states', function (Blueprint $table) {
+        Schema::create('cats', function (Blueprint $table) {
             $table->id();
+            $table->string('cbo_name');
             $table->string('name');
-            $table->string('spo')->nullable();
-            $table->string('status')->nullable();
+            $table->string('email');
+            $table->string('state');
+            $table->string('lga');
+            $table->string('phone');
             $table->timestamps();
         });
     }
@@ -29,6 +32,6 @@ class CreateStatesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('states');
+        Schema::dropIfExists('cats');
     }
 }

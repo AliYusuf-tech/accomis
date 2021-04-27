@@ -26,6 +26,8 @@ Route::get('/cbo_monthly', [App\Http\Controllers\CboController::class, 'cbo_mont
 
 //Cbo post routes
 Route::post('/cbo', [App\Http\Controllers\CboController::class, 'add_cbo'])->name('cbo.add');
+Route::post('/cbo/cat_add', [App\Http\Controllers\CatController::class, 'add_cat'])->name('cat.add');
+Route::post('/cbo/fetch', [App\Http\Controllers\CboController::class, 'fetch'])->name('lga.fetch');
 Route::post('/cbo_monthly', [App\Http\Controllers\CboController::class, 'add_cbo_monthly'])->name('cbo.add_monthly');
 
 //Spo get routes
@@ -52,4 +54,3 @@ Route::get('/clientexit', [App\Http\Controllers\ClientExitController::class, 'cl
 
 //Remidial post routes
 Route::post('/clientexit', [App\Http\Controllers\ClientExitController::class, 'client_exit_add'])->name('client_exit.add');
-

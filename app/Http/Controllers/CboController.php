@@ -8,6 +8,12 @@ use App\Models\Cbo;
 use App\Models\Lgas;
 use Illuminate\Support\Facades\Session;
 use App\Models\CboMonthly;
+use Illuminate\Support\Facades\DB;
+use App\Models\User;
+use Illuminate\Support\Facades\Hash;
+use App\Models\Role;
+use Illuminate\Support\Facades\Gate;
+use Illuminate\Support\Facades\Auth;
 
 class CboController extends Controller
 {
@@ -28,6 +34,10 @@ class CboController extends Controller
      */
     public function cbo_index()
     {
+        if (Gate::denies('admin_role')) {
+            abort('404');
+        }
+
         $cbo = Cbo::all();
         $states = States::where('status', 'active')->get();
 
@@ -36,8 +46,13 @@ class CboController extends Controller
             'states' => $states,
         ]);
     }
+
     public function cbo_monthly()
     {
+        if (Gate::denies('admin_cbo')) {
+            abort('404');
+        }
+
         $cbo = CboMonthly::all();
         $states = States::where('status', 'active')->get();
 
@@ -49,6 +64,22 @@ class CboController extends Controller
 
     public function add_cbo(Request $request)
     {
+        if (Gate::denies('admin')) {
+            abort('404');
+        }
+
+        $cboRole = Role::where('name', 'Cbo')->first();
+
+        $cbo = User::create([
+            'name' => $request->cbo_name,
+            'email' => $request->email,
+            'password' => Hash::make($request->state),
+            'email_verified_at' => now(),
+            'remember_token' => null,
+            'created_at' => now(),
+            'updated_at' => now(),
+        ]);
+
         $submit_cbo = Cbo::create([
             'cbo_name' => $request->cbo_name,
             'email' => $request->email,
@@ -61,13 +92,19 @@ class CboController extends Controller
             'physical_contact_address' => $request->contact_address,
         ]);
 
+        $cbo->roles()->attach($cboRole);
+
         if ($submit_cbo) {
             Session::flash('flash_message', 'Cbo Added Successfully');
             return redirect(route('cbo'));
         }
     }
+
     public function add_cbo_monthly(Request $request)
     {
+        if (Gate::denies('admin_cbo')) {
+            abort('404');
+        }
         $attachment = $request->attachment->store('photos/attachments');
 
         $submit_cbo_monthly = CboMonthly::create([
@@ -83,5 +120,23 @@ class CboController extends Controller
             Session::flash('flash_message', 'Cbo Monthly Report Added Successfully');
             return redirect(route('cbo.monthly'));
         }
+    }
+
+    public function fetch(Request $request)
+    {
+        $select = $request->get('select');
+        $value = $request->get('value');
+        $dependent = $request->get('dependent');
+        $data = DB::table('lgas')->where($select, $value)
+            ->get();
+
+        $output = '';
+        foreach ($data as $row) {
+            $output .=
+                '<option value="' . $row->name . '">' . $row->name . '</option>
+            ';
+        }
+
+        echo $output;
     }
 }

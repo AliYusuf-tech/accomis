@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\ClientExitQuestionare;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Gate;
 
 class ClientExitController extends Controller
 {
@@ -25,6 +27,9 @@ class ClientExitController extends Controller
 
     public function client_exit()
     {
+        if (Gate::denies('admin_cbo')) {
+            abort('404');
+        }
         $clients = ClientExitQuestionare::all();
         return view('backend.clientexit.clientexit')->with([
             'clients' => $clients
@@ -33,7 +38,10 @@ class ClientExitController extends Controller
 
     public function client_exit_add(Request $request)
     {
-
+        if (Gate::denies('admin_cbo')) {
+            abort('404');
+        }
+        
         $month = date('M');
         $day = date('d');
         $year = date('Y');
@@ -77,4 +85,6 @@ class ClientExitController extends Controller
         ]);
 
     }
+
+
 }

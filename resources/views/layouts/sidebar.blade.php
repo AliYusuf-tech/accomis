@@ -54,27 +54,33 @@
             </ul>
           </li>
 
-          <li class="nav-header">QUESTIONEERS</li>
+          <li class="nav-header brand-link">QUESTIONEERS SECTION</li>
           <li class="nav-item">
-            <a href="{{ route('cbo') }}" class="nav-link">
-              <i class="nav-icon far fa-calendar-alt"></i>
-              <p>
-                CBO/CAT
-                <span class="badge badge-info right">2</span>
-              </p>
-            </a>
-          </li>
+            @can('admin_role')
+            <li class="nav-item">
+                <a href="{{ route('cbo') }}" class="nav-link">
+                  <i class="far fa-calendar-alt"></i>
+                  <p>
+                    CBO/CAT
+                    <span class="badge badge-info right">2</span>
+                  </p>
+                </a>
+              </li>
+            @endcan
+        @can('admin_cbo')
           <li class="nav-item">
             <a href="{{ route('client.exit') }}" class="nav-link">
-              <i class="nav-icon far fa-image"></i>
+              <i class="far fa-image"></i>
               <p>
                 Client Exit
               </p>
             </a>
           </li>
+          @endcan
+
           <li class="nav-item has-treeview">
             <a href="{{ route('remidial') }}" class="nav-link">
-              <i class="nav-icon far fa-envelope"></i>
+              <i class="far fa-envelope"></i>
               <p>
                 Remedial Feedback
 
@@ -82,42 +88,53 @@
             </a>
 
           </li>
+          @can('admin_cbo')
+
           <li class="nav-item">
             <a href="{{ route('cbo.monthly') }}" class="nav-link">
               <i class="fa fa-book"></i>
               <p>CBO Monthly Minutes</p>
             </a>
           </li>
+
+          @endcan
+          @can('admin_spo')
           <li class="nav-item">
             <a href="{{ route('spo.monthly') }}" class="nav-link">
               <i class="fa fa-book"></i>
               <p>SPO Monthly Minutes</p>
             </a>
           </li>
-
-
-          <li class="nav-header">REPORTS</li>
-
+          @endcan
+          <li class="nav-header brand-link">REPORTS SECTION</li>
+          @can('admin_role')
           <li class="nav-item">
             <a href="{{ route('cbo') }}" class="nav-link">
-              <i class="nav-icon far fa-calendar-alt"></i>
+              <i class="far fa-calendar-alt"></i>
               <p>
                List of CBO/CAT
                 <span class="badge badge-info right">2</span>
               </p>
             </a>
           </li>
+          @endcan
+
+          @can('admin_cbo')
+
           <li class="nav-item">
-            <a href="clientexit.html" class="nav-link">
-              <i class="nav-icon fa fa-image"></i>
+            <a href="{{ route('client.exit') }}"class="nav-link">
+              <i class="fa fa-image"></i>
               <p>
                  Exit Questioneers
               </p>
             </a>
           </li>
+
+
+
           <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
-              <i class="nav-icon fa fa-envelope"></i>
+              <i class="fa fa-envelope"></i>
               <p>
                 Feedbacks
 
@@ -131,13 +148,18 @@
               <p>CBO Monthly Minutes</p>
             </a>
           </li>
+          @endcan
+          @can('admin_spo')
           <li class="nav-item">
             <a href="{{ route('spo.monthly') }}" class="nav-link">
               <i class="fa fa-book"></i>
               <p>SPO Monthly Minutes</p>
             </a>
           </li>
-          <li class="nav-header">HEALTH FACILITIES</li>
+          @endcan
+          @can('admin_role')
+
+          <li class="nav-header brand-link">HEALTH FACILITIES SECTION</li>
           <li class="nav-item">
             <a href="{{ route('health_facility') }}" class="nav-link">
               <i class="fas fa-eye"></i>
@@ -146,7 +168,7 @@
           </li>
           <li class="nav-item has-treeview">
             <a href="{{ route('health_facility.add') }}" class="nav-link">
-              <i class="nav-icon fas fa-plus"></i>
+              <i class="fas fa-plus"></i>
               <p>
                 Add
 
@@ -155,52 +177,56 @@
 
           </li>
 
-          <li class="nav-header">SETTINGS</li>
+          @endcan
+          <li class="nav-header brand-link">SETTINGS SECTION</li>
+          @can('admin_role')
           <li class="nav-item">
             <a href="#" class="nav-link">
-              <i class="nav-icon far fa-circle text-danger"></i>
+              <i class="far fa-circle text-danger"></i>
               <p class="text">Uploads</p>
             </a>
           </li>
           <li class="nav-item">
             <a href="#" class="nav-link">
-              <i class="nav-icon far fa-circle text-warning"></i>
+              <i class="far fa-circle text-warning"></i>
               <p>State</p>
             </a>
           </li>
           <li class="nav-item">
             <a href="#" class="nav-link">
-              <i class="nav-icon far fa-circle text-info"></i>
+              <i class="far fa-circle text-info"></i>
               <p>LGA</p>
             </a>
           </li>
           <li class="nav-item">
             <a href="#" class="nav-link">
-              <i class="nav-icon far fa-circle text-info"></i>
+              <i class="far fa-circle text-info"></i>
               <p>Wards</p>
             </a>
           </li>
           <li class="nav-item">
             <a href="#" class="nav-link">
-              <i class="nav-icon far fa-circle text-info"></i>
+              <i class="far fa-circle text-info"></i>
               <p>SPO</p>
             </a>
           </li>
           <li class="nav-item">
             <a href="#" class="nav-link">
-              <i class="nav-icon far fa-circle text-info"></i>
+              <i class="far fa-circle text-info"></i>
               <p>CBO</p>
             </a>
           </li>
           <li class="nav-item">
             <a href="#" class="nav-link">
-              <i class="nav-icon far fa-circle text-info"></i>
+              <i class="far fa-circle text-info"></i>
               <p>User</p>
             </a>
           </li>
+
+          @endcan
           <li class="nav-item">
             <a href="#" class="nav-link" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-              <i class="nav-icon far fa-circle text-info"></i>
+              <i class="fa fa-door-open text-info"></i>
               <p>Sign Out</p>
             </a>
              <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">

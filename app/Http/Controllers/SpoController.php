@@ -7,6 +7,7 @@ use App\Models\Lgas;
 use Illuminate\Support\Facades\Session;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Gate;
 
 class SpoController extends Controller
 {
@@ -28,6 +29,9 @@ class SpoController extends Controller
 
     public function spo_index()
     {
+        if (Gate::denies('admin_spo')) {
+            abort('404');
+        }
         $spo = SpoMonthly::all();
         $states = States::where('status', 'active')->get();
 
@@ -39,7 +43,9 @@ class SpoController extends Controller
 
     public function add_spomonthly(Request $request)
     {
-
+        if (Gate::denies('admin_spo')) {
+            abort('404');
+        }
         $attachment = $request->attachment->store('photos/attachments');
 
         $submit_spo_monthly = SpoMonthly::create([

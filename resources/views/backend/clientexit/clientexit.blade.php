@@ -612,7 +612,6 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                @if (count($clients) > 0)
 
                                     @foreach ($clients as $client)
                                         <tr>
@@ -625,7 +624,6 @@
                                             <td>{{ $client->respondant_name }}</td>
                                         </tr>
                                     @endforeach
-                                @endif
                             </tbody>
                             <tfoot>
                                 <tr>
@@ -668,7 +666,6 @@
                             </thead>
                             <tbody>
 
-                                @if (count($clients) > 0)
                                 @foreach ($clients as $client)
                                 <tr>
                                     <td>{{ $loop->iteration }}</td>
@@ -680,7 +677,6 @@
                                     <td>CBO1</td>
                                 </tr>
                             @endforeach
-                            @endif
 
 
                             <tfoot>
