@@ -21,7 +21,7 @@
 
       <!-- Sidebar Menu -->
       <nav class="mt-2">
-        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+        <ul class="nav nav-pills nav-sidebar nav-legacy nav-flat flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item has-treeview menu-open">
@@ -35,19 +35,19 @@
             <ul class="nav nav-treeview">
               <li class="nav-item">
                 <a href="./index.html" class="nav-link active">
-                  <i class="far fa-circle nav-icon"></i>
+                  <i class="nav-icon  far fa-circle nav-icon"></i>
                   <p>Main Dashboard</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="#" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
+                  <i class="nav-icon  far fa-circle nav-icon"></i>
                   <p>Admin Dashboard</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="#" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
+                  <i class="nav-icon  far fa-circle nav-icon"></i>
                   <p>M&E Dashboard</p>
                 </a>
               </li>
@@ -59,7 +59,7 @@
             @can('admin_role')
             <li class="nav-item">
                 <a href="{{ route('cbo') }}" class="nav-link">
-                  <i class="far fa-calendar-alt"></i>
+                  <i class="nav-icon  far fa-calendar-alt"></i>
                   <p>
                     CBO/CAT
                     <span class="badge badge-info right">2</span>
@@ -70,7 +70,7 @@
         @can('admin_cbo')
           <li class="nav-item">
             <a href="{{ route('client.exit') }}" class="nav-link">
-              <i class="far fa-image"></i>
+              <i class="nav-icon  far fa-image"></i>
               <p>
                 Client Exit
               </p>
@@ -80,7 +80,7 @@
 
           <li class="nav-item has-treeview">
             <a href="{{ route('remidial') }}" class="nav-link">
-              <i class="far fa-envelope"></i>
+              <i class="nav-icon  far fa-envelope"></i>
               <p>
                 Remedial Feedback
 
@@ -92,7 +92,7 @@
 
           <li class="nav-item">
             <a href="{{ route('cbo.monthly') }}" class="nav-link">
-              <i class="fa fa-book"></i>
+              <i class="nav-icon  fa fa-book"></i>
               <p>CBO Monthly Minutes</p>
             </a>
           </li>
@@ -101,7 +101,7 @@
           @can('admin_spo')
           <li class="nav-item">
             <a href="{{ route('spo.monthly') }}" class="nav-link">
-              <i class="fa fa-book"></i>
+              <i class="nav-icon  fa fa-book"></i>
               <p>SPO Monthly Minutes</p>
             </a>
           </li>
@@ -110,7 +110,7 @@
           @can('admin_role')
           <li class="nav-item">
             <a href="{{ route('cbo') }}" class="nav-link">
-              <i class="far fa-calendar-alt"></i>
+              <i class="nav-icon  far fa-calendar-alt"></i>
               <p>
                List of CBO/CAT
                 <span class="badge badge-info right">2</span>
@@ -123,7 +123,7 @@
 
           <li class="nav-item">
             <a href="{{ route('client.exit') }}"class="nav-link">
-              <i class="fa fa-image"></i>
+              <i class="nav-icon  fa fa-image"></i>
               <p>
                  Exit Questioneers
               </p>
@@ -134,7 +134,7 @@
 
           <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
-              <i class="fa fa-envelope"></i>
+              <i class="nav-icon  fa fa-envelope"></i>
               <p>
                 Feedbacks
 
@@ -144,7 +144,7 @@
           </li>
           <li class="nav-item">
             <a href="{{ route('cbo.monthly') }}" class="nav-link">
-              <i class="fa fa-book"></i>
+              <i class="nav-icon  fa fa-book"></i>
               <p>CBO Monthly Minutes</p>
             </a>
           </li>
@@ -152,7 +152,7 @@
           @can('admin_spo')
           <li class="nav-item">
             <a href="{{ route('spo.monthly') }}" class="nav-link">
-              <i class="fa fa-book"></i>
+              <i class="nav-icon  fa fa-book"></i>
               <p>SPO Monthly Minutes</p>
             </a>
           </li>
@@ -162,13 +162,13 @@
           <li class="nav-header brand-link">HEALTH FACILITIES SECTION</li>
           <li class="nav-item">
             <a href="{{ route('health_facility') }}" class="nav-link">
-              <i class="fas fa-eye"></i>
+              <i class="nav-icon  fas fa-eye"></i>
               <p>View</p>
             </a>
           </li>
           <li class="nav-item has-treeview">
             <a href="{{ route('health_facility.add') }}" class="nav-link">
-              <i class="fas fa-plus"></i>
+              <i class="nav-icon  fas fa-plus"></i>
               <p>
                 Add
 
@@ -182,43 +182,43 @@
           @can('admin_role')
           <li class="nav-item">
             <a href="#" class="nav-link">
-              <i class="far fa-circle text-danger"></i>
+              <i class="nav-icon  far fa-circle text-danger"></i>
               <p class="text">Uploads</p>
             </a>
           </li>
           <li class="nav-item">
             <a href="#" class="nav-link">
-              <i class="far fa-circle text-warning"></i>
+              <i class="nav-icon  far fa-circle text-warning"></i>
               <p>State</p>
             </a>
           </li>
           <li class="nav-item">
             <a href="#" class="nav-link">
-              <i class="far fa-circle text-info"></i>
+              <i class="nav-icon  far fa-circle text-info"></i>
               <p>LGA</p>
             </a>
           </li>
           <li class="nav-item">
             <a href="#" class="nav-link">
-              <i class="far fa-circle text-info"></i>
+              <i class="nav-icon  far fa-circle text-info"></i>
               <p>Wards</p>
             </a>
           </li>
           <li class="nav-item">
             <a href="#" class="nav-link">
-              <i class="far fa-circle text-info"></i>
+              <i class="nav-icon  far fa-circle text-info"></i>
               <p>SPO</p>
             </a>
           </li>
           <li class="nav-item">
             <a href="#" class="nav-link">
-              <i class="far fa-circle text-info"></i>
+              <i class="nav-icon  far fa-circle text-info"></i>
               <p>CBO</p>
             </a>
           </li>
           <li class="nav-item">
             <a href="#" class="nav-link">
-              <i class="far fa-circle text-info"></i>
+              <i class="nav-icon  far fa-circle text-info"></i>
               <p>User</p>
             </a>
           </li>
@@ -226,7 +226,7 @@
           @endcan
           <li class="nav-item">
             <a href="#" class="nav-link" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-              <i class="fa fa-door-open text-info"></i>
+              <i class="nav-icon  fa fa-door-open text-info"></i>
               <p>Sign Out</p>
             </a>
              <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
