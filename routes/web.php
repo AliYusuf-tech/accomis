@@ -28,13 +28,13 @@ Route::get('/cbo_monthly', [App\Http\Controllers\CboController::class, 'cbo_mont
 Route::post('/cbo', [App\Http\Controllers\CboController::class, 'add_cbo'])->name('cbo.add');
 Route::post('/cbo/cat_add', [App\Http\Controllers\CatController::class, 'add_cat'])->name('cat.add');
 Route::post('/cbo/fetch', [App\Http\Controllers\CboController::class, 'fetch'])->name('lga.fetch');
-Route::post('/cbo_monthly', [App\Http\Controllers\CboController::class, 'add_cbo_monthly'])->name('cbo.add_monthly');
+Route::post('/cbo_monthly/add', [App\Http\Controllers\CboController::class, 'add_cbo_monthly'])->name('cbo.add_monthly');
 
 //Spo get routes
 Route::get('/spo', [App\Http\Controllers\SpoController::class, 'spo_index'])->name('spo.monthly');
 
 //Spo post routes
-Route::post('/spo_monthly', [App\Http\Controllers\SpoController::class, 'add_spomonthly'])->name('spo.add_monthly');
+Route::post('/spo_monthly/add', [App\Http\Controllers\SpoController::class, 'add_spomonthly'])->name('spo.add_monthly');
 
 //Remidial get routes
 Route::get('/remidialfeedback', [App\Http\Controllers\RemidialController::class, 'remidial'])->name('remidial');
