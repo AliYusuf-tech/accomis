@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Gate;
+use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
@@ -23,6 +25,17 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('backend.dashboard');
+        $user = Auth::user();
+        $role = implode(' ', $user->roles->pluck('name')->toArray());
+
+        if ($role == "Admin") {
+            return view('backend.dashboards.admin_dashboard');
+        }
+        if ($role == "Cbo") {
+            return view('backend.dashboards.cbo_dashboard');
+        }
+        if ($role == "Spo") {
+            return view('backend.dashboards.spo_dashboard');
+        }
     }
 }

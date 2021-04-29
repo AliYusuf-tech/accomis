@@ -15,6 +15,15 @@ class CreateHealthFacilitiesTable extends Migration
     {
         Schema::create('health_facilities', function (Blueprint $table) {
             $table->id();
+            $table->string('State');
+            $table->string('LGA');
+            $table->string('Ward');
+            $table->string('Facility');
+            $table->string('CBO');
+            $table->string('CBO_Email');
+            $table->string('SPO');
+            $table->string('SPO_Email');
+            $table->string('status');
             $table->timestamps();
         });
     }

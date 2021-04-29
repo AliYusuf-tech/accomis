@@ -17,12 +17,20 @@ class DatabaseSeeder extends Seeder
         // \App\Models\User::factory(10)->create();
         $this->call([
             StateTableSeeder::class,
+            RoleSeeder::class,
+            UserSeeder::class,
             Lgas_1_TableSeeder::class,
             Lgas_2_TableSeeder::class,
             Lgas_3_TableSeeder::class,
             Lgas_4_TableSeeder::class,
-            RoleSeeder::class,
-            UserSeeder::class,
+            WardsTableSeeder_1::class,
+            WardsTableSeeder_2::class,
+            HealthFacilitiesTableSeeder_1::class,
+            HealthFacilitiesTableSeeder_2::class,
+            HealthFacilitiesTableSeeder_3::class,
+            HealthFacilitiesTableSeeder_4::class,
+            HealthFacilitiesTableSeeder_5::class,
         ]);
+
     }
 }
