@@ -28,6 +28,7 @@ Route::get('/cbo_monthly', [App\Http\Controllers\CboController::class, 'cbo_mont
 Route::post('/cbo', [App\Http\Controllers\CboController::class, 'add_cbo'])->name('cbo.add');
 Route::post('/cbo/cat_add', [App\Http\Controllers\CatController::class, 'add_cat'])->name('cat.add');
 Route::post('/cbo/fetch', [App\Http\Controllers\CboController::class, 'fetch'])->name('lga.fetch');
+Route::post('/cat/fetch', [App\Http\Controllers\CboController::class, 'cbo_fetch'])->name('cbo.fetch');
 Route::post('/cbo_monthly/add', [App\Http\Controllers\CboController::class, 'add_cbo_monthly'])->name('cbo.add_monthly');
 
 //Spo get routes

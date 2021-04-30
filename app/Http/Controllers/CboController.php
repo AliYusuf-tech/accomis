@@ -64,9 +64,6 @@ class CboController extends Controller
 
     public function add_cbo(Request $request)
     {
-        if (Gate::denies('admin')) {
-            abort('404');
-        }
 
         $cboRole = Role::where('name', 'Cbo')->first();
 
@@ -102,9 +99,7 @@ class CboController extends Controller
 
     public function add_cbo_monthly(Request $request)
     {
-        if (Gate::denies('admin_cbo')) {
-            abort('404');
-        }
+
         $attachment = $request->attachment->store('photos/attachments');
 
         $submit_cbo_monthly = CboMonthly::create([
@@ -133,8 +128,30 @@ class CboController extends Controller
         $output = '';
         foreach ($data as $row) {
             $output .=
-                '<option value="' . $row->name . '">' . $row->name . '</option>
+                '<option id="'.$row->name.'" value="'.$row->name .'">' .$row->name . '</option>
             ';
+        }
+
+        echo $output;
+    }
+
+    public function cbo_fetch(Request $request)
+    {
+        $select = $request->get('select');
+        $value = $request->get('value');
+        $dependent = $request->get('dependent1');
+        $data = DB::table('cbos')->where('lga', $value)
+            ->get();
+
+        $output = '';
+
+
+        foreach ($data as $row) {
+
+            $output .=
+            '<option value="'.$row->cbo_name.'">'.$row->cbo_name .'</option>
+        ';
+
         }
 
         echo $output;

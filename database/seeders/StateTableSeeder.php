@@ -98,7 +98,7 @@ class StateTableSeeder extends Seeder
             [
                 "name" => "Imo",
                 "spo" => "NULL",
-                "status" => "active",
+                "status" => "NULL",
             ],
             [
                 "name" => "Jigawa",

@@ -11,9 +11,7 @@ class CatController extends Controller
 {
     public function add_cat(Request $request)
     {
-        if (Gate::denies('admin')) {
-            abort('404');
-        }
+
         $submit_cat = Cat::create([
             'cbo_name' => $request->cbo_name,
             'name' => $request->name,

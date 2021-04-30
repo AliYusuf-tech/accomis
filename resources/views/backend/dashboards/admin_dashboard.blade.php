@@ -30,7 +30,7 @@
             <!-- small box -->
             <div class="small-box bg-info">
               <div class="inner">
-                <h3>0</h3>
+                <h3>{{$states ?? '0'}}</h3>
 
                 <p>Active State</p>
               </div>
@@ -45,7 +45,7 @@
             <!-- small box -->
             <div class="small-box bg-info">
               <div class="inner">
-                <h3>0<sup style="font-size: 20px"></sup></h3>
+                <h3>{{$lgas ?? '0'}}<sup style="font-size: 20px"></sup></h3>
 
                 <p>Active LGA</p>
               </div>
@@ -60,7 +60,7 @@
             <!-- small box -->
             <div class="small-box bg-info">
               <div class="inner">
-                <h3>0</h3>
+                <h3>{{$wards ?? '0'}}</h3>
 
                 <p>Active Ward</p>
               </div>
@@ -75,7 +75,7 @@
             <!-- small box -->
             <div class="small-box bg-info">
               <div class="inner">
-                <h3>0</h3>
+                <h3>{{$health_facilities ?? '0'}}</h3>
 
                 <p>Health Facilities</p>
               </div>
@@ -94,7 +94,7 @@
             <!-- small box -->
             <div class="small-box bg-success">
               <div class="inner">
-                <h3>0</h3>
+                <h3>{{$spos ?? '0'}}</h3>
 
                 <p>SPOs</p>
               </div>
@@ -109,7 +109,7 @@
             <!-- small box -->
             <div class="small-box bg-success">
               <div class="inner">
-                <h3>0<sup style="font-size: 20px"></sup></h3>
+                <h3>{{$cbos ?? '0'}}<sup style="font-size: 20px"></sup></h3>
 
                 <p>CBOs</p>
               </div>
@@ -124,7 +124,7 @@
             <!-- small box -->
             <div class="small-box bg-success">
               <div class="inner">
-                <h3>0</h3>
+                <h3>{{$cats ?? '0'}}</h3>
 
                 <p>CAT Members</p>
               </div>
@@ -139,7 +139,7 @@
             <!-- small box -->
             <div class="small-box bg-success">
               <div class="inner">
-                <h3>0</h3>
+                <h3>{{$client_exits ?? '0'}}</h3>
 
                 <p>Client Exits</p>
               </div>
@@ -159,7 +159,7 @@
             <!-- small box -->
             <div class="small-box bg-warning">
               <div class="inner">
-                <h3>0</h3>
+                <h3>{{$tested_malaria ?? '0'}}</h3>
 
                 <p>Tested Malaria Cases</p>
               </div>
@@ -174,7 +174,7 @@
             <!-- small box -->
             <div class="small-box bg-warning">
               <div class="inner">
-                <h3>0<sup style="font-size: 20px"></sup></h3>
+                <h3>{{$llin_recipients ?? '0'}}<sup style="font-size: 20px"></sup></h3>
 
                 <p>LLIN Recipients</p>
               </div>
@@ -189,7 +189,7 @@
             <!-- small box -->
             <div class="small-box bg-warning">
               <div class="inner">
-                <h3>0</h3>
+                <h3>{{$act_recipients ?? '0'}}</h3>
 
                 <p>ACT Recipients</p>
               </div>
@@ -204,7 +204,7 @@
             <!-- small box -->
             <div class="small-box bg-warning">
               <div class="inner">
-                <h3>0</h3>
+                <h3>{{$ipt_recipients ?? '0'}}</h3>
 
                 <p>IPT Recipients</p>
               </div>
@@ -224,7 +224,7 @@
             <!-- small box -->
             <div class="small-box bg-danger">
               <div class="inner">
-                <h3>0</h3>
+                <h3>{{$positive_malaria ?? '0'}}</h3>
 
                 <p>Positive Malaria Cases</p>
               </div>
@@ -239,7 +239,7 @@
             <!-- small box -->
             <div class="small-box bg-primary">
               <div class="inner">
-                <h3>0<sup style="font-size: 20px"></sup></h3>
+                <h3>{{$sp_recepients ?? '0'}}<sup style="font-size: 20px"></sup></h3>
 
                 <p>SP-Recipients</p>
               </div>
@@ -254,7 +254,7 @@
             <!-- small box -->
             <div class="small-box bg-secondary">
               <div class="inner">
-                <h3>0</h3>
+                <h3>{{$smc_recepients ?? '0'}}</h3>
 
                 <p>SMC Recipients</p>
               </div>
@@ -269,7 +269,7 @@
             <!-- small box -->
             <div class="small-box bg-secondary">
               <div class="inner">
-                <h3>0</h3>
+                <h3>{{$pregnant_women ?? '0'}}</h3>
 
                 <p>Pregnant Women Tested</p>
               </div>
@@ -285,7 +285,7 @@
         <div class="row">
           <div class="col-md-6">
             <!-- AREA CHART -->
-            
+
 
             <!-- DONUT CHART -->
             <div class="card card-danger">
@@ -421,14 +421,14 @@
        * -------
        * Here we will create a few charts using ChartJS
        */
-  
+
       //--------------
       //- AREA CHART -
       //--------------
-  
+
       // Get context with jQuery - using jQuery's .get() method.
       var areaChartCanvas = $('#areaChart').get(0).getContext('2d')
-  
+
       var areaChartData = {
         labels  : ['0','Jan-March', 'April-June', 'July-Sept', 'Oct-Dec'],
         datasets: [
@@ -456,7 +456,7 @@
           },
         ]
       }
-  
+
       var areaChartOptions = {
         maintainAspectRatio : false,
         responsive : true,
@@ -476,14 +476,14 @@
           }]
         }
       }
-  
+
       // This will get the first returned node in the jQuery collection.
-      var areaChart       = new Chart(areaChartCanvas, { 
+      var areaChart       = new Chart(areaChartCanvas, {
         type: 'line',
-        data: areaChartData, 
+        data: areaChartData,
         options: areaChartOptions
       })
-  
+
       //-------------
       //- LINE CHART -
       //--------------
@@ -493,13 +493,13 @@
       lineChartData.datasets[0].fill = false;
       lineChartData.datasets[1].fill = false;
       lineChartOptions.datasetFill = false
-  
-      var lineChart = new Chart(lineChartCanvas, { 
+
+      var lineChart = new Chart(lineChartCanvas, {
         type: 'line',
-        data: lineChartData, 
+        data: lineChartData,
         options: lineChartOptions
       })
-  
+
       //-------------
       //- DONUT CHART -
       //-------------
@@ -507,12 +507,12 @@
       var donutChartCanvas = $('#donutChart').get(0).getContext('2d')
       var donutData        = {
         labels: [
-            'Chrome', 
+            'Chrome',
             'IE',
-            'FireFox', 
-            'Safari', 
-            'Opera', 
-            'Navigator', 
+            'FireFox',
+            'Safari',
+            'Opera',
+            'Navigator',
         ],
         datasets: [
           {
@@ -530,9 +530,9 @@
       var donutChart = new Chart(donutChartCanvas, {
         type: 'doughnut',
         data: donutData,
-        options: donutOptions      
+        options: donutOptions
       })
-  
+
       //-------------
       //- PIE CHART -
       //-------------
@@ -548,9 +548,9 @@
       var pieChart = new Chart(pieChartCanvas, {
         type: 'pie',
         data: pieData,
-        options: pieOptions      
+        options: pieOptions
       })
-  
+
       //-------------
       //- BAR CHART -
       //-------------
@@ -560,25 +560,25 @@
       var temp1 = areaChartData.datasets[1]
       barChartData.datasets[0] = temp1
       barChartData.datasets[1] = temp0
-  
+
       var barChartOptions = {
         responsive              : true,
         maintainAspectRatio     : false,
         datasetFill             : false
       }
-  
+
       var barChart = new Chart(barChartCanvas, {
-        type: 'bar', 
+        type: 'bar',
         data: barChartData,
         options: barChartOptions
       })
-  
+
       //---------------------
       //- STACKED BAR CHART -
       //---------------------
       var stackedBarChartCanvas = $('#stackedBarChart').get(0).getContext('2d')
       var stackedBarChartData = jQuery.extend(true, {}, barChartData)
-  
+
       var stackedBarChartOptions = {
         responsive              : true,
         maintainAspectRatio     : false,
@@ -591,9 +591,9 @@
           }]
         }
       }
-  
+
       var stackedBarChart = new Chart(stackedBarChartCanvas, {
-        type: 'bar', 
+        type: 'bar',
         data: stackedBarChartData,
         options: stackedBarChartOptions
       })

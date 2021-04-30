@@ -171,7 +171,7 @@
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label>L.G.A</label>
-                                    <select class="form-control select2 dynamic2" name="lga" style="width: 100%;" id="lga2">
+                                    <select class="form-control select2 dynamic3" name="lga" style="width: 100%;" id="lga2">
                                         <option style="display: none" selected="selected">Select LGA</option>
                                     </select>
                                 </div>
@@ -179,11 +179,9 @@
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label>Community Based Organization</label>
-                                    <select name="cbo_name" class="form-control select2" style="width: 100%;" required>
+                                    <select name="cbo_name" class="form-control select2" style="width: 100%;" id="cbo1" required>
                                         <option style="display:none">Select Cbo</option>
-                                        @foreach ($cbos as $cbo)
-                                            <option value="{{ $cbo->cbo_name }}">{{ $cbo->cbo_name }}</option>
-                                        @endforeach
+
                                     </select>
                                 </div>
                             </div>
