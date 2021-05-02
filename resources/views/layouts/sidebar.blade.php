@@ -190,48 +190,48 @@
           @endcan
           <li class="nav-header brand-link">SETTINGS SECTION</li>
           @can('admin_role')
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon  far fa-circle text-danger"></i>
               <p class="text">Uploads</p>
             </a>
-          </li>
-          <li class="nav-item">
+          </li> -->
+          <!-- <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon  far fa-circle text-warning"></i>
               <p>State</p>
             </a>
-          </li>
-          <li class="nav-item">
+          </li> -->
+          <!-- <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon  far fa-circle text-info"></i>
               <p>LGA</p>
             </a>
-          </li>
-          <li class="nav-item">
+          </li> -->
+          <!-- <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon  far fa-circle text-info"></i>
               <p>Wards</p>
             </a>
-          </li>
-          <li class="nav-item">
+          </li> -->
+          <!-- <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon  far fa-circle text-info"></i>
               <p>SPO</p>
             </a>
-          </li>
-          <li class="nav-item">
+          </li> -->
+          <!-- <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon  far fa-circle text-info"></i>
               <p>CBO</p>
             </a>
-          </li>
-          <li class="nav-item">
+          </li> -->
+          <!-- <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon  far fa-circle text-info"></i>
               <p>User</p>
             </a>
-          </li>
+          </li> -->
 
           @endcan
           <li class="nav-item">
