@@ -153,7 +153,7 @@
                             </div>
                             <div class="col-md-4">
                                 <div class="form-group" id="what_did_you_come_for">
-                                    <label>Which One you came for?</label>
+                                    <label>Which Service did you come for?</label>
                                     <select class="form-control what_did_you_come_for" name="what_did_you_come_for"
                                         required>
                                         <option value="" style="display: none">Select</option>
@@ -172,7 +172,7 @@
                             </div>
                             <div class="col-md-4">
                                 <div class="form-group" id="what_treatment_did_you_recieve">
-                                    <label>Which One you received?</label>
+                                    <label>Which Service did you received?</label>
                                     <select class="form-control what_treatment_did_you_recieve"
                                         name="what_treatment_did_you_recieve">
                                         <option value="" style="display: none">Select</option>
@@ -299,7 +299,7 @@
                                     <select class="form-control ipt_frequency" name="ipt_frequency">
                                         <option value="" style="display: none">Select</option>
                                         <option value="After 13 Weeks (Quickening)">After 13 Weeks (Quickening)</option>
-                                        <option value="Once Every Month">Once Every</option>
+                                        <option value="Once Every Month">Once Every Month</option>
                                         <option value="Once Every 2 Months">Once Every 2 Months</option>
                                         <option value="Once Every 3 Months">Once Every 3 Months</option>
                                     </select>
@@ -513,11 +513,8 @@
                                     <label>How satisfied are you with the service(s) you received today?</label>
                                     <select class="form-control satisfaction_level" name="satisfaction_level">
                                         <option value="" style="display: none">Select</option>
-                                        <option value="Very dissatisfied">Very dissatisfied</option>
-                                        <option value="Somewhat dissatisfied">Somewhat dissatisfied</option>
-                                        <option value="Neither dissatisfied nor satisfied">Neither dissatisfied nor
-                                            satisfied</option>
-                                        <option value="Very Satisfied">Very Satisfied</option>
+                                        <option value="Very dissatisfied">Dissatisfied</option>                                       
+                                        <option value="Very Satisfied">Satisfied</option>
                                         <option value="Don't Know">Don't Know</option>
                                     </select><br>
 

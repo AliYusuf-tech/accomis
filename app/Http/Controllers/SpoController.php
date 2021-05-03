@@ -64,4 +64,12 @@ class SpoController extends Controller
             return redirect(route('spo.monthly'));
         }
     }
+
+    public function spo_add(Request $request)
+    {
+        if (Gate::denies('admin_spo')) {
+            abort('404');
+        }
+        
+    }
 }
