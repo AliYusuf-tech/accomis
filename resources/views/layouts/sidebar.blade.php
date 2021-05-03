@@ -87,7 +87,8 @@
             </a>
           </li>
           @endcan
-
+          
+          @can('admin_cbo')
           <li class="nav-item has-treeview">
             <a href="{{ route('remidial') }}" class="nav-link">
               <i class="nav-icon  far fa-envelope"></i>
@@ -98,7 +99,7 @@
             </a>
 
           </li>
-          @can('admin_cbo')
+
 
           <li class="nav-item">
             <a href="{{ route('cbo.monthly') }}" class="nav-link">

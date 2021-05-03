@@ -19,6 +19,8 @@ $(document).ready(function() {
         $(".arthemisinin_therapy_show_no").hide();
         $(".other_causes").hide();
         $(".choice_cause").hide();
+        $(".swallow_sp_sulfadoxin").hide();
+
 
         //for occupation element
         $('#occupation select[name="occupation"]').change(function() {
@@ -62,7 +64,7 @@ $(document).ready(function() {
                     $(".field3").val("");
                 }
             }
-        ); 
+        );
 
         //for education element
         $(
@@ -100,9 +102,11 @@ $(document).ready(function() {
         //ipt section
         $(".ipt_recieve_yes").click(function() {
             $(".ipt_true").show();
+            $(".swallow_sp_sulfadoxin").show();
         });
         $(".ipt_recieve_no").click(function() {
             $(".ipt_true").hide();
+            $(".swallow_sp_sulfadoxin").hide();
         });
 
         //sp_swallow section
@@ -328,7 +332,7 @@ $(document).ready(function() {
         });
 
         //swallow_sp_sulfadoxin
-        var swallow_sp_sulfadoxin = "";
+        var swallow_sp_sulfadoxin = "not applicable";
         $('#swallow_sp_sulfadoxin input[name="swallow_sp_sulfadoxin"]').change(
             function() {
                 swallow_sp_sulfadoxin = $(
@@ -464,7 +468,6 @@ $(document).ready(function() {
                 frequency_of_visit,
                 recieve_llin,
                 recieve_ipt,
-                swallow_sp_sulfadoxin,
                 smc,
                 malaria_test,
                 arthemisinin_based_therapy,

@@ -21,6 +21,8 @@ class CreateCboMonthlyMinutesTable extends Migration
             $table->string('date_of_meeting');
             $table->string('attachment');
             $table->string('minutes_of_meeting');
+            $table->string('month');
+            $table->string('year');
             $table->timestamps();
         });
     }

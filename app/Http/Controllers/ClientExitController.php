@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\ClientExitQuestionare;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Gate;
 
@@ -41,10 +42,11 @@ class ClientExitController extends Controller
         if (Gate::denies('admin_cbo')) {
             abort('404');
         }
-        
+
         $month = date('M');
         $day = date('d');
         $year = date('Y');
+        $user = Auth::user();
 
 
         $submit_client_form = ClientExitQuestionare::create([
@@ -79,6 +81,7 @@ class ClientExitController extends Controller
             'service_satisfaction_level_reason' => $request->insatisfaction_cause,
             'service_satisfaction_aid' => $request->customer_help,
             'facility_improvment_suggestion' => $request->customer_help_improve,
+            'auth_user_email' => $user->email,
             'month' => $month,
             'year' => $year,
             'day' => $day,

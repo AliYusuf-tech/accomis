@@ -47,12 +47,16 @@ class SpoController extends Controller
             abort('404');
         }
         $attachment = $request->attachment->store('photos/attachments');
+        $month = date('M');
+        $year = date('Y');
 
         $submit_spo_monthly = SpoMonthly::create([
             'state' => $request->state,
             'attachment' => $attachment,
             'minutes_of_meeting' => $request->minutes,
             'date_of_meeting' => $request->meeting_date,
+            'month'=>$month,
+            'year'=>$year,
         ]);
 
         if ($submit_spo_monthly) {

@@ -29,6 +29,7 @@
         <section class="content">
             <div class="container-fluid">
                 <!-- SELECT2 EXAMPLE -->
+                @can('cbo_role')
                 <div class="card card-info">
                     <div class="card-header">
                         <h3 class="card-title">Remedial Feedback</h3>
@@ -76,16 +77,8 @@
 
                                     </div>
                                 </div>
-                                <div class="col-md-4">
-                                    <div class="form-group">
-                                        <label>CBO</label>
-                                        <select name="cbo" class="form-control select2" style="width: 100%;" required>
-                                            <option selected="selected">Select CBO</option>
-                                            <option value="CBO 1">CBO 1</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
+
+                                <div class="col-md-8">
                                     <div class="form-group">
                                         <label>Date Visit</label>
                                         <input type="date" name="date_visit" class="form-control" placeholder="" required>
@@ -205,7 +198,8 @@
                     </div>
                 </div>
                 <!-- /.card -->
-
+                @endcan
+                @can('admin_role')
                 <!-- SELECT2 EXAMPLE -->
                 <div class="card card-success">
                     <div class="card-header">
@@ -295,7 +289,7 @@
                                             </tr>
                                         @endforeach
                                     @endif
-                                 
+
                                 <tfoot>
                                     <tr>
                                         <th>id</th>
@@ -312,6 +306,7 @@
 
 
                 </div><!-- /.container-fluid -->
+                @endcan
         </section>
         <!-- /.content -->
     </div>

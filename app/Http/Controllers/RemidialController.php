@@ -5,7 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Remedial;
 use App\Models\States;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Gate;
 
 class RemidialController extends Controller
 {
@@ -27,6 +29,9 @@ class RemidialController extends Controller
 
     public function remidial()
     {
+        if (Gate::denies('admin_cbo')) {
+            abort('404');
+        }
         $rem = Remedial::all();
         $states = States::where('status', 'active')->get();
 
@@ -42,11 +47,14 @@ class RemidialController extends Controller
         $signed_doc = $request->signed_doc->store('photos/signed_documents');
         $month = date('M');
         $year = date('Y');
+        $user = Auth::user();
+        $cbo = $user->email;
+
 
         $add_remidial = Remedial::create([
             'state' => $request->state,
             'ward' => $request->ward,
-            'cbo' => $request->cbo,
+            'cbo' => $cbo,
             'date_visit' => $request->date_visit,
             'tracker_type' => $request->tracker_type,
             'identified_issues' => $request->key_findings,

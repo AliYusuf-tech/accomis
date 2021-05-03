@@ -101,7 +101,8 @@ class CboController extends Controller
     {
 
         $attachment = $request->attachment->store('photos/attachments');
-
+        $month = date('M');
+        $year = date('Y');
         $submit_cbo_monthly = CboMonthly::create([
             'cbo_name' => $request->cbo_name,
             'state' => $request->state,
@@ -109,6 +110,8 @@ class CboController extends Controller
             'attachment' => $attachment,
             'minutes_of_meeting' => $request->minutes,
             'date_of_meeting' => $request->meeting_date,
+            'month'=>$month,
+            'year'=>$year,
         ]);
 
         if ($submit_cbo_monthly) {

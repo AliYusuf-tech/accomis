@@ -22,6 +22,7 @@
         <!-- Main content -->
         <section class="content">
             <div class="container-fluid">
+                @can('cbo_role')
                 <!-- SELECT2 EXAMPLE -->
                 <div class="card card-info">
                     <div class="card-header">
@@ -210,7 +211,7 @@
                                 <p style="text-align: center; font-size: large;">Question Section 2</p>
                             </div>
                             <div class="col-md-4" id="llin_recieve">
-                                <p>Did You Receive LLIN?</p>
+                                <label>Did You Receive LLIN?</label>
                                 <div class="form-group clearfix" id="recieve_llin">
                                     <div class="icheck-primary d-inline">
                                         <input type="radio" id="radioPrimary4" class="llin_recieve_yes " name="recieve_llin"
@@ -269,7 +270,7 @@
 
                         <div class="row">
                             <div class="col-md-4" id="recieve_ipt">
-                                <p>Did You Receive IPT (3 White Tablets)?</p>
+                                <label>Did You Receive IPT (3 White Tablets)?</label>
                                 <div class="form-group clearfix ">
                                     <div class="icheck-primary d-inline">
                                         <input type="radio" id="ipt1" class="ipt_recieve_yes" name="recieve_ipt"
@@ -305,8 +306,8 @@
                                 </div>
                             </div>
 
-                            <div class="col-md-4 " id="swallow_sp_sulfadoxin">
-                                <p>Did You Swallow the (SP-Sulfadoxin-Pyrimethamine 3 White tabs)?</p>
+                            <div class="col-md-4 swallow_sp_sulfadoxin" id="swallow_sp_sulfadoxin">
+                                <label>Did You Swallow the (SP-Sulfadoxin-Pyrimethamine 3 White tabs)?</label>
                                 <div class="form-group clearfix">
                                     <div class="icheck-primary d-inline">
                                         <input type="radio" id="swallow1" class="sp_swallow_yes"
@@ -584,8 +585,9 @@
                     </div>
                 </div>
                 <!-- /.card -->
+                @endcan
 
-
+                @can('admin_role')
 
                 <!-- SELECT2 EXAMPLE -->
                 <div class="card card-success">
@@ -693,7 +695,7 @@
                     <!-- /.card-body -->
 
                 </div>
-
+                @endcan
             </div><!-- /.container-fluid -->
         </section>
         <!-- /.content -->
