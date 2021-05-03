@@ -208,18 +208,18 @@
               <p>LGA</p>
             </a>
           </li> -->
-          <!-- <li class="nav-item">
+          <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon  far fa-circle text-info"></i>
               <p>Wards</p>
             </a>
-          </li> -->
-          <!-- <li class="nav-item">
+          </li>
+          <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon  far fa-circle text-info"></i>
-              <p>SPO</p>
+              <p>Profile</p>
             </a>
-          </li> -->
+          </li>
           <!-- <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon  far fa-circle text-info"></i>
