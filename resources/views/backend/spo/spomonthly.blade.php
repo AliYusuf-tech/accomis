@@ -47,12 +47,13 @@
                 <div class="col-md-4">
                 <div class="form-group">
                   <label>State</label>
-                  <select name="state" class="form-control select2" style="width: 100%;" id="state">
+                  <input type="text" name="state" class="form-control select2" style="width: 100%;" id="state" readonly>
+                  <!-- <select name="state" class="form-control select2" style="width: 100%;" id="state">
                     <option selected="selected">Select State</option>
                         @foreach ($states as $state)
                             <option value="{{ $state->name }}">{{ $state->name }}</option>
                         @endforeach
-                  </select>
+                  </select> -->
                 </div>
               </div>
 
