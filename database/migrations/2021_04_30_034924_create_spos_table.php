@@ -15,6 +15,11 @@ class CreateSposTable extends Migration
     {
         Schema::create('spos', function (Blueprint $table) {
             $table->id();
+            $table->string('spo_name');
+            $table->string('email');
+            $table->string('phone');
+            $table->string('state');
+            $table->string('physical_contact_address');
             $table->timestamps();
         });
     }

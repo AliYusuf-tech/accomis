@@ -87,7 +87,7 @@
             </a>
           </li>
           @endcan
-          
+
           @can('admin_cbo')
           <li class="nav-item has-treeview">
             <a href="{{ route('remidial') }}" class="nav-link">
@@ -174,18 +174,8 @@
           <li class="nav-item">
             <a href="{{ route('health_facility') }}" class="nav-link">
               <i class="nav-icon  fas fa-eye"></i>
-              <p>View</p>
+              <p>Health Facilities</p>
             </a>
-          </li>
-          <li class="nav-item has-treeview">
-            <a href="{{ route('health_facility.add') }}" class="nav-link">
-              <i class="nav-icon  fas fa-plus"></i>
-              <p>
-                Add
-
-              </p>
-            </a>
-
           </li>
 
           @endcan
@@ -221,12 +211,18 @@
               <p>Profile</p>
             </a>
           </li>
-          <!-- <li class="nav-item">
-            <a href="#" class="nav-link">
+          <li class="nav-item">
+            <a href="{{ route('cbo.add.view') }}" class="nav-link">
               <i class="nav-icon  far fa-circle text-info"></i>
-              <p>CBO</p>
+              <p>Add CBO/CAT</p>
             </a>
-          </li> -->
+          </li>
+          <li class="nav-item">
+            <a href="{{ route('spo.monthly') }}" class="nav-link">
+              <i class="nav-icon  far fa-circle text-info"></i>
+              <p>Add SPO</p>
+            </a>
+          </li>
           <!-- <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon  far fa-circle text-info"></i>

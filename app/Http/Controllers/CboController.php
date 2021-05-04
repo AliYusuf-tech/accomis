@@ -46,7 +46,20 @@ class CboController extends Controller
             'states' => $states,
         ]);
     }
+    public function add_cbo_view()
+    {
+        if (Gate::denies('admin_role')) {
+            abort('404');
+        }
 
+        $cbo = Cbo::all();
+        $states = States::where('status', 'active')->get();
+
+        return view('backend.cbo.add_cbo')->with([
+            'cbos' => $cbo,
+            'states' => $states,
+        ]);
+    }
     public function cbo_monthly()
     {
         if (Gate::denies('admin_cbo')) {
@@ -66,7 +79,10 @@ class CboController extends Controller
     {
 
         $cboRole = Role::where('name', 'Cbo')->first();
-
+        if (User::where('email', '=', $request->email)->exists()) {
+            Session::flash('error_message', 'A user with this email already exists!');
+            return redirect(route('cbo.add.view'));
+        }else {
         $cbo = User::create([
             'name' => $request->cbo_name,
             'email' => $request->email,
@@ -95,6 +111,7 @@ class CboController extends Controller
             Session::flash('flash_message', 'Cbo Added Successfully');
             return redirect(route('cbo'));
         }
+    }
     }
 
     public function add_cbo_monthly(Request $request)

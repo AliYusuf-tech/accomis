@@ -8,4 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class Spo extends Model
 {
     use HasFactory;
+    protected $fillable = [
+        'spo_name',
+        'email',
+        'state',
+        'phone',
+        'physical_contact_address',
+    ];
 }

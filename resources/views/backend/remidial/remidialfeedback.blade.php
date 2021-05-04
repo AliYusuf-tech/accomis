@@ -282,7 +282,6 @@
                                                 <td>{{ $loop->iteration }}</td>
                                                 <td>{{ $rem->date_visit }}</td>
                                                 <td><a href="#"><i class="fa fa-file-download"></i></a></td>
-                                                <td><span class="badge bg-warning">Pending</span></td>
                                                 <td>{{ $rem->cbo }}</td>
                                                 <td><a href="#" data-toggle="modal" data-target="#exampleModalCenter"><i
                                                             class="fa fa-eye"></i></a></td>
