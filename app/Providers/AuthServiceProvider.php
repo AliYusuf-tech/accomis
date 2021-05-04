@@ -53,5 +53,15 @@ class AuthServiceProvider extends ServiceProvider
         Gate::define('admin_cbo', function ($user) {
             return $user->hasAnyRoles(['Admin', 'Cbo']);
         });
+
+         //admin cbo access
+         Gate::define('spo_cbo', function ($user) {
+            return $user->hasAnyRoles(['Spo', 'Cbo']);
+        });
+
+         //admin cbo access
+         Gate::define('admin_spo_cbo', function ($user) {
+            return $user->hasAnyRoles(['Admin','Spo', 'Cbo']);
+        });
     }
 }

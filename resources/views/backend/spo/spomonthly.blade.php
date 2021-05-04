@@ -29,6 +29,7 @@
     <section class="content">
       <div class="container-fluid">
         <!-- SELECT2 EXAMPLE -->
+        @can('spo_role')
         <div class="card card-info">
           <div class="card-header">
             <h3 class="card-title">SPO Minutes of Meeting</h3>
@@ -98,7 +99,7 @@
           </div>
         </div>
         <!-- /.card -->
-
+      
 
 
         <!-- SELECT2 EXAMPLE -->
@@ -158,13 +159,13 @@
             </table>
           </div>
           <!-- /.card-body -->
-
+          @endcan
         </div>
 
 
           <div class="card card-success">
             <div class="card-header">
-              <h3 class="card-title">Admin View: SPOs Monthly Reports</h3>
+              <h3 class="card-title">SPOs Monthly Reports</h3>
 
               <div class="card-tools">
                 <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i></button>

@@ -30,7 +30,8 @@
     <section class="content">
       <div class="container-fluid">
         <!-- SELECT2 EXAMPLE -->
-        <div class="card card-info">
+      @can('cbo_role')
+      <div class="card card-info">
           <div class="card-header">
             <h3 class="card-title">CBO Minutes of Meeting</h3>
 
@@ -116,114 +117,13 @@
           <div class="card-footer">
 
           </div>
-        </div>
+      </div>
+      @endcan
         <!-- /.card -->
-
-
-
-        <!-- SELECT2 EXAMPLE -->
-        <div class="card card-success">
-          <div class="card-header">
-            <h3 class="card-title">CBO Monthly Reports</h3>
-
-            <div class="card-tools">
-              <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i></button>
-              <button type="button" class="btn btn-tool" data-card-widget="remove"><i class="fas fa-times"></i></button>
-            </div>
-          </div>
-          <!-- /.card-header -->
-          <div class="card-body">
-            <table id="example1" class="table table-bordered table-striped">
-              <thead>
-              <tr>
-                <th>id</th>
-                <th>Meeting Date</th>
-                <th>Attachment</th>
-                <th>Status</th>
-                <th>Action</th>
-              </tr>
-              </thead>
-              <tbody>
-                @if (count($cbos)>0)
-                    @foreach ($cbos as $cbo)
-                    <tr>
-                    <td>{{ $loop->iteration }}</td>
-                    <td>{{ $cbo->date_of_meeting }}</td>
-                    <td><a href="#"><i class="fa fa-file-download"></i></a></td>
-                    <td><span class="badge bg-success">Approved</span></td>
-                    <td><a href="#" data-toggle="modal" data-target="#exampleModalCenter"><i class="fa fa-eye"></i></a></td>
-                    </tr>
-              @endforeach
-              @endif
-
-            <tfoot>
-                <tr>
-                    <th>id</th>
-                    <th>Meeting Date</th>
-                    <th>Attachment</th>
-                    <th>Status</th>
-
-                    <th>Action</th>
-                  </tr>
-              </tfoot>
-            </table>
-          </div>
-          <!-- /.card-body -->
-
-        </div>
-        <!-- /.card -->
+  
         <div class="card card-success">
             <div class="card-header">
-              <h3 class="card-title">SPO VIEW: CBO Monthly Reports</h3>
-
-              <div class="card-tools">
-                <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i></button>
-                <button type="button" class="btn btn-tool" data-card-widget="remove"><i class="fas fa-times"></i></button>
-              </div>
-            </div>
-            <!-- /.card-header -->
-            <div class="card-body">
-              <table id="example1" class="table table-bordered table-striped">
-                <thead>
-                <tr>
-                  <th>id</th>
-                  <th>Meeting Date</th>
-                  <th>Attached Report</th>
-                  <th>CBO Name</th>
-                  <th>Action</th>
-                </tr>
-                </thead>
-                <tbody>
-              @if (count($cbos)>0)
-                    @foreach ($cbos as $cbo)
-                    <tr>
-                    <td>{{ $loop->iteration }}</td>
-                    <td>{{ $cbo->date_of_meeting }}</td>
-                    <td><a href="#"><i class="fa fa-file-download"></i></a></td>
-                    <td>{{$cbo->cbo_name}}</td>
-                    <td><a href="#" data-toggle="modal" data-target="#exampleModalCenter"><i class="fa fa-eye"></i></a></td>
-                    </tr>
-              @endforeach
-              @endif
-              <tfoot>
-                  <tr>
-                      <th>id</th>
-                      <th>Meeting Date</th>
-                      <th>Attached Report</th>
-                      <th>CBO Name</th>
-
-                      <th>Action</th>
-                    </tr>
-                </tfoot>
-              </table>
-            </div>
-            <!-- /.card-body -->
-
-          </div>
-
-          <div class="card card-success">
-            <div class="card-header">
-              <h3 class="card-title">Admin VIEW: CBO Monthly Reports</h3>
+              <h3 class="card-title">CBO Monthly Reports</h3>
 
               <div class="card-tools">
                 <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i></button>

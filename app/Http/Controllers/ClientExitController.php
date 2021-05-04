@@ -28,7 +28,7 @@ class ClientExitController extends Controller
 
     public function client_exit()
     {
-        if (Gate::denies('admin_cbo')) {
+        if (Gate::denies('admin_spo_cbo')) {
             abort('404');
         }
         $clients = ClientExitQuestionare::all();
@@ -39,7 +39,7 @@ class ClientExitController extends Controller
 
     public function client_exit_add(Request $request)
     {
-        if (Gate::denies('admin_cbo')) {
+        if (Gate::denies('admin_spo_cbo')) {
             abort('404');
         }
 

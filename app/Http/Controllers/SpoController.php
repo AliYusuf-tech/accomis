@@ -33,7 +33,7 @@ class SpoController extends Controller
 
     public function spo_index()
     {
-        if (Gate::denies('admin_role')) {
+        if (Gate::denies('admin_spo')) {
             abort('404');
         }
         $states = States::where('status', 'active')->get();

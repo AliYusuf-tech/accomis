@@ -111,14 +111,15 @@
           @endcan
           @can('admin_spo')
           <li class="nav-item">
-            <a href="{{ route('spo.monthly') }}" class="nav-link">
+            <a href="{{ route('spo_add_monthly') }}" class="nav-link">
               <i class="nav-icon  fa fa-book"></i>
               <p>SPO Monthly Minutes</p>
             </a>
           </li>
           @endcan
+          
           <li class="nav-header brand-link">REPORTS SECTION</li>
-          @can('admin_role')
+          @can('admin_spo')
           <li class="nav-item">
             <a href="{{ route('cbo') }}" class="nav-link">
               <i class="nav-icon  far fa-calendar-alt"></i>
@@ -130,7 +131,7 @@
           </li>
           @endcan
 
-          @can('admin_cbo')
+          @can('admin_spo')
 
           <li class="nav-item">
             <a href="{{ route('client.exit') }}"class="nav-link">
@@ -144,7 +145,7 @@
 
 
           <li class="nav-item has-treeview">
-            <a href="#" class="nav-link">
+            <a href="{{ route('remidial') }}" class="nav-link">
               <i class="nav-icon  fa fa-envelope"></i>
               <p>
                 Feedbacks
@@ -162,53 +163,25 @@
           @endcan
           @can('admin_spo')
           <li class="nav-item">
-            <a href="{{ route('spo.monthly') }}" class="nav-link">
+            <a href="{{ route('spo_add_monthly') }}" class="nav-link">
               <i class="nav-icon  fa fa-book"></i>
               <p>SPO Monthly Minutes</p>
             </a>
           </li>
           @endcan
-          @can('admin_role')
-
-          <li class="nav-header brand-link">HEALTH FACILITIES SECTION</li>
-          <li class="nav-item">
-            <a href="{{ route('health_facility') }}" class="nav-link">
-              <i class="nav-icon  fas fa-eye"></i>
-              <p>Health Facilities</p>
-            </a>
-          </li>
-
-          @endcan
+     
           <li class="nav-header brand-link">SETTINGS SECTION</li>
           @can('admin_role')
-          <!-- <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon  far fa-circle text-danger"></i>
-              <p class="text">Uploads</p>
-            </a>
-          </li> -->
-          <!-- <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon  far fa-circle text-warning"></i>
-              <p>State</p>
-            </a>
-          </li> -->
-          <!-- <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon  far fa-circle text-info"></i>
-              <p>LGA</p>
-            </a>
-          </li> -->
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="{{ route('spo.monthly') }}" class="nav-link">
               <i class="nav-icon  far fa-circle text-info"></i>
-              <p>Wards</p>
+              <p>Add SPO</p>
             </a>
           </li>
           <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon  far fa-circle text-info"></i>
-              <p>Profile</p>
+              <p>Add Wards</p>
             </a>
           </li>
           <li class="nav-item">
@@ -218,11 +191,19 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="{{ route('spo.monthly') }}" class="nav-link">
+            <a href="{{ route('health_facility') }}" class="nav-link">
               <i class="nav-icon  far fa-circle text-info"></i>
-              <p>Add SPO</p>
+              <p>Health Facilities</p>
+            </a>
+          </li>          
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon  far fa-circle text-info"></i>
+              <p>Profile</p>
             </a>
           </li>
+          
+          
           <!-- <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon  far fa-circle text-info"></i>

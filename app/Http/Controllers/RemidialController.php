@@ -29,7 +29,7 @@ class RemidialController extends Controller
 
     public function remidial()
     {
-        if (Gate::denies('admin_cbo')) {
+        if (Gate::denies('admin_spo_cbo')) {
             abort('404');
         }
         $rem = Remedial::all();

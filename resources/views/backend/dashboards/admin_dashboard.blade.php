@@ -96,7 +96,7 @@
               <div class="inner">
                 <h3>{{$spos ?? '0'}}</h3>
 
-                <p>SPOs</p>
+                <p>Issues Identified</p>
               </div>
               <div class="icon">
                 <i class="ion ion-bag"></i>
@@ -111,7 +111,7 @@
               <div class="inner">
                 <h3>{{$cbos ?? '0'}}<sup style="font-size: 20px"></sup></h3>
 
-                <p>CBOs</p>
+                <p>Issues Resolved</p>
               </div>
               <div class="icon">
                 <i class="ion ion-stats-bars"></i>
@@ -126,7 +126,7 @@
               <div class="inner">
                 <h3>{{$cats ?? '0'}}</h3>
 
-                <p>CAT Members</p>
+                <p>Remedial Feedback Reports</p>
               </div>
               <div class="icon">
                 <i class="ion ion-person-add"></i>
@@ -234,14 +234,31 @@
               <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
-          <!-- ./col -->
+         
+         
           <div class="col-lg-3 col-6">
             <!-- small box -->
-            <div class="small-box bg-primary">
+            <div class="small-box bg-warning">
+              <div class="inner">
+                <h3>{{$pregnant_women ?? '0'}}</h3>
+
+                <p>P.W Tested For Malaria</p>
+              </div>
+              <div class="icon">
+                <i class="ion ion-pie-graph"></i>
+              </div>
+              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
+          <!-- ./col -->
+           <!-- ./col -->
+           <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="small-box bg-warning">
               <div class="inner">
                 <h3>{{$sp_recepients ?? '0'}}<sup style="font-size: 20px"></sup></h3>
 
-                <p>SP-Recipients</p>
+                <p>Antenatal Care Service</p>
               </div>
               <div class="icon">
                 <i class="ion ion-stats-bars"></i>
@@ -249,10 +266,10 @@
               <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
-          <!-- ./col -->
-          <div class="col-lg-3 col-6">
+           <!-- ./col -->
+           <div class="col-lg-3 col-6">
             <!-- small box -->
-            <div class="small-box bg-secondary">
+            <div class="small-box bg-warning">
               <div class="inner">
                 <h3>{{$smc_recepients ?? '0'}}</h3>
 
@@ -260,21 +277,6 @@
               </div>
               <div class="icon">
                 <i class="ion ion-person-add"></i>
-              </div>
-              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-            </div>
-          </div>
-          <!-- ./col -->
-          <div class="col-lg-3 col-6">
-            <!-- small box -->
-            <div class="small-box bg-secondary">
-              <div class="inner">
-                <h3>{{$pregnant_women ?? '0'}}</h3>
-
-                <p>Pregnant Women Tested</p>
-              </div>
-              <div class="icon">
-                <i class="ion ion-pie-graph"></i>
               </div>
               <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
@@ -290,7 +292,7 @@
             <!-- DONUT CHART -->
             <div class="card card-danger">
               <div class="card-header">
-                <h3 class="card-title">Donut Chart</h3>
+                <h3 class="card-title">Malaria Cases</h3>
 
                 <div class="card-tools">
                   <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i>
@@ -308,7 +310,7 @@
             <!-- PIE CHART -->
             <div class="card card-danger">
               <div class="card-header">
-                <h3 class="card-title">Pie Chart</h3>
+                <h3 class="card-title">Malaria Services Vs ACT Recipients</h3>
 
                 <div class="card-tools">
                   <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i>
@@ -368,7 +370,7 @@
             <!-- BAR CHART -->
             <div class="card card-success">
               <div class="card-header">
-                <h3 class="card-title">Bar Chart</h3>
+                <h3 class="card-title">Total Malaria Cases Vs Positive Cases</h3>
 
                 <div class="card-tools">
                   <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i>
@@ -388,7 +390,7 @@
             <!-- STACKED BAR CHART -->
             <div class="card card-success">
               <div class="card-header">
-                <h3 class="card-title">Stacked Bar Chart</h3>
+                <h3 class="card-title">Total Malaria Cases Vs Positive Cases</h3>
 
                 <div class="card-tools">
                   <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i>
@@ -507,17 +509,14 @@
       var donutChartCanvas = $('#donutChart').get(0).getContext('2d')
       var donutData        = {
         labels: [
-            'Chrome',
-            'IE',
-            'FireFox',
-            'Safari',
-            'Opera',
-            'Navigator',
+            'Malaria Service',
+            'ACT Recipients',
+           
         ],
         datasets: [
           {
-            data: [700,500,400,600,300,100],
-            backgroundColor : ['#f56954', '#00a65a', '#f39c12', '#00c0ef', '#3c8dbc', '#d2d6de'],
+            data: [700,500],
+            backgroundColor : ['#f56954', '#00a65a'],
           }
         ]
       }

@@ -34,7 +34,7 @@ class CboController extends Controller
      */
     public function cbo_index()
     {
-        if (Gate::denies('admin_role')) {
+        if (Gate::denies('admin_spo')) {
             abort('404');
         }
 
@@ -62,7 +62,7 @@ class CboController extends Controller
     }
     public function cbo_monthly()
     {
-        if (Gate::denies('admin_cbo')) {
+        if (Gate::denies('admin_spo_cbo')) {
             abort('404');
         }
 

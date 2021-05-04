@@ -33,7 +33,7 @@ Route::post('/cat/fetch', [App\Http\Controllers\CboController::class, 'cbo_fetch
 Route::post('/cbo_monthly/add', [App\Http\Controllers\CboController::class, 'add_cbo_monthly'])->name('cbo.add_monthly');
 
 //Spo get routes
-Route::get('/spo', [App\Http\Controllers\SpoController::class, 'spo_index'])->name('spo.monthly');
+Route::get('/spo_add', [App\Http\Controllers\SpoController::class, 'spo_index'])->name('spo.monthly');
 Route::get('/spo_monthly/', [App\Http\Controllers\SpoController::class, 'spo_monthly'])->name('spo_add_monthly');
 
 //Spo post routes
