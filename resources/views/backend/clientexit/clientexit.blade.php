@@ -513,7 +513,7 @@
                                     <label>How satisfied are you with the service(s) you received today?</label>
                                     <select class="form-control satisfaction_level" name="satisfaction_level">
                                         <option value="" style="display: none">Select</option>
-                                        <option value="Very dissatisfied">Dissatisfied</option>                                       
+                                        <option value="Very dissatisfied">Dissatisfied</option>
                                         <option value="Very Satisfied">Satisfied</option>
                                         <option value="Don't Know">Don't Know</option>
                                     </select><br>
@@ -642,7 +642,7 @@
                     </div>
                     <!-- /.card-body -->
 
-           
+
 
 
                 @endcan
@@ -654,4 +654,9 @@
 @endsection
 @section('js')
     <script src="dist/js/dependentform.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#example1').DataTable();
+        });
+    </script>
 @endsection

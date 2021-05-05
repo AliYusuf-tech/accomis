@@ -129,24 +129,19 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>001</td>
-                                    <td>SPO 1
-                                    </td>
-                                    <td>Paul Kumchi</td>
-                                    <td>Kadun State</td>
-                                    <td><a href="#" data-toggle="modal" data-target="#exampleModalCenter"><i
-                                                class="fa fa-eye"></i></a></td>
-                                </tr>
-                                <tr>
-                                    <td>002</td>
-                                    <td>SPO 2
-                                    </td>
-                                    <td>Sherma Emmanuel</td>
-                                    <td>Jigawa State</td>
-                                    <td><a href="#" data-toggle="modal" data-target="#exampleModalCenter"><i
-                                                class="fa fa-eye"></i></a></td>
-                                </tr>
+                                @if (count($spos) > 0)
+                                @foreach ($spos as $spo)
+                                    <tr>
+                                        <td>{{ $loop->iteration }}</td>
+                                        <td>{{ $spo->spo_name }}</td>
+                                        <td>{{ $spo->physical_contact_address }}</td>
+                                        <td>{{ $spo->state }}</td>
+                                        <td><a href="#" data-toggle="modal" data-target="#exampleModalCenter"><i
+                                                    class="fa fa-eye"></i></a></td>
+                                    </tr>
+                                @endforeach
+                            @endif
+
                             <tfoot>
                                 <tr>
                                     <th>id</th>

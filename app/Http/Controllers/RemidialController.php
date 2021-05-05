@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Cbo;
 use Illuminate\Http\Request;
 use App\Models\Remedial;
 use App\Models\States;
+use App\Models\Ward;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Gate;
@@ -32,12 +34,32 @@ class RemidialController extends Controller
         if (Gate::denies('admin_spo_cbo')) {
             abort('404');
         }
+
+        $user = Auth::user();
+        $cbo = Cbo::where('email', $user->email)->get();
         $rem = Remedial::all();
         $states = States::where('status', 'active')->get();
+
+        $cbo_state = '';
+        $cbo_lga = '';
+        $cbo_name = '';
+
+        //loof for parsing fetched authenticated user's data
+        foreach($cbo as $cbo_detail){
+            $cbo_name = $cbo_detail->cbo_name;
+            $cbo_state = $cbo_detail->state;
+            $cbo_lga = $cbo_detail->lga;
+        }
+
+        $wards = Ward::where('lga', $cbo_lga)->get();
 
         return view('backend.remidial.remidialfeedback')->with([
             'rems' => $rem,
             'states' => $states,
+            'cbo_state' => $cbo_state,
+            'cbo_lga' => $cbo_lga,
+            'cbo_name' => $cbo_name,
+            'wards' => $wards,
         ]);
     }
 
@@ -50,10 +72,13 @@ class RemidialController extends Controller
         $user = Auth::user();
         $cbo = $user->email;
 
+        if($request->ward == ""){
+            $ward = 'not available';
+        }
 
         $add_remidial = Remedial::create([
             'state' => $request->state,
-            'ward' => $request->ward,
+            'ward' => $ward,
             'cbo' => $cbo,
             'date_visit' => $request->date_visit,
             'tracker_type' => $request->tracker_type,

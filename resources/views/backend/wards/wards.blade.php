@@ -77,7 +77,7 @@
                                     </div>
                                 </div>
 
-                              
+
                             </div>
                             <p class="url" id="/cbo/fetch" style="display: none"></p>
                             {{ csrf_field() }}
@@ -93,7 +93,7 @@
                 </div>
                 <!-- /.card -->
 
-              
+
 
                 <!-- SELECT2 EXAMPLE -->
                 <div class="card card-success">
@@ -156,4 +156,10 @@
 @endsection
 @section('js')
     <script src="dist/js/selectField.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('#example1').DataTable();
+        });
+    </script>
 @endsection

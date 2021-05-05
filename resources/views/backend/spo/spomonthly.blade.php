@@ -100,7 +100,7 @@
           </div>
         </div>
         <!-- /.card -->
-      
+
 
 
         <!-- SELECT2 EXAMPLE -->
@@ -228,4 +228,11 @@
     <!-- /.content -->
   </div>
 
+@endsection
+@section('js')
+<script>
+    $(document).ready(function() {
+        $('#example1').DataTable();
+    });
+</script>
 @endsection

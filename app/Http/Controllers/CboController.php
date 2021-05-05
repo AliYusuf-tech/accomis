@@ -66,12 +66,35 @@ class CboController extends Controller
             abort('404');
         }
 
-        $cbo = CboMonthly::all();
+        $user = Auth::user();
+        $role = implode(' ', $user->roles->pluck('name')->toArray());
+        $cbo = "";
+
+        if ($role == "Cbo") {
+            $cbo = CboMonthly::where('cbo_name', $user->name)->get();
+        }
+        if ($role == "Admin") {
+            $cbo = CboMonthly::all();
+        }
+
+        $cbo_state = '';
+        $cbo_lga = '';
+
+        //loof for parsing fetched authenticated user's data
+        foreach($cbo as $cbo_detail){
+            $cbo_name = $cbo_detail->cbo_name;
+            $cbo_state = $cbo_detail->state;
+            $cbo_lga = $cbo_detail->lga;
+        }
+
         $states = States::where('status', 'active')->get();
 
         return view('backend.cbo.cbomonthly')->with([
             'cbos' => $cbo,
             'states' => $states,
+            'cbo_state' => $cbo_state,
+            'cbo_lga' => $cbo_lga,
+            'cbo_name' => $cbo_name,
         ]);
     }
 

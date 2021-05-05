@@ -30,6 +30,10 @@ class DatabaseSeeder extends Seeder
             HealthFacilitiesTableSeeder_3::class,
             HealthFacilitiesTableSeeder_4::class,
             HealthFacilitiesTableSeeder_5::class,
+            SposSeeder::class,
+            CbosSeeder::class,
+
+
         ]);
 
     }
