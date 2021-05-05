@@ -36,10 +36,13 @@ class SpoController extends Controller
         if (Gate::denies('admin_spo')) {
             abort('404');
         }
+
+        $spos = Spo::all();
         $states = States::where('status', 'active')->get();
 
         return view('backend.spo.spo')->with([
             'states' => $states,
+            'spos' => $spos,
         ]);
     }
 

@@ -49,32 +49,23 @@
             <div class="col-md-4">
                 <div class="form-group">
                   <label>State</label>
-                  <input type="text" name="state" class="form-control select2" style="width: 100%;" id="state" readonly>
+                  <input type="text" name="state" class="form-control select2" style="width: 100%;" id="state" value={{$cbo_state}} readonly>
 
-                  <!-- <select name="state" class="form-control select2" style="width: 100%;" id="state">
-                    <option selected="selected">Select State</option>
-                        @foreach ($states as $state)
-                            <option value="{{ $state->name }}">{{ $state->name }}</option>
-                        @endforeach
-                  </select> -->
                 </div>
               </div>
 
               <div class="col-md-4">
                 <div class="form-group">
                   <label>L.G.A</label>
-                  <input type="text" name="lga" class="form-control select2" style="width: 100%;" id="lga" readonly>
+                  <input type="text" name="lga" class="form-control select2" style="width: 100%;" id="lga" value={{$cbo_lga}} readonly>
 
-                  <!-- <select name="lga" class="form-control select2" style="width: 100%;" id="lga">
-                    <option selected="selected">Select LGA</option>
-                    <option>Kakuri</option>
-                  </select> -->
+
                 </div>
               </div>
               <div class="col-md-4">
                 <div class="form-group">
                   <label>Community Based Organization</label>
-                  <input type="text" name="cbo_name" class="form-control select2" style="width: 100%;" readonly>
+                  <input type="text" name="cbo_name" class="form-control select2" style="width: 100%;" value={{$cbo_name}} readonly>
                   <!-- <select name="cbo_name" class="form-control select2" style="width: 100%;">
                     <option selected="selected">Select CBO</option>
                     <option>CBO 1</option>
@@ -86,7 +77,7 @@
               <div class="col-md-6">
                 <div class="form-group">
                   <label>Date of Meeting</label>
-                  <input type="date" name="meeting_date" class="form-control" placeholder="">
+                  <input type="date" name="meeting_date" class="form-control" placeholder="" required>
 
                 </div>
               </div>
@@ -95,7 +86,7 @@
                     <label for="exampleInputFile">Attach Signed Copy</label>
                     <div class="input-group">
                       <div class="custom-file">
-                        <input type="file" class="custom-file-input" name="attachment" id="exampleInputFile">
+                        <input type="file" class="custom-file-input" name="attachment" id="exampleInputFile" required>
                         <label class="custom-file-label" for="exampleInputFile">Choose file</label>
                       </div>
                       <div class="input-group-append">
@@ -109,7 +100,7 @@
             </div>
             <label>Minutes of Meeting</label>
             <textarea name="minutes" class="textarea" placeholder="Place some text here"
-                          style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea>
+                          style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;" required></textarea>
 
 
 
@@ -125,7 +116,7 @@
       </div>
       @endcan
         <!-- /.card -->
-  
+
         <div class="card card-success">
             <div class="card-header">
               <h3 class="card-title">CBO Monthly Reports</h3>
@@ -180,4 +171,11 @@
     <!-- /.content -->
   </div>
 
+@endsection
+@section('js')
+<script>
+    $(document).ready(function() {
+        $('#example1').DataTable();
+    });
+</script>
 @endsection

@@ -117,7 +117,7 @@
             </a>
           </li>
           @endcan
-          
+
           <li class="nav-header brand-link">REPORTS SECTION</li>
           @can('admin_spo')
           <li class="nav-item">
@@ -169,25 +169,25 @@
             </a>
           </li>
           @endcan
-     
+
           <li class="nav-header brand-link">SETTINGS SECTION</li>
           @can('admin_role')
           <li class="nav-item">
             <a href="{{ route('spo.monthly') }}" class="nav-link">
               <i class="nav-icon  far fa-circle text-info"></i>
-              <p>Add SPO</p>
+              <p>SPO</p>
             </a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="{{route('wards.view')}}" class="nav-link">
               <i class="nav-icon  far fa-circle text-info"></i>
-              <p>Add Wards</p>
+              <p>Wards</p>
             </a>
           </li>
           <li class="nav-item">
             <a href="{{ route('cbo.add.view') }}" class="nav-link">
               <i class="nav-icon  far fa-circle text-info"></i>
-              <p>Add CBO/CAT</p>
+              <p>CBO/CAT</p>
             </a>
           </li>
           <li class="nav-item">
@@ -195,15 +195,15 @@
               <i class="nav-icon  far fa-circle text-info"></i>
               <p>Health Facilities</p>
             </a>
-          </li>          
+          </li>
           <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon  far fa-circle text-info"></i>
               <p>Profile</p>
             </a>
           </li>
-          
-          
+
+
           <!-- <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon  far fa-circle text-info"></i>

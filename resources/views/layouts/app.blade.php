@@ -34,6 +34,10 @@
   <!-- summernote -->
   <link rel="stylesheet" href="plugins/summernote/summernote-bs4.css">
   <link rel="stylesheet" href="plugins/sweetalert2/sweetalert2.css">
+
+  {{-- jquery datatables link and script --}}
+
+  <link rel="stylesheet" type="text/css" href="DataTables/datatables.min.css"/>
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 </head>
@@ -95,6 +99,7 @@
 <script src="dist/js/pages/dashboard.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="dist/js/demo.js"></script>
+<script type="text/javascript" src="DataTables/datatables.min.js"></script>
 
 @yield('js');
 </body>

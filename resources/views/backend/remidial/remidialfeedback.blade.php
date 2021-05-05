@@ -50,7 +50,7 @@
                                     <div class="form-group">
                                         <label>State</label>
                                         <input type="text" name="state" class="form-control select2 dynamic" style="width: 100%;"
-                                            id="state" data-dependent="lga" readonly>
+                                            id="state" data-dependent="lga" value="{{$cbo_state}}" readonly>
                                         <!-- <select name="state" class="form-control select2 dynamic" style="width: 100%;"
                                             id="state" data-dependent="lga" required>
                                             <option selected="selected">Select State</option>
@@ -64,8 +64,8 @@
                                 <div class="col-md-4">
                                     <div class="form-group">
                                         <label>LGA</label>
-                                        <input type="text" name="lga" class="form-control select2" style="width: 100%;" id="lga" readonly>
-                                            
+                                        <input type="text" name="lga" class="form-control select2" style="width: 100%;" id="lga" value="{{$cbo_lga}}" readonly>
+
                                         <!-- <select name="lga" class="form-control select2" style="width: 100%;" id="lga">
                                             <option selected="selected" style="display: none">Select Lga</option>
                                             {{-- @foreach ($states as $state)
@@ -77,8 +77,14 @@
                                 <div class="col-md-4">
                                     <div class="form-group">
                                         <label>Ward</label>
-                                        <input type="text" name="ward" class="form-control" placeholder="" readonly>
-
+                                        <select name="ward" class="form-control select2" style="width: 100%;"
+                                            id="state_id" >
+                                            <option style="display:none" value="">Select Ward</option>
+                                            @foreach ($wards as $ward)
+                                                <option id="{{ $ward->id }}" value="{{ $ward->ward_name }}">
+                                                    {{ $ward->ward_name }}</option>
+                                            @endforeach
+                                        </select>
                                     </div>
                                 </div>
 
@@ -206,8 +212,8 @@
                 @can('admin_spo')
                 <!-- SELECT2 EXAMPLE -->
                 <div class="card card-success">
-                    
-                   
+
+
                     <div class="card card-success">
                         <div class="card-header">
                             <h3 class="card-title">SPO/Admin Feedback View</h3>
