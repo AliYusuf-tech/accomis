@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\DB;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
 use App\Models\Role;
+use App\Models\Spo;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\Auth;
 
@@ -67,6 +68,8 @@ class CboController extends Controller
         }
 
         $user = Auth::user();
+        $spouser = Spo::where('email', $user->email)->get();
+
         $role = implode(' ', $user->roles->pluck('name')->toArray());
         $cbo = "";
 
@@ -76,15 +79,25 @@ class CboController extends Controller
         if ($role == "Admin") {
             $cbo = CboMonthly::all();
         }
+        if ($role == "Spo") {
+            $cbo = CboMonthly::where('state', $user->state)->get();
+        }
 
+        $cbo = Cbo::where('email', $user->email)->get();
         $cbo_state = '';
         $cbo_lga = '';
 
-        //loof for parsing fetched authenticated user's data
-        foreach($cbo as $cbo_detail){
+        //loop for parsing fetched authenticated user's data
+        foreach ($cbo as $cbo_detail) {
             $cbo_name = $cbo_detail->cbo_name;
             $cbo_state = $cbo_detail->state;
             $cbo_lga = $cbo_detail->lga;
+        }
+        //loop for parsing fetched authenticated user's data
+        foreach ($spouser as $spo_detail) {
+            $cbo_name = $spo_detail->cbo_name;
+            $cbo_state = $spo_detail->state;
+            $cbo_lga = $spo_detail->lga;
         }
 
         $states = States::where('status', 'active')->get();
@@ -105,36 +118,36 @@ class CboController extends Controller
         if (User::where('email', '=', $request->email)->exists()) {
             Session::flash('error_message', 'A user with this email already exists!');
             return redirect(route('cbo.add.view'));
-        }else {
-        $cbo = User::create([
-            'name' => $request->cbo_name,
-            'email' => $request->email,
-            'password' => Hash::make($request->state),
-            'email_verified_at' => now(),
-            'remember_token' => null,
-            'created_at' => now(),
-            'updated_at' => now(),
-        ]);
+        } else {
+            $cbo = User::create([
+                'name' => $request->cbo_name,
+                'email' => $request->email,
+                'password' => Hash::make($request->state),
+                'email_verified_at' => now(),
+                'remember_token' => null,
+                'created_at' => now(),
+                'updated_at' => now(),
+            ]);
 
-        $submit_cbo = Cbo::create([
-            'cbo_name' => $request->cbo_name,
-            'email' => $request->email,
-            'state' => $request->state,
-            'lga' => $request->lga,
-            'phone' => $request->phone,
-            'contact_person' => $request->contact_person,
-            'date_of_engagement' => $request->engage_date,
-            'date_of_establishment' => $request->establish_date,
-            'physical_contact_address' => $request->contact_address,
-        ]);
+            $submit_cbo = Cbo::create([
+                'cbo_name' => $request->cbo_name,
+                'email' => $request->email,
+                'state' => $request->state,
+                'lga' => $request->lga,
+                'phone' => $request->phone,
+                'contact_person' => $request->contact_person,
+                'date_of_engagement' => $request->engage_date,
+                'date_of_establishment' => $request->establish_date,
+                'physical_contact_address' => $request->contact_address,
+            ]);
 
-        $cbo->roles()->attach($cboRole);
+            $cbo->roles()->attach($cboRole);
 
-        if ($submit_cbo) {
-            Session::flash('flash_message', 'Cbo Added Successfully');
-            return redirect(route('cbo'));
+            if ($submit_cbo) {
+                Session::flash('flash_message', 'Cbo Added Successfully');
+                return redirect(route('cbo'));
+            }
         }
-    }
     }
 
     public function add_cbo_monthly(Request $request)
@@ -150,8 +163,8 @@ class CboController extends Controller
             'attachment' => $attachment,
             'minutes_of_meeting' => $request->minutes,
             'date_of_meeting' => $request->meeting_date,
-            'month'=>$month,
-            'year'=>$year,
+            'month' => $month,
+            'year' => $year,
         ]);
 
         if ($submit_cbo_monthly) {
@@ -171,7 +184,7 @@ class CboController extends Controller
         $output = '';
         foreach ($data as $row) {
             $output .=
-                '<option id="'.$row->name.'" value="'.$row->name .'">' .$row->name . '</option>
+                '<option id="' . $row->name . '" value="' . $row->name . '">' . $row->name . '</option>
             ';
         }
 
@@ -192,9 +205,8 @@ class CboController extends Controller
         foreach ($data as $row) {
 
             $output .=
-            '<option value="'.$row->cbo_name.'">'.$row->cbo_name .'</option>
+                '<option value="' . $row->cbo_name . '">' . $row->cbo_name . '</option>
         ';
-
         }
 
         echo $output;
