@@ -42,13 +42,14 @@
                     </div>
                     <!-- /.card-header -->
                     <div class="card-body">
-                        <form action="{{ route('add_health_facility') }}" action="post">
+
+                        <form action="/healthfacilities" enctype="multipart/form-data" method="POST">
                             @csrf
                             <div class="row">
                                 <div class="col-md-4">
                                     <div class="form-group">
                                         <label>State</label>
-                                        <select class="form-control select2 dynamic" style="width: 100%;" id="state_id">
+                                        <select class="form-control select2 dynamic" name="state" style="width: 100%;" id="state_id">
                                             <option style="display: none" value="">Select State</option>
                                             @foreach ($states as $state)
                                             <option id="{{ $state->id }}" value="{{ $state->name }}">
@@ -61,7 +62,7 @@
                                 <div class="col-md-4">
                                     <div class="form-group">
                                         <label>L.G.A</label>
-                                        <select class="form-control select2 dynamic2" style="width: 100%;" id="lga">
+                                        <select class="form-control select2 dynamic2" name="lga" style="width: 100%;" id="lga">
                                             <option style="display: none" selected="selected">Select LGA</option>
                                         </select>
                                     </div>
@@ -69,7 +70,7 @@
                                 <div class="col-md-4">
                                     <div class="form-group">
                                         <label>Ward</label>
-                                        <select class="form-control select2" style="width: 100%;" id="ward">
+                                        <select class="form-control select2" name="ward" style="width: 100%;" id="ward">
                                             <option style="display: none" selected="selected">Select Ward</option>
                                         </select>
                                     </div>
@@ -77,14 +78,14 @@
                                 <div class="col-md-12">
                                     <div class="form-group">
                                         <label>Facility:</label>
-                                        <input class="form-control" placeholder="">
+                                        <input class="form-control" name="facility" placeholder="">
                                     </div>
                                 </div>
 
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label>CBO</label>
-                                        <select class="form-control select2 dynamic3" style="width: 100%;" id="cbo1">
+                                        <select class="form-control select2 dynamic4" name="cbo_name" style="width: 100%;" id="cbo1">
                                             <option style="display: none" value="">select CBO</option>
                                         </select>
 
@@ -94,14 +95,14 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label>CBO Email</label>
-                                        <input type="email" name="email" class="form-control" placeholder="" readonly>
+                                        <input type="email" name="cbo_email" class="form-control" id="cbo_email" placeholder="" readonly>
 
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label>SPO</label>
-                                        <input type="text" name="email" class="form-control" placeholder="" readonly>
+                                        <input type="text" name="spo_name" class="form-control" id="spo_name" placeholder="" readonly>
 
                                     </div>
                                 </div>
@@ -109,7 +110,7 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label>SPO Email</label>
-                                        <input type="email" name="email" class="form-control" placeholder="" readonly>
+                                        <input type="email" name="spo_email" class="form-control" id="spo_email" placeholder="" readonly>
 
                                     </div>
                                 </div>
@@ -120,6 +121,7 @@
                             <button class="btn btn-primary">Add Health Facility</button>
                             <!-- /.row -->
                         </form>
+
                     </div>
                     <!-- /.card-body -->
                     <div class="card-footer">
@@ -156,15 +158,19 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>001</td>
-                                    <td>CBO 1
-                                    </td>
-                                    <td>PHC</td>
-                                    <td>Kadun State</td>
-                                    <td><a href="#" data-toggle="modal" data-target="#exampleModalCenter"><i
-                                                class="fa fa-eye"></i></a></td>
-                                </tr>
+                                @if (count($health_facilities) > 0)
+
+                                @foreach ($health_facilities as $health_facility)
+                                    <tr>
+                                        <td>{{ $loop->iteration }}</td>
+                                        <td>{{ $health_facility->Facility }}</td>
+                                        <td>{{ $health_facility->LGA }}</td>
+                                        <td>{{ $health_facility->CBO }}</td>
+                                        <td><a href="#" data-toggle="modal" data-target="#exampleModalCenter"><i
+                                                    class="fa fa-eye"></i></a></td>
+                                    </tr>
+                                @endforeach
+                            @endif
                                 <tr>
                                     <td>002</td>
                                     <td>CBO 2

@@ -18,7 +18,7 @@ class SposSeeder extends Seeder
             'spo_name' => 'Spo',
             'email' => 'spo@accomis.com',
             'phone' => '08188286181',
-            'state' => 'kaduna',
+            'state' => 'Gombe',
             'physical_contact_address' => 'Kaduna, Nigeria',
             'created_at' => now(),
             'updated_at' => now(),

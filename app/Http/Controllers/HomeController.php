@@ -39,7 +39,7 @@ class HomeController extends Controller
         if ($role == "Admin") {
 
             $states =  count(States::where('status', 'active')->get());
-            $lgas =  count(HealthFacility::all()->groupBy('LGA'));
+            $lgas =  count(Lgas::where('status', 'active')->get());
             $wards = count(Ward::where('status', 'active')->get());
             $health_facilities = count(HealthFacility::all());
             $spos = count(HealthFacility::all()->groupBy('SPO_Email'));;

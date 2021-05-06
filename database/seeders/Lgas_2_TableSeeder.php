@@ -14,855 +14,1407 @@ class Lgas_2_TableSeeder extends Seeder
      */
     public function run()
     {
-        // Delta
-        DB::table('lgas')->insert([
-            'name' => 'Oshimili',
-            'state_id' => '10'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'Aniocha',
-            'state_id' => '10'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'Aniocha-South',
-            'state_id' => '10'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'Ika South',
-            'state_id' => '10'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'Ika North-East',
-            'state_id' => '10'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'Ndokwa West',
-            'state_id' => '10'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'Ndokwa East',
-            'state_id' => '10'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'Isoko South',
-            'state_id' => '10'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'Isoko North',
-            'state_id' => '10'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'Bomadi',
-            'state_id' => '10'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'Burutu',
-            'state_id' => '10'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'Ughelli South',
-            'state_id' => '10'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'Ughelli North',
-            'state_id' => '10'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'Ethiope West',
-            'state_id' => '10'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'Ethiope East',
-            'state_id' => '10'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'Sapele',
-            'state_id' => '10'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'Okpe',
-            'state_id' => '10'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'Warri North',
-            'state_id' => '10'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'Warri South',
-            'state_id' => '10'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'Uvwie',
-            'state_id' => '10'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'Udu',
-            'state_id' => '10'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'Warri Central',
-            'state_id' => '10'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'Ukwani',
-            'state_id' => '10'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'Oshimili North',
-            'state_id' => '10'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'Patani',
-            'state_id' => '10'
-        ]);
-
-        // Ebonyi
-        DB::table('lgas')->insert([
-            'name' => 'Afikpo South',
-            'state_id' => '11'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'Afikpo North',
-            'state_id' => '11'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'Onicha',
-            'state_id' => '11'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'Ohaozara',
-            'state_id' => '11'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'Abakaliki',
-            'state_id' => '11'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'Ishielu',
-            'state_id' => '11'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'lkwo',
-            'state_id' => '11'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'Ezza',
-            'state_id' => '11'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'Ezza South',
-            'state_id' => '11'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'Ohaukwu',
-            'state_id' => '11'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'Ebonyi',
-            'state_id' => '11'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'Ivo',
-            'state_id' => '11'
-        ]);
-
-        // Edo
-        DB::table('lgas')->insert([
-            'name' => 'Esan North-East',
-            'state_id' => '12'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'Esan Central',
-            'state_id' => '12'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'Esan West',
-            'state_id' => '12'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'Egor',
-            'state_id' => '12'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'Ukpoba',
-            'state_id' => '12'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'Central',
-            'state_id' => '12'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'Etsako Central',
-            'state_id' => '12'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'Igueben',
-            'state_id' => '12'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'Oredo',
-            'state_id' => '12'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'Ovia SouthWest',
-            'state_id' => '12'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'Ovia South-East',
-            'state_id' => '12'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'Orhionwon',
-            'state_id' => '12'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'Uhunmwonde',
-            'state_id' => '12'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'Etsako East',
-            'state_id' => '12'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'Esan South-East',
-            'state_id' => '12'
-        ]);
-
-        // Ekiti
-        DB::table('lgas')->insert([
-            'name' => 'Ado',
-            'state_id' => '13'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'Ekiti-East',
-            'state_id' => '13'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'Ekiti-West',
-            'state_id' => '13'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'Emure/Ise/Orun',
-            'state_id' => '13'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'Ekiti South-West',
-            'state_id' => '13'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'Ikare',
-            'state_id' => '13'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'Irepodun',
-            'state_id' => '13'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'Ijero',
-            'state_id' => '13'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'Ido/Osi',
-            'state_id' => '13'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'Oye',
-            'state_id' => '13'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'Ikole',
-            'state_id' => '13'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'Moba',
-            'state_id' => '13'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'Gbonyin',
-            'state_id' => '13'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'Efon',
-            'state_id' => '13'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'Ise/Orun',
-            'state_id' => '13'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'Ilejemeje',
-            'state_id' => '13'
-        ]);
-
-        // Enugu
-        DB::table('lgas')->insert([
-            'name' => 'Enugu South',
-            'state_id' => '14'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'Igbo-Eze South',
-            'state_id' => '14'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'Enugu North',
-            'state_id' => '14'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'Nkanu',
-            'state_id' => '14'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'Udi Agwu',
-            'state_id' => '14'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'Oji-River',
-            'state_id' => '14'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'Ezeagu',
-            'state_id' => '14'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'IgboEze North',
-            'state_id' => '14'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'Isi-Uzo',
-            'state_id' => '14'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'Nsukka',
-            'state_id' => '14'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'Igbo-Ekiti',
-            'state_id' => '14'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'Uzo-Uwani',
-            'state_id' => '14'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'Enugu East',
-            'state_id' => '14'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'Aninri',
-            'state_id' => '14'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'Nkanu South',
-            'state_id' => '14'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'Udenu',
-            'state_id' => '14'
-        ]);
-
-        // Gombe
-        DB::table('lgas')->insert([
-            'name' => 'Akko',
-            'state_id' => '15'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'Balanga',
-            'state_id' => '15'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'Billiri',
-            'state_id' => '15'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'Dukku',
-            'state_id' => '15'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'Kaltungo',
-            'state_id' => '15'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'Kwami',
-            'state_id' => '15'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'Shomgom',
-            'state_id' => '15'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'Funakaye',
-            'state_id' => '15'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'Gombe',
-            'state_id' => '15'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'Nafada/Bajoga',
-            'state_id' => '15'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'Yamaltu/Delta',
-            'state_id' => '15'
-        ]);
-
-        // Imo
-        DB::table('lgas')->insert([
-            'name' => 'Aboh-Mbaise',
-            'state_id' => '16'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'Ahiazu-Mbaise',
-            'state_id' => '16'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'Ehime-Mbano',
-            'state_id' => '16'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'Ezinihitte',
-            'state_id' => '16'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'Ideato North',
-            'state_id' => '16'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'Ideato South',
-            'state_id' => '16'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'Ihitte/Uboma',
-            'state_id' => '16'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'Ikeduru',
-            'state_id' => '16'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'Isiala Mbano',
-            'state_id' => '16'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'Isu',
-            'state_id' => '16'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'Mbaitoli',
-            'state_id' => '16'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'Ngor-Okpala',
-            'state_id' => '16'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'Njaba',
-            'state_id' => '16'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'Nwangele',
-            'state_id' => '16'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'Nkwerre',
-            'state_id' => '16'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'Obowo',
-            'state_id' => '16'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'Oguta',
-            'state_id' => '16'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'Ohaji/Egbeme',
-            'state_id' => '16'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'Okigwe',
-            'state_id' => '16'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'Orlu',
-            'state_id' => '16'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'Orsu',
-            'state_id' => '16'
-        ]);
-        DB::table('lgas')->insert([
-            'name' => 'Oru East',
-            'state_id' => '16'
-        ]);
-        DB::table('lgas')->insert([
-            'name' => 'Oru West',
-            'state_id' => '16'
-        ]);
-        DB::table('lgas')->insert([
-            'name' => 'Owerri-Municipal',
-            'state_id' => '16'
-        ]);
-        DB::table('lgas')->insert([
-            'name' => 'Owerri North',
-            'state_id' => '16'
-        ]);
-        DB::table('lgas')->insert([
-            'name' => 'Owerri West',
-            'state_id' => '16'
-        ]);
-
-        // Jigawa
-        DB::table('lgas')->insert([
-            'name' =>  'Auyo',
-            'state_id' => '17'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' =>  'Babura',
-            'state_id' => '17'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'Birni kudu',
-            'state_id' => '17'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'Birniwa',
-            'state_id' => '17'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'Buji',
-            'state_id' => '17'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'Dutse',
-            'state_id' => '17'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'Gagarawa',
-            'state_id' => '17'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'Garki',
-            'state_id' => '17'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'Gumel',
-            'state_id' => '17'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'Guri',
-            'state_id' => '17'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'Gwaram',
-            'state_id' => '17'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'Gwiwa',
-            'state_id' => '17'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'Hadejia',
-            'state_id' => '17'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'Jahun',
-            'state_id' => '17'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'Kafin Hausa',
-            'state_id' => '17'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'Kaugama Kazaure',
-            'state_id' => '17'
-        ]);
-
-
-        DB::table('lgas')->insert([
-            'name' => 'kiri kasamma',
-            'state_id' => '17'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'kiyawa',
-            'state_id' => '17'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'Maigatari',
-            'state_id' => '17'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'Malam Madori',
-            'state_id' => '17'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'Miga',
-            'state_id' => '17'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'Ringim',
-            'state_id' => '17'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'Roni',
-            'state_id' => '17'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'Sule-Tankarkar',
-            'state_id' => '17'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'Taura',
-            'state_id' => '17'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'Yankwashi',
-            'state_id' => '17'
-        ]);
-
-        // Kaduna
-        DB::table('lgas')->insert([
-            'name' => 'Chikun',
-            'state_id' => '18'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'Giwa',
-            'state_id' => '18'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'Igabi',
-            'state_id' => '18'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'Ikara',
-            'state_id' => '18'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'jaba',
-            'state_id' => '18'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'Jema"a',
-            'state_id' => '18'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'kachia',
-            'state_id' => '18'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'Kaduna North',
-            'state_id' => '18'
-        ]);
-
-
-        DB::table('lgas')->insert([
-            'name' => 'Kaduna South',
-            'state_id' => '18'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'kagarko',
-            'state_id' => '18'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'kajuru',
-            'state_id' => '18'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'kaura',
-            'state_id' => '18'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' =>  'kauru',
-            'state_id' => '18'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'kubua',
-            'state_id' => '18'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'kudan',
-            'state_id' => '18'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'lere',
-            'state_id' => '18'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'Makarfi',
-            'state_id' => '18'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'sabon-gari',
-            'state_id' => '18'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'sanga',
-            'state_id' => '18'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'soba',
-            'state_id' => '18'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'zango-kataf',
-            'state_id' => '18'
-        ]);
-
-        DB::table('lgas')->insert([
-            'name' => 'zaria',
-            'state_id' => '18'
-        ]);
+        DB::table('lgas')->insert(array (
+            0 =>
+            array (
+                'id' => 201,
+                'state_id' => 10,
+                'name' => 'Oshimili South',
+                'status' => 'active',
+            ),
+            1 =>
+            array (
+                'id' => 202,
+                'state_id' => 10,
+                'name' => 'Patani',
+                'status' => 'active',
+            ),
+            2 =>
+            array (
+                'id' => 203,
+                'state_id' => 10,
+                'name' => 'Sapele, Delta',
+                'status' => 'active',
+            ),
+            3 =>
+            array (
+                'id' => 204,
+                'state_id' => 10,
+                'name' => 'Udu',
+                'status' => 'active',
+            ),
+            4 =>
+            array (
+                'id' => 205,
+                'state_id' => 10,
+                'name' => 'Ughelli North',
+                'status' => 'active',
+            ),
+            5 =>
+            array (
+                'id' => 206,
+                'state_id' => 10,
+                'name' => 'Ughelli South',
+                'status' => 'active',
+            ),
+            6 =>
+            array (
+                'id' => 207,
+                'state_id' => 10,
+                'name' => 'Ukwuani',
+                'status' => 'active',
+            ),
+            7 =>
+            array (
+                'id' => 208,
+                'state_id' => 10,
+                'name' => 'Uvwie',
+                'status' => 'active',
+            ),
+            8 =>
+            array (
+                'id' => 209,
+                'state_id' => 10,
+                'name' => 'Warri North',
+                'status' => 'active',
+            ),
+            9 =>
+            array (
+                'id' => 210,
+                'state_id' => 10,
+                'name' => 'Warri South',
+                'status' => 'active',
+            ),
+            10 =>
+            array (
+                'id' => 211,
+                'state_id' => 10,
+                'name' => 'Warri South West',
+                'status' => 'active',
+            ),
+            11 =>
+            array (
+                'id' => 212,
+                'state_id' => 11,
+                'name' => 'Abakaliki',
+                'status' => 'null',
+            ),
+            12 =>
+            array (
+                'id' => 213,
+                'state_id' => 11,
+                'name' => 'Afikpo North',
+                'status' => 'null',
+            ),
+            13 =>
+            array (
+                'id' => 214,
+                'state_id' => 11,
+                'name' => 'Afikpo South',
+                'status' => 'null',
+            ),
+            14 =>
+            array (
+                'id' => 215,
+                'state_id' => 11,
+                'name' => 'Ebonyi',
+                'status' => 'null',
+            ),
+            15 =>
+            array (
+                'id' => 216,
+                'state_id' => 11,
+                'name' => 'Ezza North',
+                'status' => 'null',
+            ),
+            16 =>
+            array (
+                'id' => 217,
+                'state_id' => 11,
+                'name' => 'Ezza South',
+                'status' => 'null',
+            ),
+            17 =>
+            array (
+                'id' => 218,
+                'state_id' => 11,
+                'name' => 'Ikwo',
+                'status' => 'null',
+            ),
+            18 =>
+            array (
+                'id' => 219,
+                'state_id' => 11,
+                'name' => 'Ishielu',
+                'status' => 'null',
+            ),
+            19 =>
+            array (
+                'id' => 220,
+                'state_id' => 11,
+                'name' => 'Ivo',
+                'status' => 'null',
+            ),
+            20 =>
+            array (
+                'id' => 221,
+                'state_id' => 11,
+                'name' => 'Izzi',
+                'status' => 'null',
+            ),
+            21 =>
+            array (
+                'id' => 222,
+                'state_id' => 11,
+                'name' => 'Ohaozara',
+                'status' => 'null',
+            ),
+            22 =>
+            array (
+                'id' => 223,
+                'state_id' => 11,
+                'name' => 'Ohaukwu',
+                'status' => 'null',
+            ),
+            23 =>
+            array (
+                'id' => 224,
+                'state_id' => 11,
+                'name' => 'Onicha',
+                'status' => 'null',
+            ),
+            24 =>
+            array (
+                'id' => 225,
+                'state_id' => 12,
+                'name' => 'Akoko-Edo',
+                'status' => 'null',
+            ),
+            25 =>
+            array (
+                'id' => 226,
+                'state_id' => 12,
+                'name' => 'Egor',
+                'status' => 'null',
+            ),
+            26 =>
+            array (
+                'id' => 227,
+                'state_id' => 12,
+                'name' => 'Esan Central',
+                'status' => 'null',
+            ),
+            27 =>
+            array (
+                'id' => 228,
+                'state_id' => 12,
+                'name' => 'Esan North-East',
+                'status' => 'null',
+            ),
+            28 =>
+            array (
+                'id' => 229,
+                'state_id' => 12,
+                'name' => 'Esan South-East',
+                'status' => 'null',
+            ),
+            29 =>
+            array (
+                'id' => 230,
+                'state_id' => 12,
+                'name' => 'Esan West',
+                'status' => 'null',
+            ),
+            30 =>
+            array (
+                'id' => 231,
+                'state_id' => 12,
+                'name' => 'Etsako Central',
+                'status' => 'null',
+            ),
+            31 =>
+            array (
+                'id' => 232,
+                'state_id' => 12,
+                'name' => 'Etsako East',
+                'status' => 'null',
+            ),
+            32 =>
+            array (
+                'id' => 233,
+                'state_id' => 12,
+                'name' => 'Etsako West',
+                'status' => 'null',
+            ),
+            33 =>
+            array (
+                'id' => 234,
+                'state_id' => 12,
+                'name' => 'Igueben',
+                'status' => 'null',
+            ),
+            34 =>
+            array (
+                'id' => 235,
+                'state_id' => 12,
+                'name' => 'Ikpoba Okha',
+                'status' => 'null',
+            ),
+            35 =>
+            array (
+                'id' => 236,
+                'state_id' => 12,
+                'name' => 'Orhionmwon',
+                'status' => 'null',
+            ),
+            36 =>
+            array (
+                'id' => 237,
+                'state_id' => 12,
+                'name' => 'Oredo',
+                'status' => 'null',
+            ),
+            37 =>
+            array (
+                'id' => 238,
+                'state_id' => 12,
+                'name' => 'Ovia North-East',
+                'status' => 'null',
+            ),
+            38 =>
+            array (
+                'id' => 239,
+                'state_id' => 12,
+                'name' => 'Ovia South-West',
+                'status' => 'null',
+            ),
+            39 =>
+            array (
+                'id' => 240,
+                'state_id' => 12,
+                'name' => 'Owan East',
+                'status' => 'null',
+            ),
+            40 =>
+            array (
+                'id' => 241,
+                'state_id' => 12,
+                'name' => 'Owan West',
+                'status' => 'null',
+            ),
+            41 =>
+            array (
+                'id' => 242,
+                'state_id' => 12,
+                'name' => 'Uhunmwonde',
+                'status' => 'null',
+            ),
+            42 =>
+            array (
+                'id' => 243,
+                'state_id' => 13,
+                'name' => 'Ado Ekiti',
+                'status' => 'null',
+            ),
+            43 =>
+            array (
+                'id' => 244,
+                'state_id' => 13,
+                'name' => 'Efon',
+                'status' => 'null',
+            ),
+            44 =>
+            array (
+                'id' => 245,
+                'state_id' => 13,
+                'name' => 'Ekiti East',
+                'status' => 'null',
+            ),
+            45 =>
+            array (
+                'id' => 246,
+                'state_id' => 13,
+                'name' => 'Ekiti South-West',
+                'status' => 'null',
+            ),
+            46 =>
+            array (
+                'id' => 247,
+                'state_id' => 13,
+                'name' => 'Ekiti West',
+                'status' => 'null',
+            ),
+            47 =>
+            array (
+                'id' => 248,
+                'state_id' => 13,
+                'name' => 'Emure',
+                'status' => 'null',
+            ),
+            48 =>
+            array (
+                'id' => 249,
+                'state_id' => 13,
+                'name' => 'Gbonyin',
+                'status' => 'null',
+            ),
+            49 =>
+            array (
+                'id' => 250,
+                'state_id' => 13,
+                'name' => 'Ido Osi',
+                'status' => 'null',
+            ),
+            50 =>
+            array (
+                'id' => 251,
+                'state_id' => 13,
+                'name' => 'Ijero',
+                'status' => 'null',
+            ),
+            51 =>
+            array (
+                'id' => 252,
+                'state_id' => 13,
+                'name' => 'Ikere',
+                'status' => 'null',
+            ),
+            52 =>
+            array (
+                'id' => 253,
+                'state_id' => 13,
+                'name' => 'Ikole',
+                'status' => 'null',
+            ),
+            53 =>
+            array (
+                'id' => 254,
+                'state_id' => 13,
+                'name' => 'Ilejemeje',
+                'status' => 'null',
+            ),
+            54 =>
+            array (
+                'id' => 255,
+                'state_id' => 13,
+                'name' => 'Irepodun/Ifelodun',
+                'status' => 'null',
+            ),
+            55 =>
+            array (
+                'id' => 256,
+                'state_id' => 13,
+                'name' => 'Ise/Orun',
+                'status' => 'null',
+            ),
+            56 =>
+            array (
+                'id' => 257,
+                'state_id' => 13,
+                'name' => 'Moba',
+                'status' => 'null',
+            ),
+            57 =>
+            array (
+                'id' => 258,
+                'state_id' => 13,
+                'name' => 'Oye',
+                'status' => 'null',
+            ),
+            58 =>
+            array (
+                'id' => 259,
+                'state_id' => 14,
+                'name' => 'Aninri',
+                'status' => 'null',
+            ),
+            59 =>
+            array (
+                'id' => 260,
+                'state_id' => 14,
+                'name' => 'Awgu',
+                'status' => 'null',
+            ),
+            60 =>
+            array (
+                'id' => 261,
+                'state_id' => 14,
+                'name' => 'Enugu East',
+                'status' => 'null',
+            ),
+            61 =>
+            array (
+                'id' => 262,
+                'state_id' => 14,
+                'name' => 'Enugu North',
+                'status' => 'null',
+            ),
+            62 =>
+            array (
+                'id' => 263,
+                'state_id' => 14,
+                'name' => 'Enugu South',
+                'status' => 'null',
+            ),
+            63 =>
+            array (
+                'id' => 264,
+                'state_id' => 14,
+                'name' => 'Ezeagu',
+                'status' => 'null',
+            ),
+            64 =>
+            array (
+                'id' => 265,
+                'state_id' => 14,
+                'name' => 'Igbo Etiti',
+                'status' => 'null',
+            ),
+            65 =>
+            array (
+                'id' => 266,
+                'state_id' => 14,
+                'name' => 'Igbo Eze North',
+                'status' => 'null',
+            ),
+            66 =>
+            array (
+                'id' => 267,
+                'state_id' => 14,
+                'name' => 'Igbo Eze South',
+                'status' => 'null',
+            ),
+            67 =>
+            array (
+                'id' => 268,
+                'state_id' => 14,
+                'name' => 'Isi Uzo',
+                'status' => 'null',
+            ),
+            68 =>
+            array (
+                'id' => 269,
+                'state_id' => 14,
+                'name' => 'Nkanu East',
+                'status' => 'null',
+            ),
+            69 =>
+            array (
+                'id' => 270,
+                'state_id' => 14,
+                'name' => 'Nkanu West',
+                'status' => 'null',
+            ),
+            70 =>
+            array (
+                'id' => 271,
+                'state_id' => 14,
+                'name' => 'Nsukka',
+                'status' => 'null',
+            ),
+            71 =>
+            array (
+                'id' => 272,
+                'state_id' => 14,
+                'name' => 'Oji River',
+                'status' => 'null',
+            ),
+            72 =>
+            array (
+                'id' => 273,
+                'state_id' => 14,
+                'name' => 'Udenu',
+                'status' => 'null',
+            ),
+            73 =>
+            array (
+                'id' => 274,
+                'state_id' => 14,
+                'name' => 'Udi',
+                'status' => 'null',
+            ),
+            74 =>
+            array (
+                'id' => 275,
+                'state_id' => 14,
+                'name' => 'Uzo Uwani',
+                'status' => 'null',
+            ),
+            75 =>
+            array (
+                'id' => 276,
+                'state_id' => 15,
+                'name' => 'Abaji',
+                'status' => 'null',
+            ),
+            76 =>
+            array (
+                'id' => 277,
+                'state_id' => 15,
+                'name' => 'Bwari',
+                'status' => 'null',
+            ),
+            77 =>
+            array (
+                'id' => 278,
+                'state_id' => 15,
+                'name' => 'Gwagwalada',
+                'status' => 'null',
+            ),
+            78 =>
+            array (
+                'id' => 279,
+                'state_id' => 15,
+                'name' => 'Kuje',
+                'status' => 'null',
+            ),
+            79 =>
+            array (
+                'id' => 280,
+                'state_id' => 15,
+                'name' => 'Kwali',
+                'status' => 'null',
+            ),
+            80 =>
+            array (
+                'id' => 281,
+                'state_id' => 15,
+                'name' => 'Municipal Area Council',
+                'status' => 'null',
+            ),
+            81 =>
+            array (
+                'id' => 282,
+                'state_id' => 16,
+                'name' => 'Akko',
+                'status' => 'active',
+            ),
+            82 =>
+            array (
+                'id' => 283,
+                'state_id' => 16,
+                'name' => 'Balanga',
+                'status' => 'active',
+            ),
+            83 =>
+            array (
+                'id' => 284,
+                'state_id' => 16,
+                'name' => 'Billiri',
+                'status' => 'active',
+            ),
+            84 =>
+            array (
+                'id' => 285,
+                'state_id' => 16,
+                'name' => 'Dukku',
+                'status' => 'active',
+            ),
+            85 =>
+            array (
+                'id' => 286,
+                'state_id' => 16,
+                'name' => 'Funakaye',
+                'status' => 'active',
+            ),
+            86 =>
+            array (
+                'id' => 287,
+                'state_id' => 16,
+                'name' => 'Gombe',
+                'status' => 'active',
+            ),
+            87 =>
+            array (
+                'id' => 288,
+                'state_id' => 16,
+                'name' => 'Kaltungo',
+                'status' => 'active',
+            ),
+            88 =>
+            array (
+                'id' => 289,
+                'state_id' => 16,
+                'name' => 'Kwami',
+                'status' => 'active',
+            ),
+            89 =>
+            array (
+                'id' => 290,
+                'state_id' => 16,
+                'name' => 'Nafada',
+                'status' => 'active',
+            ),
+            90 =>
+            array (
+                'id' => 291,
+                'state_id' => 16,
+                'name' => 'Shongom',
+                'status' => 'active',
+            ),
+            91 =>
+            array (
+                'id' => 292,
+                'state_id' => 16,
+                'name' => 'Yamaltu/Deba',
+                'status' => 'active',
+            ),
+            92 =>
+            array (
+                'id' => 293,
+                'state_id' => 17,
+                'name' => 'Aboh Mbaise',
+                'status' => 'null',
+            ),
+            93 =>
+            array (
+                'id' => 294,
+                'state_id' => 17,
+                'name' => 'Ahiazu Mbaise',
+                'status' => 'null',
+            ),
+            94 =>
+            array (
+                'id' => 295,
+                'state_id' => 17,
+                'name' => 'Ehime Mbano',
+                'status' => 'null',
+            ),
+            95 =>
+            array (
+                'id' => 296,
+                'state_id' => 17,
+                'name' => 'Ezinihitte',
+                'status' => 'null',
+            ),
+            96 =>
+            array (
+                'id' => 297,
+                'state_id' => 17,
+                'name' => 'Ideato North',
+                'status' => 'null',
+            ),
+            97 =>
+            array (
+                'id' => 298,
+                'state_id' => 17,
+                'name' => 'Ideato South',
+                'status' => 'null',
+            ),
+            98 =>
+            array (
+                'id' => 299,
+                'state_id' => 17,
+                'name' => 'Ihitte/Uboma',
+                'status' => 'null',
+            ),
+            99 =>
+            array (
+                'id' => 300,
+                'state_id' => 17,
+                'name' => 'Ikeduru',
+                'status' => 'null',
+            ),
+            100 =>
+            array (
+                'id' => 301,
+                'state_id' => 17,
+                'name' => 'Isiala Mbano',
+                'status' => 'null',
+            ),
+            101 =>
+            array (
+                'id' => 302,
+                'state_id' => 17,
+                'name' => 'Isu',
+                'status' => 'null',
+            ),
+            102 =>
+            array (
+                'id' => 303,
+                'state_id' => 17,
+                'name' => 'Mbaitoli',
+                'status' => 'null',
+            ),
+            103 =>
+            array (
+                'id' => 304,
+                'state_id' => 17,
+                'name' => 'Ngor Okpala',
+                'status' => 'null',
+            ),
+            104 =>
+            array (
+                'id' => 305,
+                'state_id' => 17,
+                'name' => 'Njaba',
+                'status' => 'null',
+            ),
+            105 =>
+            array (
+                'id' => 306,
+                'state_id' => 17,
+                'name' => 'Nkwerre',
+                'status' => 'null',
+            ),
+            106 =>
+            array (
+                'id' => 307,
+                'state_id' => 17,
+                'name' => 'Nwangele',
+                'status' => 'null',
+            ),
+            107 =>
+            array (
+                'id' => 308,
+                'state_id' => 17,
+                'name' => 'Obowo',
+                'status' => 'null',
+            ),
+            108 =>
+            array (
+                'id' => 309,
+                'state_id' => 17,
+                'name' => 'Oguta',
+                'status' => 'null',
+            ),
+            109 =>
+            array (
+                'id' => 310,
+                'state_id' => 17,
+                'name' => 'Ohaji/Egbema',
+                'status' => 'null',
+            ),
+            110 =>
+            array (
+                'id' => 311,
+                'state_id' => 17,
+                'name' => 'Okigwe',
+                'status' => 'null',
+            ),
+            111 =>
+            array (
+                'id' => 312,
+                'state_id' => 17,
+                'name' => 'Orlu',
+                'status' => 'null',
+            ),
+            112 =>
+            array (
+                'id' => 313,
+                'state_id' => 17,
+                'name' => 'Orsu',
+                'status' => 'null',
+            ),
+            113 =>
+            array (
+                'id' => 314,
+                'state_id' => 17,
+                'name' => 'Oru East',
+                'status' => 'null',
+            ),
+            114 =>
+            array (
+                'id' => 315,
+                'state_id' => 17,
+                'name' => 'Oru West',
+                'status' => 'null',
+            ),
+            115 =>
+            array (
+                'id' => 316,
+                'state_id' => 17,
+                'name' => 'Owerri Municipal',
+                'status' => 'null',
+            ),
+            116 =>
+            array (
+                'id' => 317,
+                'state_id' => 17,
+                'name' => 'Owerri North',
+                'status' => 'null',
+            ),
+            117 =>
+            array (
+                'id' => 318,
+                'state_id' => 17,
+                'name' => 'Owerri West',
+                'status' => 'null',
+            ),
+            118 =>
+            array (
+                'id' => 319,
+                'state_id' => 17,
+                'name' => 'Unuimo',
+                'status' => 'null',
+            ),
+            119 =>
+            array (
+                'id' => 320,
+                'state_id' => 18,
+                'name' => 'Auyo',
+                'status' => 'active',
+            ),
+            120 =>
+            array (
+                'id' => 321,
+                'state_id' => 18,
+                'name' => 'Babura',
+                'status' => 'active',
+            ),
+            121 =>
+            array (
+                'id' => 322,
+                'state_id' => 18,
+                'name' => 'Biriniwa',
+                'status' => 'active',
+            ),
+            122 =>
+            array (
+                'id' => 323,
+                'state_id' => 18,
+                'name' => 'Birnin Kudu',
+                'status' => 'active',
+            ),
+            123 =>
+            array (
+                'id' => 324,
+                'state_id' => 18,
+                'name' => 'Buji',
+                'status' => 'active',
+            ),
+            124 =>
+            array (
+                'id' => 325,
+                'state_id' => 18,
+                'name' => 'Dutse',
+                'status' => 'active',
+            ),
+            125 =>
+            array (
+                'id' => 326,
+                'state_id' => 18,
+                'name' => 'Gagarawa',
+                'status' => 'active',
+            ),
+            126 =>
+            array (
+                'id' => 327,
+                'state_id' => 18,
+                'name' => 'Garki',
+                'status' => 'active',
+            ),
+            127 =>
+            array (
+                'id' => 328,
+                'state_id' => 18,
+                'name' => 'Gumel',
+                'status' => 'active',
+            ),
+            128 =>
+            array (
+                'id' => 329,
+                'state_id' => 18,
+                'name' => 'Guri',
+                'status' => 'active',
+            ),
+            129 =>
+            array (
+                'id' => 330,
+                'state_id' => 18,
+                'name' => 'Gwaram',
+                'status' => 'active',
+            ),
+            130 =>
+            array (
+                'id' => 331,
+                'state_id' => 18,
+                'name' => 'Gwiwa',
+                'status' => 'active',
+            ),
+            131 =>
+            array (
+                'id' => 332,
+                'state_id' => 18,
+                'name' => 'Hadejia',
+                'status' => 'active',
+            ),
+            132 =>
+            array (
+                'id' => 333,
+                'state_id' => 18,
+                'name' => 'Jahun',
+                'status' => 'active',
+            ),
+            133 =>
+            array (
+                'id' => 334,
+                'state_id' => 18,
+                'name' => 'Kafin Hausa',
+                'status' => 'active',
+            ),
+            134 =>
+            array (
+                'id' => 335,
+                'state_id' => 18,
+                'name' => 'Kazaure',
+                'status' => 'active',
+            ),
+            135 =>
+            array (
+                'id' => 336,
+                'state_id' => 18,
+                'name' => 'Kiri Kasama',
+                'status' => 'active',
+            ),
+            136 =>
+            array (
+                'id' => 337,
+                'state_id' => 18,
+                'name' => 'Kiyawa',
+                'status' => 'active',
+            ),
+            137 =>
+            array (
+                'id' => 338,
+                'state_id' => 18,
+                'name' => 'Kaugama',
+                'status' => 'active',
+            ),
+            138 =>
+            array (
+                'id' => 339,
+                'state_id' => 18,
+                'name' => 'Maigatari',
+                'status' => 'active',
+            ),
+            139 =>
+            array (
+                'id' => 340,
+                'state_id' => 18,
+                'name' => 'Malam Madori',
+                'status' => 'active',
+            ),
+            140 =>
+            array (
+                'id' => 341,
+                'state_id' => 18,
+                'name' => 'Miga',
+                'status' => 'active',
+            ),
+            141 =>
+            array (
+                'id' => 342,
+                'state_id' => 18,
+                'name' => 'Ringim',
+                'status' => 'active',
+            ),
+            142 =>
+            array (
+                'id' => 343,
+                'state_id' => 18,
+                'name' => 'Roni',
+                'status' => 'active',
+            ),
+            143 =>
+            array (
+                'id' => 344,
+                'state_id' => 18,
+                'name' => 'Sule Tankarkar',
+                'status' => 'active',
+            ),
+            144 =>
+            array (
+                'id' => 345,
+                'state_id' => 18,
+                'name' => 'Taura',
+                'status' => 'active',
+            ),
+            145 =>
+            array (
+                'id' => 346,
+                'state_id' => 18,
+                'name' => 'Yankwashi',
+                'status' => 'active',
+            ),
+            146 =>
+            array (
+                'id' => 347,
+                'state_id' => 19,
+                'name' => 'Birnin Gwari',
+                'status' => 'active',
+            ),
+            147 =>
+            array (
+                'id' => 348,
+                'state_id' => 19,
+                'name' => 'Chikun',
+                'status' => 'active',
+            ),
+            148 =>
+            array (
+                'id' => 349,
+                'state_id' => 19,
+                'name' => 'Giwa',
+                'status' => 'active',
+            ),
+            149 =>
+            array (
+                'id' => 350,
+                'state_id' => 19,
+                'name' => 'Igabi',
+                'status' => 'active',
+            ),
+            150 =>
+            array (
+                'id' => 351,
+                'state_id' => 19,
+                'name' => 'Ikara',
+                'status' => 'active',
+            ),
+            151 =>
+            array (
+                'id' => 352,
+                'state_id' => 19,
+                'name' => 'Jaba',
+                'status' => 'active',
+            ),
+            152 =>
+            array (
+                'id' => 353,
+                'state_id' => 19,
+                'name' => 'Jema\'a',
+                'status' => 'active',
+            ),
+            153 =>
+            array (
+                'id' => 354,
+                'state_id' => 19,
+                'name' => 'Kachia',
+                'status' => 'active',
+            ),
+            154 =>
+            array (
+                'id' => 355,
+                'state_id' => 19,
+                'name' => 'Kaduna North',
+                'status' => 'active',
+            ),
+            155 =>
+            array (
+                'id' => 356,
+                'state_id' => 19,
+                'name' => 'Kaduna South',
+                'status' => 'active',
+            ),
+            156 =>
+            array (
+                'id' => 357,
+                'state_id' => 19,
+                'name' => 'Kagarko',
+                'status' => 'active',
+            ),
+            157 =>
+            array (
+                'id' => 358,
+                'state_id' => 19,
+                'name' => 'Kajuru',
+                'status' => 'active',
+            ),
+            158 =>
+            array (
+                'id' => 359,
+                'state_id' => 19,
+                'name' => 'Kaura',
+                'status' => 'active',
+            ),
+            159 =>
+            array (
+                'id' => 360,
+                'state_id' => 19,
+                'name' => 'Kauru',
+                'status' => 'active',
+            ),
+            160 =>
+            array (
+                'id' => 361,
+                'state_id' => 19,
+                'name' => 'Kubau',
+                'status' => 'active',
+            ),
+            161 =>
+            array (
+                'id' => 362,
+                'state_id' => 19,
+                'name' => 'Kudan',
+                'status' => 'active',
+            ),
+            162 =>
+            array (
+                'id' => 363,
+                'state_id' => 19,
+                'name' => 'Lere',
+                'status' => 'active',
+            ),
+            163 =>
+            array (
+                'id' => 364,
+                'state_id' => 19,
+                'name' => 'Makarfi',
+                'status' => 'active',
+            ),
+            164 =>
+            array (
+                'id' => 365,
+                'state_id' => 19,
+                'name' => 'Sabon Gari',
+                'status' => 'active',
+            ),
+            165 =>
+            array (
+                'id' => 366,
+                'state_id' => 19,
+                'name' => 'Sanga',
+                'status' => 'active',
+            ),
+            166 =>
+            array (
+                'id' => 367,
+                'state_id' => 19,
+                'name' => 'Soba',
+                'status' => 'active',
+            ),
+            167 =>
+            array (
+                'id' => 368,
+                'state_id' => 19,
+                'name' => 'Zangon Kataf',
+                'status' => 'active',
+            ),
+            168 =>
+            array (
+                'id' => 369,
+                'state_id' => 19,
+                'name' => 'Zaria',
+                'status' => 'active',
+            ),
+            169 =>
+            array (
+                'id' => 370,
+                'state_id' => 20,
+                'name' => 'Ajingi',
+                'status' => 'active',
+            ),
+            170 =>
+            array (
+                'id' => 371,
+                'state_id' => 20,
+                'name' => 'Albasu',
+                'status' => 'active',
+            ),
+            171 =>
+            array (
+                'id' => 372,
+                'state_id' => 20,
+                'name' => 'Bagwai',
+                'status' => 'active',
+            ),
+            172 =>
+            array (
+                'id' => 373,
+                'state_id' => 20,
+                'name' => 'Bebeji',
+                'status' => 'active',
+            ),
+            173 =>
+            array (
+                'id' => 374,
+                'state_id' => 20,
+                'name' => 'Bichi',
+                'status' => 'active',
+            ),
+            174 =>
+            array (
+                'id' => 375,
+                'state_id' => 20,
+                'name' => 'Bunkure',
+                'status' => 'active',
+            ),
+            175 =>
+            array (
+                'id' => 376,
+                'state_id' => 20,
+                'name' => 'Dala',
+                'status' => 'active',
+            ),
+            176 =>
+            array (
+                'id' => 377,
+                'state_id' => 20,
+                'name' => 'Dambatta',
+                'status' => 'active',
+            ),
+            177 =>
+            array (
+                'id' => 378,
+                'state_id' => 20,
+                'name' => 'Dawakin Kudu',
+                'status' => 'active',
+            ),
+            178 =>
+            array (
+                'id' => 379,
+                'state_id' => 20,
+                'name' => 'Dawakin Tofa',
+                'status' => 'active',
+            ),
+            179 =>
+            array (
+                'id' => 380,
+                'state_id' => 20,
+                'name' => 'Doguwa',
+                'status' => 'active',
+            ),
+            180 =>
+            array (
+                'id' => 381,
+                'state_id' => 20,
+                'name' => 'Fagge',
+                'status' => 'active',
+            ),
+            181 =>
+            array (
+                'id' => 382,
+                'state_id' => 20,
+                'name' => 'Gabasawa',
+                'status' => 'active',
+            ),
+            182 =>
+            array (
+                'id' => 383,
+                'state_id' => 20,
+                'name' => 'Garko',
+                'status' => 'active',
+            ),
+            183 =>
+            array (
+                'id' => 384,
+                'state_id' => 20,
+                'name' => 'Garun Mallam',
+                'status' => 'active',
+            ),
+            184 =>
+            array (
+                'id' => 385,
+                'state_id' => 20,
+                'name' => 'Gaya',
+                'status' => 'active',
+            ),
+            185 =>
+            array (
+                'id' => 386,
+                'state_id' => 20,
+                'name' => 'Gezawa',
+                'status' => 'active',
+            ),
+            186 =>
+            array (
+                'id' => 387,
+                'state_id' => 20,
+                'name' => 'Gwale',
+                'status' => 'active',
+            ),
+            187 =>
+            array (
+                'id' => 388,
+                'state_id' => 20,
+                'name' => 'Gwarzo',
+                'status' => 'active',
+            ),
+            188 =>
+            array (
+                'id' => 389,
+                'state_id' => 20,
+                'name' => 'Kabo',
+                'status' => 'active',
+            ),
+            189 =>
+            array (
+                'id' => 390,
+                'state_id' => 20,
+                'name' => 'Kano Municipal',
+                'status' => 'active',
+            ),
+            190 =>
+            array (
+                'id' => 391,
+                'state_id' => 20,
+                'name' => 'Karaye',
+                'status' => 'active',
+            ),
+            191 =>
+            array (
+                'id' => 392,
+                'state_id' => 20,
+                'name' => 'Kibiya',
+                'status' => 'active',
+            ),
+            192 =>
+            array (
+                'id' => 393,
+                'state_id' => 20,
+                'name' => 'Kiru',
+                'status' => 'active',
+            ),
+            193 =>
+            array (
+                'id' => 394,
+                'state_id' => 20,
+                'name' => 'Kumbotso',
+                'status' => 'active',
+            ),
+            194 =>
+            array (
+                'id' => 395,
+                'state_id' => 20,
+                'name' => 'Kunchi',
+                'status' => 'active',
+            ),
+            195 =>
+            array (
+                'id' => 396,
+                'state_id' => 20,
+                'name' => 'Kura',
+                'status' => 'active',
+            ),
+            196 =>
+            array (
+                'id' => 397,
+                'state_id' => 20,
+                'name' => 'Madobi',
+                'status' => 'active',
+            ),
+            197 =>
+            array (
+                'id' => 398,
+                'state_id' => 20,
+                'name' => 'Makoda',
+                'status' => 'active',
+            ),
+            198 =>
+            array (
+                'id' => 399,
+                'state_id' => 20,
+                'name' => 'Minjibir',
+                'status' => 'active',
+            ),
+            199 =>
+            array (
+                'id' => 400,
+                'state_id' => 20,
+                'name' => 'Nasarawa',
+                'status' => 'active',
+            ),
+        ));
     }
 }

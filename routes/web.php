@@ -50,9 +50,10 @@ Route::post('/remidialfeedback', [App\Http\Controllers\RemidialController::class
 Route::get('/healthfacilities', [App\Http\Controllers\HealthFacilitiesController::class, 'health_facility'])->name('health_facility');
 
 //Health-facilities post routes
-Route::post('/healthfacilities/', [App\Http\Controllers\HealthFacilitiesController::class, 'add_health_facility'])->name('add_health_facility');
+Route::post('/healthfacilities/', [App\Http\Controllers\HealthFacilitiesController::class, 'health_facility_add'])->name('add_health_facility');
 Route::post('/healthfacilities/fetch', [App\Http\Controllers\HealthFacilitiesController::class, 'fetch'])->name('healthfacilities.lga.fetch');
 Route::post('/healthfacilities/cbo/fetch', [App\Http\Controllers\HealthFacilitiesController::class, 'cbo_fetch'])->name('healthfacilities.cbo.fetch');
+Route::post('/healthfacilities/fetch_info', [App\Http\Controllers\HealthFacilitiesController::class, 'cbo_info'])->name('cbo_info');
 
 //Remidial get routes
 Route::get('/clientexit', [App\Http\Controllers\ClientExitController::class, 'client_exit'])->name('client.exit');

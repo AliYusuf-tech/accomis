@@ -17,6 +17,7 @@ class CreateLgasTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('state_id');
+            $table->string('status');
             $table->timestamps();
         });
     }
