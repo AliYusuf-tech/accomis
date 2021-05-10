@@ -42,7 +42,7 @@
                         </div>
                     </div>
                     <!-- /.card-header -->
-                    <form role="form" action="{{ route('cbo.add') }}" enctype="multipart/form-data" method="POST">
+                    <form role="form" action="{{ route('wards.add') }}" enctype="multipart/form-data" method="POST">
                         @csrf
                         <div class="card-body">
                             <div class="row">
@@ -64,7 +64,7 @@
                                 <div class="col-md-4">
                                     <div class="form-group">
                                         <label>L.G.A</label>
-                                        <select name="lga" class="form-control select2 dynamic" style="width: 100%;"
+                                        <select name="lga" class="form-control select2" style="width: 100%;"
                                             id="lga" required>
                                             <option style="display:none" value="">Select Lga</option>
                                         </select>
@@ -73,7 +73,7 @@
                                 <div class="col-md-4">
                                     <div class="form-group">
                                         <label>Ward</label>
-                                        <input type="text" name="cbo_name" class="form-control" placeholder="Ward Name">
+                                        <input type="text" name="ward_name" class="form-control" placeholder="Ward Name">
                                     </div>
                                 </div>
 
@@ -155,7 +155,7 @@
     </div>
 @endsection
 @section('js')
-    <script src="dist/js/selectField.js"></script>
+    <script src="dist/js/wards.js"></script>
 
     <script>
         $(document).ready(function() {
