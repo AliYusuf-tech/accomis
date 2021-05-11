@@ -30,8 +30,16 @@
         <section class="content">
             <div class="container-fluid">
 
+                <form method="POST" action="/cbo/excel" id="form1">
+                    @csrf
+                    <input type="button" class="input btn btn-primary" onclick="$('#form1').submit();" value="parse excel">
+                </form>
+                <br>
+                <br>
+
                 <!-- SELECT2 EXAMPLE -->
                 <div class="card card-success">
+
                     <div class="card-header">
                         <h3 class="card-title">CBOs / CATs</h3>
 

@@ -1,23 +1,58 @@
 <?php
 
 namespace App\Imports;
-use Maatwebsite\Excel\Concerns\ToModel;
-use App\Models\User;
-use Illuminate\Support\Facades\Hash;
 
-class UsersImport implements ToModel
-{
-    /**
-    * @param array $row
-    *
-    * @return \Illuminate\Database\Eloquent\Model|null
-    */
-    public function model(array $row)
+use App\Models\Cbo;
+use App\Models\Role;
+use App\Models\User;
+use Illuminate\Support\Collection;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Session;
+use Maatwebsite\Excel\Concerns\ToCollection;
+use Maatwebsite\Excel\Concerns\WithHeadingRow;
+
+
+class UsersImport implements ToCollection{
+
+    public function collection(Collection $rows)
     {
-        return new User([
-            'name'     => $row[0],
-            'email'    => $row[1],
-            'password' => Hash::make($row[2]),
-         ]);
+        $cboRole = Role::where('name', 'Cbo')->first();
+        foreach ($rows as $key => $value) {
+
+            if($key > 0){
+
+                $user = User::create([
+                    'name' => $value[1],
+                    'email' => $value[2],
+                    'email_verified_at' => now(),
+                    'password' => Hash::make($value[4]),
+                ]);
+
+                $user->roles()->attach($cboRole);
+
+                $cbo = Cbo::create([
+                    'cbo_name' => $value[1],
+                    'email' => $value[2],
+                    'phone' =>  $value[3],
+                    'state' => $value[4],
+                    'lga' => $value[5],
+                    'contact_person' => $value[6],
+                    'date_of_engagement' => $value[7],
+                    'date_of_establishment' => $value[8],
+                    'physical_contact_address' => $value[9],
+                ]);
+
+            }
+        }
+
+        if($user && $cbo){
+            Session::flash('flash_message', 'Cbo parsed from excel file Added Successfully');
+            return redirect('/cbo');
+        }else{
+            Session::flash('error_message', 'Cbo parse from excel failed');
+            return redirect('/cbo');
+        }
     }
 }
+
+
