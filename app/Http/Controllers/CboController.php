@@ -184,7 +184,7 @@ class CboController extends Controller
         $output = '';
         foreach ($data as $row) {
             $output .=
-                '<option id="' . $row->name . '" value="' . $row->name . '">' . $row->name . '</option>
+                '<option class="'.$row->id.'" id="' . $row->name . '" value="' . $row->name . '">' . $row->name . '</option>
             ';
         }
 

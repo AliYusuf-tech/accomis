@@ -61,5 +61,12 @@ Route::get('/clientexit', [App\Http\Controllers\ClientExitController::class, 'cl
 //Remidial post routes
 Route::post('/clientexit', [App\Http\Controllers\ClientExitController::class, 'client_exit_add'])->name('client_exit.add');
 
-//Remidial get routes
+//Wards get routes
 Route::get('/wards', [App\Http\Controllers\WardsController::class, 'index'])->name('wards.view');
+
+//Wards post routes
+Route::post('/wards', [App\Http\Controllers\WardsController::class, 'add_ward'])->name('wards.add');
+
+Route::post('/cbo/excel', [App\Http\Controllers\CatController::class, 'uploadCbo'])->name('excel.cbo');
+Route::post('/spo/excel', [App\Http\Controllers\CatController::class, 'uploadSpo'])->name('excel.spo');
+Route::post('/healthfacility/excel', [App\Http\Controllers\CatController::class, 'uploadHealth'])->name('excel.health');

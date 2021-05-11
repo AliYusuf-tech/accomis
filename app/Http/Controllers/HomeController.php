@@ -13,7 +13,7 @@ use App\Models\Cbo;
 use App\Models\Ward;
 use App\Models\HealthFacility;
 use App\Models\Remedial;
-// use Illuminate\Support\Facades\Hash;
+use App\Models\Spo;
 
 class HomeController extends Controller
 {
@@ -39,13 +39,11 @@ class HomeController extends Controller
 
         if ($role == "Admin") {
 
-            // $password = HASH::make('Adamawa');
-            // dd($password);
             $states =  count(States::where('status', 'active')->get());
             $lgas =  count(Lgas::where('status', 'active')->get());
             $wards = count(Ward::where('status', 'active')->get());
             $health_facilities = count(HealthFacility::all());
-            $spos = count(HealthFacility::all()->groupBy('SPO_Email'));;
+            $spos = count(Spo::all());
             $cbos = count(Cbo::all());
             $cats = count(Cat::all());
             $client_exits = count(ClientExitQuestionare::all());

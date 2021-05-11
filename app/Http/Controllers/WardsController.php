@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\States;
 use App\Models\Ward;
 use Illuminate\Support\Facades\Gate;
+use Illuminate\Support\Facades\Session;
 
 class WardsController extends Controller
 {
@@ -19,8 +20,8 @@ class WardsController extends Controller
         if (Gate::denies('admin_role')) {
             abort('404');
         }
-        
-        $wards = Ward::where('status', 'active')->get();
+
+        $wards = Ward::where('status', 'active')->get()->sortDesc();
         $states = States::where('status', 'active')->get();
         return view('backend.wards.wards')->with([
             'states' => $states,
@@ -30,6 +31,16 @@ class WardsController extends Controller
 
     public function add_ward(Request $request)
     {
-        # code...
+        $ward = Ward::create([
+            'ward_name'=> $request->ward_name,
+            'lga'=> $request->lga,
+            'state'=> $request->state,
+            'status'=> 'active',
+
+        ]);
+        if ($ward) {
+            Session::flash('flash_message', 'Ward Added Successfully');
+            return redirect(route('wards.view'));
+        }
     }
 }
