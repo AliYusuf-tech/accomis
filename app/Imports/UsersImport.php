@@ -45,13 +45,7 @@ class UsersImport implements ToCollection{
             }
         }
 
-        if($user && $cbo){
-            Session::flash('flash_message', 'Cbo parsed from excel file Added Successfully');
-            return redirect('/cbo');
-        }else{
-            Session::flash('error_message', 'Cbo parse from excel failed');
-            return redirect('/cbo');
-        }
+
     }
 }
 

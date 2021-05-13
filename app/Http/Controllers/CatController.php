@@ -6,8 +6,7 @@ use App\Models\Cat;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Gate;
-use App\Imports\UsersImport;
-use Maatwebsite\Excel\Facades\Excel;
+
 
 class CatController extends Controller
 {
@@ -30,8 +29,5 @@ class CatController extends Controller
         }
     }
 
-    public function uploadCbo()
-    {
-        Excel::import(new UsersImport, 'cbosexcel.xlsx');
-    }
+
 }

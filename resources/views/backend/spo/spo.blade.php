@@ -28,6 +28,13 @@
                     @include('partials.flash')
                 </div>
                 {{-- Flash message end --}}
+                <form method="POST" action="/spo/excel" id="form1">
+                    @csrf
+                    <input type="button" class="input btn btn-primary" onclick="$('#form1').submit();" value="parse excel">
+                </form>
+                <br>
+                <br>
+
                 <form action="{{ route('spo.add') }}" method="post">
                     @csrf
                     <!-- SELECT2 EXAMPLE -->

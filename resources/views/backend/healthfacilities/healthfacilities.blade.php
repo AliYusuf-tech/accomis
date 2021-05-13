@@ -29,6 +29,12 @@
                 </div>
                 {{-- Flash message end --}}
                 <!-- SELECT2 EXAMPLE -->
+                <form method="POST" action="/healthfacility/excel" id="form1">
+                    @csrf
+                    <input type="button" class="input btn btn-primary" onclick="$('#form1').submit();" value="parse excel">
+                </form>
+                <br>
+                <br>
                 <div class="card card-info">
                     <div class="card-header">
                         <h3 class="card-title">Add Health Facility</h3>
