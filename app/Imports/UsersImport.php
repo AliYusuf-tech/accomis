@@ -20,7 +20,7 @@ class UsersImport implements ToCollection{
         foreach ($rows as $key => $value) {
 
             if($key > 0){
-
+                // dd($value[1]);
                 $user = User::create([
                     'name' => $value[1],
                     'email' => $value[2],
