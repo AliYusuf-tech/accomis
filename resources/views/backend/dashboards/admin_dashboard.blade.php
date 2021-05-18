@@ -158,7 +158,7 @@
             <!-- small box -->
             <div class="small-box bg-success">
               <div class="inner">
-                <h3>{{$spos ?? '0'}}</h3>
+                <h3>0</h3>
 
                 <p>Issues Identified</p>
               </div>
@@ -173,7 +173,7 @@
             <!-- small box -->
             <div class="small-box bg-success">
               <div class="inner">
-                <h3>{{$cbos ?? '0'}}<sup style="font-size: 20px"></sup></h3>
+                <h3>0<sup style="font-size: 20px"></sup></h3>
 
                 <p>Issues Resolved</p>
               </div>
@@ -334,7 +334,7 @@
             <!-- small box -->
             <div class="small-box bg-warning">
               <div class="inner">
-                <h3>{{$smc_recepients ?? '0'}}</h3>
+                <h3>0</h3>
 
                 <p>SMC Recipients</p>
               </div>
@@ -373,7 +373,7 @@
             <!-- PIE CHART -->
             <div class="card card-danger">
               <div class="card-header">
-                <h3 class="card-title">Malaria Services Vs ACT Recipients</h3>
+                <h3 class="card-title">Issues Identified Vs Resolved Issues</h3>
 
                 <div class="card-tools">
                   <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i>
@@ -495,10 +495,10 @@
       var areaChartCanvas = $('#areaChart').get(0).getContext('2d')
 
       var areaChartData = {
-        labels  : ['0','Jan-March', 'April-June', 'July-Sept', 'Oct-Dec'],
+        labels  : ['Ogun', 'Osun', 'Gombe', 'Kano'],
         datasets: [
           {
-            label               : 'Digital Goods',
+            label               : 'Satisfied',
             backgroundColor     : 'rgba(60,141,188,0.9)',
             borderColor         : 'rgba(60,141,188,0.8)',
             pointRadius          : false,
@@ -506,10 +506,10 @@
             pointStrokeColor    : 'rgba(60,141,188,1)',
             pointHighlightFill  : '#fff',
             pointHighlightStroke: 'rgba(60,141,188,1)',
-            data                : [28, 48, 40, 19]
+            data                : [{{$tested_malaria ?? '0'}}]
           },
           {
-            label               : 'Electronics',
+            label               : 'Dissatisfied',
             backgroundColor     : 'rgba(210, 214, 222, 1)',
             borderColor         : 'rgba(210, 214, 222, 1)',
             pointRadius         : false,
@@ -517,7 +517,7 @@
             pointStrokeColor    : '#c1c7d1',
             pointHighlightFill  : '#fff',
             pointHighlightStroke: 'rgba(220,220,220,1)',
-            data                : [65, 59, 80, 81]
+            data                : [{{$positive_malaria ?? '0'}}]
           },
         ]
       }
@@ -572,14 +572,15 @@
       var donutChartCanvas = $('#donutChart').get(0).getContext('2d')
       var donutData        = {
         labels: [
-            'Malaria Service',
+            'Malaria Services',
             'ACT Recipients',
+            'Positive Cases',
            
         ],
         datasets: [
           {
-            data: [700,500],
-            backgroundColor : ['#f56954', '#00a65a'],
+            data: [{{$tested_malaria ?? '0'}},{{$act_recipients ?? '0'}},{{$positive_malaria ?? '0'}}],
+            backgroundColor : ['#f56954', '#00a65a', '#00004a'],
           }
         ]
       }
@@ -600,7 +601,20 @@
       //-------------
       // Get context with jQuery - using jQuery's .get() method.
       var pieChartCanvas = $('#pieChart').get(0).getContext('2d')
-      var pieData        = donutData;
+      var pieData        = {
+        labels: [
+            'Issues Identified',
+            'Issues Resolved',
+            
+           
+        ],
+        datasets: [
+          {
+            data: [{{$tested_malaria ?? '0'}},{{$act_recipients ?? '0'}}],
+            backgroundColor : ['#f56954', '#00a65a'],
+          }
+        ]
+      }
       var pieOptions     = {
         maintainAspectRatio : false,
         responsive : true,
@@ -617,7 +631,33 @@
       //- BAR CHART -
       //-------------
       var barChartCanvas = $('#barChart').get(0).getContext('2d')
-      var barChartData = jQuery.extend(true, {}, areaChartData)
+      var barChartData = {
+        labels  : ['Ogun', 'Osun', 'Gombe', 'Kano'],
+        datasets: [
+          {
+            label               : 'Satisfied',
+            backgroundColor     : 'rgba(60,141,188,0.9)',
+            borderColor         : 'rgba(60,141,188,0.8)',
+            pointRadius          : false,
+            pointColor          : '#3b8bba',
+            pointStrokeColor    : 'rgba(60,141,188,1)',
+            pointHighlightFill  : '#fff',
+            pointHighlightStroke: 'rgba(60,141,188,1)',
+            data                : [{{$tested_malaria ?? '0'}}]
+          },
+          {
+            label               : 'Dissatisfied',
+            backgroundColor     : 'rgba(210, 214, 222, 1)',
+            borderColor         : 'rgba(210, 214, 222, 1)',
+            pointRadius         : false,
+            pointColor          : 'rgba(210, 214, 222, 1)',
+            pointStrokeColor    : '#c1c7d1',
+            pointHighlightFill  : '#fff',
+            pointHighlightStroke: 'rgba(220,220,220,1)',
+            data                : [{{$positive_malaria ?? '0'}}]
+          },
+        ]
+      }
       var temp0 = areaChartData.datasets[0]
       var temp1 = areaChartData.datasets[1]
       barChartData.datasets[0] = temp1
@@ -639,7 +679,33 @@
       //- STACKED BAR CHART -
       //---------------------
       var stackedBarChartCanvas = $('#stackedBarChart').get(0).getContext('2d')
-      var stackedBarChartData = jQuery.extend(true, {}, barChartData)
+      var stackedBarChartData = {
+        labels  : ['Ogun', 'Osun', 'Gombe', 'Kano'],
+        datasets: [
+          {
+            label               : 'Postive Cases',
+            backgroundColor     : 'rgba(60,141,188,0.9)',
+            borderColor         : 'rgba(60,141,188,0.8)',
+            pointRadius          : false,
+            pointColor          : '#3b8bba',
+            pointStrokeColor    : 'rgba(60,141,188,1)',
+            pointHighlightFill  : '#fff',
+            pointHighlightStroke: 'rgba(60,141,188,1)',
+            data                : [{{$tested_malaria ?? '0'}}]
+          },
+          {
+            label               : 'Tested Cases',
+            backgroundColor     : '#f56954',
+            borderColor         : 'rgba(210, 214, 222, 1)',
+            pointRadius         : false,
+            pointColor          : 'rgba(210, 214, 222, 1)',
+            pointStrokeColor    : '#c1c7d1',
+            pointHighlightFill  : '#fff',
+            pointHighlightStroke: 'rgba(220,220,220,1)',
+            data                : [{{$positive_malaria ?? '0'}}]
+          },
+        ]
+      }
 
       var stackedBarChartOptions = {
         responsive              : true,
