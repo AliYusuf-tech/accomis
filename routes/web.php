@@ -15,9 +15,13 @@ use Illuminate\Support\Facades\Auth;
 
 Auth::routes();
 
+
 //Dashboard routes
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+//NFM 2 Dashboard get routes
+Route::get('/prevdash', [App\Http\Controllers\PrevdashController::class, 'prevdash'])->name('prevdash');
 
 
 //Cbo get routes

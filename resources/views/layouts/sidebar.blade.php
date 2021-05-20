@@ -64,6 +64,18 @@
             </a>
           </li>
 
+          @can('admin_role')
+
+          <li class="nav-item">
+            <a href="{{ route('prevdash') }}" class="nav-link active">
+              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <p>
+                NFM 2 Dashboard
+               
+              </p>
+            </a>
+          </li>
+          @endcan
           <li class="nav-header brand-link">QUESTIONEERS SECTION</li>
           <li class="nav-item">
             @can('admin_role')
@@ -169,6 +181,26 @@
             </a>
           </li>
           @endcan
+
+          <li class="nav-header brand-link">ANALYSIS SECTION</li>
+          <li class="nav-item">
+            <a href="{{ route('spo.monthly') }}" class="nav-link">
+              <i class="nav-icon  far fa-circle text-info"></i>
+              <p>General Analysis</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="{{ route('spo.monthly') }}" class="nav-link">
+              <i class="nav-icon  far fa-circle text-info"></i>
+              <p>State Level Analysis</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="{{ route('spo.monthly') }}" class="nav-link">
+              <i class="nav-icon  far fa-circle text-info"></i>
+              <p>CBO Level Analysis</p>
+            </a>
+          </li>
 
           <li class="nav-header brand-link">SETTINGS SECTION</li>
           @can('admin_role')
