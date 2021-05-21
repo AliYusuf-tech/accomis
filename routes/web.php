@@ -75,3 +75,6 @@ Route::post('/wards', [App\Http\Controllers\WardsController::class, 'add_ward'])
 Route::post('/cbo/excel', [App\Http\Controllers\ExcelImportController::class, 'uploadCbo'])->name('excel.cbo');
 Route::post('/spo/excel', [App\Http\Controllers\ExcelImportController::class, 'uploadSpo'])->name('excel.spo');
 Route::post('/healthfacility/excel', [App\Http\Controllers\ExcelImportController::class, 'uploadHealth'])->name('excel.health');
+
+//Analysis get routes
+Route::get('/genanalysis', [App\Http\Controllers\GeneralAnalysisController::class, 'genanalysis'])->name('genanalysis');

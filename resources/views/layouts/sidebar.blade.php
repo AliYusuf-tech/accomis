@@ -182,26 +182,22 @@
           </li>
           @endcan
 
+          @can('admin_role')
           <li class="nav-header brand-link">ANALYSIS SECTION</li>
+          
           <li class="nav-item">
-            <a href="{{ route('spo.monthly') }}" class="nav-link">
-              <i class="nav-icon  far fa-circle text-info"></i>
-              <p>General Analysis</p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="{{ route('spo.monthly') }}" class="nav-link">
+            <a href="{{ route('genanalysis') }}" class="nav-link">
               <i class="nav-icon  far fa-circle text-info"></i>
               <p>State Level Analysis</p>
             </a>
           </li>
           <li class="nav-item">
-            <a href="{{ route('spo.monthly') }}" class="nav-link">
+            <a href="/" class="nav-link">
               <i class="nav-icon  far fa-circle text-info"></i>
               <p>CBO Level Analysis</p>
             </a>
           </li>
-
+          @endcan
           <li class="nav-header brand-link">SETTINGS SECTION</li>
           @can('admin_role')
           <li class="nav-item">
