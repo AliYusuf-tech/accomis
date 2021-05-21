@@ -16,7 +16,7 @@
                         <div class="card-body">
                             <div class="row">
 
-                                <div class="col-md-12">
+                                <div class="col-md-4">
                                     <div class="form-group">
                                         <label>State</label>
                                         <select name="state" class="form-control select2 dynamic" style="width: 100%;"
