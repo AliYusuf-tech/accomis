@@ -158,8 +158,9 @@
                                 <tr>
                                     <th>id</th>
                                     <th>Health Facility</th>
+                                    <th>Attached CBO</th>
                                     <th>LGA</th>
-                                    <th>CBO</th>
+                                    <th>State</th>                                    
                                     <th>Action</th>
                                 </tr>
                             </thead>
@@ -170,22 +171,14 @@
                                     <tr>
                                         <td>{{ $loop->iteration }}</td>
                                         <td>{{ $health_facility->Facility }}</td>
-                                        <td>{{ $health_facility->LGA }}</td>
                                         <td>{{ $health_facility->CBO }}</td>
+                                        <td>{{ $health_facility->LGA }}</td>
+                                        <td>{{ $health_facility->State }}</td>                                        
                                         <td><a href="#" data-toggle="modal" data-target="#exampleModalCenter"><i
                                                     class="fa fa-eye"></i></a></td>
                                     </tr>
                                 @endforeach
-                            @endif
-                                <tr>
-                                    <td>002</td>
-                                    <td>CBO 2
-                                    </td>
-                                    <td>nphc a</td>
-                                    <td>Jigawa State</td>
-                                    <td><a href="#" data-toggle="modal" data-target="#exampleModalCenter"><i
-                                                class="fa fa-eye"></i></a></td>
-                                </tr>
+                            @endif                               
                             <tfoot>
                                 <tr>
                                     <th>id</th>

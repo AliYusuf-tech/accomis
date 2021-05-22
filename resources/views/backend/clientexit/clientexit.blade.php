@@ -7,7 +7,7 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1>Client Exit Questioneers</h1>
+                        <h1>Client Exit Questionnaire</h1>
                     </div>
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
@@ -26,7 +26,7 @@
                 <!-- SELECT2 EXAMPLE -->
                 <div class="card card-info">
                     <div class="card-header">
-                        <h3 class="card-title">Respondant Questioneers</h3>
+                        <h3 class="card-title">Respondant Questionnaire</h3>
 
                         <div class="card-tools">
                             <button type="button" class="btn btn-tool" data-card-widget="collapse"><i

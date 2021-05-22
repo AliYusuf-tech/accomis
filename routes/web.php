@@ -15,9 +15,13 @@ use Illuminate\Support\Facades\Auth;
 
 Auth::routes();
 
+
 //Dashboard routes
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+//NFM 2 Dashboard get routes
+Route::get('/prevdash', [App\Http\Controllers\PrevdashController::class, 'prevdash'])->name('prevdash');
 
 
 //Cbo get routes
@@ -70,4 +74,7 @@ Route::post('/wards', [App\Http\Controllers\WardsController::class, 'add_ward'])
 //Excel parse routes
 Route::post('/cbo/excel', [App\Http\Controllers\ExcelImportController::class, 'uploadCbo'])->name('excel.cbo');
 Route::post('/spo/excel', [App\Http\Controllers\ExcelImportController::class, 'uploadSpo'])->name('excel.spo');
-Route::post('/healthfacility/excel', [App\Http\Controllers\ExcelImportController::class, 'uploadHealth'])->name('excel.health');
+Route::post('/healthfacility/excel', [App\Http\Controllers\ExcelImportController::class, 'uploadHealthFacility'])->name('excel.health');
+
+//Analysis get routes
+Route::get('/genanalysis', [App\Http\Controllers\GeneralAnalysisController::class, 'genanalysis'])->name('genanalysis');
