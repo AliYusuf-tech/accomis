@@ -25,6 +25,12 @@
                  {{ Session::get('error_message') }}
              </div>
          @endif
+         @if (Session::has('warn_message'))
+             <div class="alert alert-warning alert-dismissible">
+                 <button type="button" class="close" data-dismiss="alert">&times;</button>
+                 {{ Session::get('warn_message') }}
+             </div>
+         @endif
      </div>
  </div>
 

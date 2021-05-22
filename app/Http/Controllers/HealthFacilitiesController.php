@@ -71,7 +71,7 @@ class HealthFacilitiesController extends Controller
 
         $data = DB::table('lgas')->where($select, $value)
             ->get();
-        $spo_data = DB::table('spos')->where('state', $value2)
+        $spo_data = DB::table('spos')->where('state', 'LIKE', "%{$value2}%")
             ->get();
 
         $output = '';

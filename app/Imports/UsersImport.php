@@ -45,7 +45,13 @@ class UsersImport implements ToCollection{
             }
         }
 
-
+        if($user && $cbo){
+            Session::flash('flash_message', 'Health facility parsed from excel file Added Successfully');
+            return redirect('/healthfacilities');
+        }else{
+            Session::flash('error_message', 'Health facility parse from excel failed');
+            return redirect('/healthfacilities');
+        }
     }
 }
 

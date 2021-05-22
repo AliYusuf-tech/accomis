@@ -37,15 +37,12 @@ class ExcelImportController extends Controller
         }
     }
 
-    public function uploadHealthFacility()
+    public function uploadHealth()
     {
-        $cbo = Excel::import(new HealthFacilityImport, 'health_facility.xlsx');
+        $health = Excel::import(new HealthFacilityImport, 'health_facility.xlsx');
 
-        if($cbo){
-            Session::flash('flash_message', 'Health facility parsed from excel file Added Successfully');
-            return redirect('/healthfacilities');
-        }else{
-            Session::flash('error_message', 'Health facility parse from excel failed');
+        if($health){
+            Session::flash('warn_message', 'Health facility cannot be parsed at the moment please wait for future updates');
             return redirect('/healthfacilities');
         }
     }

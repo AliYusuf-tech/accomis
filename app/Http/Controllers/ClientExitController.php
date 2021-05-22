@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Cbo;
 use Illuminate\Http\Request;
 use App\Models\ClientExitQuestionare;
+use App\Models\Spo;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Gate;
@@ -47,7 +49,22 @@ class ClientExitController extends Controller
         $day = date('d');
         $year = date('Y');
         $user = Auth::user();
+        $email = $user->email;
 
+        $cbo = DB::table('cbos')->where('email', $email)
+            ->get();
+
+        $state = '';
+        $spo_email = '';
+        //loop for parsing fetched authenticated user's data
+        foreach ($cbo as $cbo_detail) {
+            $state = $cbo_detail->state;
+        }
+        $spo = DB::table('spos')->where('state', 'LIKE', "%{$state}%")
+            ->get();
+        foreach ($spo as $spo_detail) {
+            $spo_email = $spo_detail->email;
+        }
 
         $submit_client_form = ClientExitQuestionare::create([
             'respondant_name' => $request->res_name,
@@ -82,12 +99,10 @@ class ClientExitController extends Controller
             'service_satisfaction_aid' => $request->customer_help,
             'facility_improvment_suggestion' => $request->customer_help_improve,
             'auth_user_email' => $user->email,
+            'spo' => $spo_email,
             'month' => $month,
             'year' => $year,
             'day' => $day,
         ]);
-
     }
-
-
 }

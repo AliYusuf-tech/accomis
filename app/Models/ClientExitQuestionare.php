@@ -42,6 +42,7 @@ class ClientExitQuestionare extends Model
         'service_satisfaction_aid',
         'facility_improvment_suggestion',
         'auth_user_email',
+        'spo',
         'month',
         'year',
         'day',
