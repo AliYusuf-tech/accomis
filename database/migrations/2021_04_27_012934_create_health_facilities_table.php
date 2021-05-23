@@ -24,6 +24,9 @@ class CreateHealthFacilitiesTable extends Migration
             $table->string('SPO');
             $table->string('SPO_Email');
             $table->string('status');
+            $table->string('day');
+            $table->string('month');
+            $table->string('year');
             $table->timestamps();
         });
     }

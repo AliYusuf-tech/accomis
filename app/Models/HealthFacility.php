@@ -10,7 +10,7 @@ class HealthFacility extends Model
     use HasFactory;
     protected $fillable = [
         'State',
-        'Lga' ,
+        'LGA' ,
         'Ward' ,
         'Facility',
         'CBO' ,
@@ -18,5 +18,8 @@ class HealthFacility extends Model
         'SPO' ,
         'SPO_Email' ,
         'status',
+        'day',
+        'month',
+        'year',
     ];
 }

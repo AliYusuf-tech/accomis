@@ -76,21 +76,5 @@ class PrevdashController extends Controller
             ]);
         }
 
-        if ($role == "Cbo") {
-
-            $health_facilities = count(HealthFacility::where('CBO_Email', $user->email)->get());
-            $client_exits = count(ClientExitQuestionare::where('auth_user_email', $user->email)->get());
-            $remidial = count(Remedial::where('cbo', $user->email)->get());
-
-            return view('backend.dashboards.cbo_dashboard')->with([
-                'health_facilities'=>$health_facilities,
-                'client_exits'=>$client_exits,
-                'remidial'=>$remidial,
-            ]);;
-        }
-
-        if ($role == "Spo") {
-            return view('backend.dashboards.spo_dashboard');
-        }
     }
 }

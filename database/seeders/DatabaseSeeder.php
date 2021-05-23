@@ -25,11 +25,6 @@ class DatabaseSeeder extends Seeder
             Lgas_4_TableSeeder::class,
             WardsTableSeeder_1::class,
             WardsTableSeeder_2::class,
-            HealthFacilitiesTableSeeder_1::class,
-            HealthFacilitiesTableSeeder_2::class,
-            HealthFacilitiesTableSeeder_3::class,
-            HealthFacilitiesTableSeeder_4::class,
-            HealthFacilitiesTableSeeder_5::class,
             SposSeeder::class,
             CbosSeeder::class,
 

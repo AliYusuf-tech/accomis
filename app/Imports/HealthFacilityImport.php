@@ -13,29 +13,30 @@ class HealthFacilityImport implements ToCollection
     */
     public function collection(Collection $rows)
     {
+        $month = date('M');
+        $day = date('d');
+        $year = date('Y');
 
-        // // foreach ($rows as $key => $value) {
-        // //     if($key > 0){
-        // //         $health = HealthFacility::create([
-        // //             'state' => $value[2],
-        // //             'LGA' => $value[4],
-        // //             'Ward' => now(),
-        // //             'Facility' => Hash::make($password),
-        // //             'LGA' => $value[4],
-        // //             'CBO' => $value[4],
-        // //             'CBO_Email' => $value[4],
-        // //             'SPO' => $value[4],
-        // //             'SPO_Email' => $value[4],
-        // //             'status' => $value[4],
-        // //             'year' => $value[4],
-        // //             'month' => $value[4],
-        // //             'day' => $value[4],
-        // //         ]);
+        foreach ($rows as $key => $value) {
+            if($key > 0){
+                $health = HealthFacility::create([
+                    'State' => $value[1],
+                    'LGA' => $value[2],
+                    'Ward' => $value[3],
+                    'Facility' => $value[4],
+                    'CBO' => $value[5],
+                    'CBO_Email' => $value[6],
+                    'SPO' => $value[7],
+                    'SPO_Email' => $value[8],
+                    'status' => $value[9],
+                    'day' => $day,
+                    'month' => $month,
+                    'year' => $year,
+                ]);
 
-        // //     }
+            }
 
-        // }
-        return "error";
+        }
 
     }
 }
