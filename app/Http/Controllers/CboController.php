@@ -86,6 +86,7 @@ class CboController extends Controller
         $cbo = Cbo::where('email', $user->email)->get();
         $cbo_state = '';
         $cbo_lga = '';
+        $cbo_name = '';
 
         //loop for parsing fetched authenticated user's data
         foreach ($cbo as $cbo_detail) {

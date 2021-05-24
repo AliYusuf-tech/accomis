@@ -41,6 +41,7 @@
             </div>
           </div>
           <!-- /.card-header -->
+          @can('cbo_role')
         <form role="form" action="{{ route('cbo.add_monthly') }}" enctype="multipart/form-data" method="POST">
              @csrf
           <div class="card-body">
@@ -65,7 +66,7 @@
               <div class="col-md-4">
                 <div class="form-group">
                   <label>Community Based Organization</label>
-                  <input type="text" name="cbo_name" class="form-control select2" style="width: 100%;" value={{$cbo_name}} readonly>
+                  <input type="text" name="cbo_name" class="form-control select2" style="width: 100%;" value={{$cbo_name ?? 0}} readonly>
                   <!-- <select name="cbo_name" class="form-control select2" style="width: 100%;">
                     <option selected="selected">Select CBO</option>
                     <option>CBO 1</option>
@@ -110,6 +111,8 @@
           </div>
           <!-- /.card-body -->
         </form>
+
+        @endcan
           <div class="card-footer">
 
           </div>

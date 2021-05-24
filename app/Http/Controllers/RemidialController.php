@@ -71,7 +71,8 @@ class RemidialController extends Controller
         $year = date('Y');
         $user = Auth::user();
         $cbo = $user->email;
-
+        $ward = "";
+        
         if($request->ward == ""){
             $ward = 'not available';
         }

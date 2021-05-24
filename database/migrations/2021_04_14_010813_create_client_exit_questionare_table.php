@@ -48,6 +48,7 @@ class CreateClientExitQuestionareTable extends Migration
             $table->string('facility_improvment_suggestion');
             $table->string('auth_user_email');
             $table->string('spo')->nullable();
+            $table->string('state');
             $table->string('month');
             $table->string('year');
             $table->string('day');

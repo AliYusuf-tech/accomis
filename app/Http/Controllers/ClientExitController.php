@@ -100,6 +100,7 @@ class ClientExitController extends Controller
             'facility_improvment_suggestion' => $request->customer_help_improve,
             'auth_user_email' => $user->email,
             'spo' => $spo_email,
+            'state' => $state,
             'month' => $month,
             'year' => $year,
             'day' => $day,
