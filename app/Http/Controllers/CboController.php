@@ -63,7 +63,7 @@ class CboController extends Controller
     }
     public function cbo_monthly()
     {
-        if (Gate::denies('admin_spo_cbo')) {
+        if (Gate::denies('admin_spo_cbo_me')) {
             abort('404');
         }
 
