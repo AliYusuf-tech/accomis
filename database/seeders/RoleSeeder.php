@@ -34,5 +34,11 @@ class RoleSeeder extends Seeder
             'description' =>
             'somebody who performs the work of the spo.',
         ]);
+
+        Role::create([
+            'name' => 'Me',
+            'description' =>
+            'somebody who performs the work of the m&e officer.',
+        ]);
     }
 }

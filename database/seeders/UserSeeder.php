@@ -24,6 +24,7 @@ class UserSeeder extends Seeder
         $adminRole = Role::where('name', 'Admin')->first();
         $cboRole = Role::where('name', 'Cbo')->first();
         $spoRole = Role::where('name', 'Spo')->first();
+        $meRole = Role::where('name', 'Me')->first();
 
         $admin = User::create([
             'name' => 'Admin',
@@ -55,8 +56,19 @@ class UserSeeder extends Seeder
             'updated_at' => now(),
         ]);
 
+        $me = User::create([
+            'name' => 'Me',
+            'email' => 'me@accomis.org',
+            'password' => Hash::make('secret'),
+            'email_verified_at' => now(),
+            'remember_token' => null,
+            'created_at' => now(),
+            'updated_at' => now(),
+        ]);
+
         $admin->roles()->attach($adminRole);
         $cbo->roles()->attach($cboRole);
         $spo->roles()->attach($spoRole);
+        $me->roles()->attach($meRole);
     }
 }
