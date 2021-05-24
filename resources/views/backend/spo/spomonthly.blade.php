@@ -47,7 +47,9 @@
                 <div class="col-md-4">
                 <div class="form-group">
                   <label>State</label>
-                  <input type="text" name="state" class="form-control select2" style="width: 100%;" id="state" readonly>
+
+                  <input type="text" name="state"  class="form-control select2" style="width: 100%;" id="state" readonly>
+                
                   <!-- <select name="state" class="form-control select2" style="width: 100%;" id="state">
                     <option selected="selected">Select State</option>
                         @foreach ($states as $state)

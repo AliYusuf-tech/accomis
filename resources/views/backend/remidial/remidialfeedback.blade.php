@@ -269,15 +269,75 @@
 
                 </div><!-- /.container-fluid -->
                 @endcan
+
+                @can('cbo_role')
+
+                <div class="card card-success">
+
+                                    
+                    <div class="card card-success">
+                        <div class="card-header">
+                            <h3 class="card-title">CBO Remedial Feedback View</h3>
+
+                            <div class="card-tools">
+                                <button type="button" class="btn btn-tool" data-card-widget="collapse"><i
+                                        class="fas fa-minus"></i></button>
+                                <button type="button" class="btn btn-tool" data-card-widget="remove"><i
+                                        class="fas fa-times"></i></button>
+                            </div>
+                        </div>
+                        <!-- /.card-header -->
+                        <div class="card-body">
+                            <table id="example1" class="table table-bordered table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>id</th>
+                                        <th>Date</th>
+                                        <th>Attachment</th>
+                                        <th>CBO</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @if (count($rems) > 0)
+
+                                        @foreach ($rems as $rem)
+                                            <tr>
+                                                <td>{{ $loop->iteration }}</td>
+                                                <td>{{ $rem->date_visit }}</td>
+                                                <td><a href="#"><i class="fa fa-file-download"></i></a></td>
+                                                <td>{{ $rem->cbo }}</td>
+                                                <td><a href="#" data-toggle="modal" data-target="#exampleModalCenter"><i
+                                                            class="fa fa-eye"></i></a></td>
+                                            </tr>
+                                        @endforeach
+                                    @endif
+
+                                <tfoot>
+                                    <tr>
+                                        <th>id</th>
+                                        <th>Date</th>
+                                        <th>Attachment</th>
+                                        <th>CBO</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                        <!-- /.card-body -->
+                    </div>
+
+
+                </div>
+                @endcan
         </section>
         <!-- /.content -->
     </div>
 @endsection
 @section('js');
-    <script>
+<script>
         $(document).ready(function() {
-
+            $('#example1').DataTable();
         });
-
     </script>
 @endsection

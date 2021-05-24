@@ -58,7 +58,7 @@
               <div class="col-md-4">
                 <div class="form-group">
                   <label>L.G.A</label>
-                  <input type="text" name="lga" class="form-control select2" style="width: 100%;" id="lga" value={{$cbo_lga}} readonly>
+                  <input type="text" name="lga" class="form-control select2" style="width: 100%;" id="lga" value="{{$cbo_lga}}" readonly>
 
 
                 </div>
@@ -66,11 +66,8 @@
               <div class="col-md-4">
                 <div class="form-group">
                   <label>Community Based Organization</label>
-                  <input type="text" name="cbo_name" class="form-control select2" style="width: 100%;" value={{$cbo_name ?? 0}} readonly>
-                  <!-- <select name="cbo_name" class="form-control select2" style="width: 100%;">
-                    <option selected="selected">Select CBO</option>
-                    <option>CBO 1</option>
-                  </select> -->
+                  <input type="text" name="cbo_name" class="form-control select2" style="width: 100%;" value="{{$cbo_name}}" readonly>
+
                 </div>
               </div>
 
@@ -149,7 +146,67 @@
                     <td>{{ $cbo->date_of_meeting }}</td>
                     <td><a href="#"><i class="fa fa-file-download"></i></a></td>
                     <td>{{$cbo->cbo_name}}</td>
-                    <td><a href="#" data-toggle="modal" data-target="#exampleModalCenter"><i class="fa fa-eye"></i></a></td>
+                    <td><a href="#" data-toggle="modal" data-target="{{ '#Modal' . $cbo->id }}" ><i
+                            class="fa fa-eye"></i></a>
+
+                            <div class="modal fade" id="{{ 'Modal' . $cbo->id }}" tabindex="-1"
+                        role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="ModalLabel">Monthly Minutes
+                                    </h5>
+                                    <button type="button" class="close" data-dismiss="modal"
+                                        aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <h3 class="card-title">
+                                                <i class="fas fa-text-width"></i>
+
+                                            </h3>
+                                        </div>
+                                        <!-- /.card-header -->
+                                        <div class="card-body">
+                                            <dl class="row">
+                                                <dt class="col-sm-4">State</dt>
+                                                <dd class="col-sm-8">{{ $cbo->state }}.
+                                                </dd>
+                                                <dt class="col-sm-4">Lga:</dt>
+                                                <dd class="col-sm-8">{{ $cbo->lga }}.
+                                                </dd>
+                                                <dt class="col-sm-4">Ward Name:</dt>
+                                                <dd class="col-sm-8">{{ $cbo->cbo_name }}.
+                                                </dd>
+                                                <dt class="col-sm-4">Facility Name:</dt>
+                                                <dd class="col-sm-8"> 
+                                                {{html_entity_decode($cbo->minutes_of_meeting)}}
+                                                </dd>
+                                               
+                                                <dt class="col-sm-4">Date of Submission:</dt>
+                                                <dd class="col-sm-8">{{ $cbo->created_at }}.
+                                                </dd>
+
+                                            </dl>
+                                        </div>
+                                        <!-- /.card-body -->
+                                    </div>
+                                    <!-- /.card -->
+
+                                    <div class="modal-footer">
+                                        <p>
+                                            <button type="button" class="btn btn-info"
+                                                data-dismiss="modal">Close</button>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </td>
                     </tr>
               @endforeach
               @endif

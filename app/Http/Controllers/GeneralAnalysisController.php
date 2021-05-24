@@ -38,7 +38,7 @@ class GeneralAnalysisController extends Controller
         $user = Auth::user();
         $role = implode(' ', $user->roles->pluck('name')->toArray());
 
-        if ($role == "Admin") {
+        if ($role == "Admin" || $role == "Me" ) {
 
             $states =  States::where('status', 'active')->get();
             $lgas =  count(Lgas::where('status', 'active')->get());

@@ -584,7 +584,7 @@
                 <!-- /.card -->
                 @endcan
 
-                @can('admin_spo')
+                @can('admin_spo_me')
 
                 <!-- SELECT2 EXAMPLE -->
                 <div class="card card-success">
@@ -646,7 +646,69 @@
 
 
                 @endcan
-            </div><!-- /.container-fluid -->
+            </div>
+            <!-- /.container-fluid -->
+            @can('cbo_role')
+            <div class="card card-success">
+                    <div class="card-header">
+                        <h3 class="card-title">CBO Client Exit Reports</h3>
+
+                        <div class="card-tools">
+                            <button type="button" class="btn btn-tool" data-card-widget="collapse"><i
+                                    class="fas fa-minus"></i></button>
+                            <button type="button" class="btn btn-tool" data-card-widget="remove"><i
+                                    class="fas fa-times"></i></button>
+                        </div>
+                    </div>
+                    <!-- /.card-header -->
+                    <div class="card-body">
+                        <table id="example1" class="table table-bordered table-striped">
+                            <thead>
+                                <tr>
+                                    <th>id</th>
+                                    <th>Date</th>
+                                    <th>Health Facility</th>
+                                    <th>Rating</th>
+                                    <th>CBO</th>
+                                    <th>SPO</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                    @foreach ($clients as $client)
+                                        <tr>
+                                            <td>{{ $loop->iteration }}</td>
+                                            <td>{{ $client->day . '/' . $client->month . '/' . $client->year }}</td>
+                                            <td>{{ $client->health_facility_of_interview }}</td>
+                                            <td><span
+                                                    class="badge bg-warning">{{ $client->service_satisfaction_level }}</span>
+                                            </td>
+                                            <td>{{ $client->respondant_name }}</td>
+                                            <td><a><i class="fa fa-eye"></i></a></td>
+                                        </tr>
+                                    @endforeach
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <th>id</th>
+                                    <th>Date</th>
+                                    <th>Health Facility</th>
+                                    <th>Rating</th>
+                                    <th>CBO</th>
+                                    <th>SPO</th>
+                                    <th>Action</th>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                    <!-- /.card-body -->
+
+
+
+
+                @endcan
+            </div>
         </section>
         <!-- /.content -->
     </div>

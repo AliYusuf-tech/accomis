@@ -31,6 +31,11 @@ class AuthServiceProvider extends ServiceProvider
             return $user->hasRole('Admin');
         });
 
+        //full access rules
+        Gate::define('me_role', function ($user) {
+            return $user->hasRole('Me');
+        });
+
         //Cbo role
         Gate::define('cbo_role', function ($user) {
             return $user->hasRole('Cbo');
@@ -61,7 +66,18 @@ class AuthServiceProvider extends ServiceProvider
 
          //admin cbo access
          Gate::define('admin_spo_cbo', function ($user) {
-            return $user->hasAnyRoles(['Admin','Spo', 'Cbo']);
+            return $user->hasAnyRoles(['Admin','Spo', 'Cbo','Me']);
+        });
+
+         //admin spo and me access
+         Gate::define('admin_spo_me', function ($user) {
+            return $user->hasAnyRoles(['Admin','Spo', 'Me']);
+        });
+
+        //admin spo and me access
+        Gate::define('admin_me', function ($user) {
+            return $user->hasAnyRoles(['Admin', 'Me']);
         });
     }
 }
+ 

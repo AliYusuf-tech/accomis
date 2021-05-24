@@ -68,7 +68,12 @@ class CboController extends Controller
         }
 
         $user = Auth::user();
-        $spouser = Spo::where('email', $user->email)->get();
+        $spouser = Spo::where('email',  $user->email)->get();
+        $state = ""; 
+        
+        foreach ($spouser as $spo_detail) {
+            $state = $spo_detail->state;
+        }
 
         $role = implode(' ', $user->roles->pluck('name')->toArray());
         $cbo = "";
@@ -80,25 +85,22 @@ class CboController extends Controller
             $cbo = CboMonthly::all();
         }
         if ($role == "Spo") {
-            $cbo = CboMonthly::where('state', $user->state)->get();
+            $state = substr($state, 0, strpos($state, ' '));    
+            $cbo = CboMonthly::where('state', $state)->get();
+           
+           
         }
 
-        $cbo = Cbo::where('email', $user->email)->get();
+        $cbo1 = Cbo::where('email', $user->email)->get();
         $cbo_state = '';
         $cbo_lga = '';
         $cbo_name = '';
 
         //loop for parsing fetched authenticated user's data
-        foreach ($cbo as $cbo_detail) {
+        foreach ($cbo1 as $cbo_detail) {
             $cbo_name = $cbo_detail->cbo_name;
             $cbo_state = $cbo_detail->state;
             $cbo_lga = $cbo_detail->lga;
-        }
-        //loop for parsing fetched authenticated user's data
-        foreach ($spouser as $spo_detail) {
-            $cbo_name = $spo_detail->cbo_name;
-            $cbo_state = $spo_detail->state;
-            $cbo_lga = $spo_detail->lga;
         }
 
         $states = States::where('status', 'active')->get();

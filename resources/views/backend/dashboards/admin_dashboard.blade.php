@@ -347,6 +347,7 @@
           <!-- ./col -->
         </div>
         <!-- /.row (main row) -->
+        
         <div class="row">
           <div class="col-md-6">
             <!-- AREA CHART -->
