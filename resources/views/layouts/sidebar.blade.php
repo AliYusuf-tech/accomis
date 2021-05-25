@@ -130,7 +130,7 @@
             </a>
           </li>
           @endcan
-          @can('admin_spo_me')
+          @can('admin_spo')
           <li class="nav-header brand-link">REPORTS SECTION</li>
          
           <li class="nav-item">
@@ -138,7 +138,7 @@
               <i class="nav-icon  far fa-calendar-alt"></i>
               <p>
                List of CBO/CAT
-                <span class="badge badge-info right">2</span>
+                <!-- <span class="badge badge-info right">2</span> -->
               </p>
             </a>
           </li>
@@ -148,7 +148,7 @@
             <a href="{{ route('client.exit') }}"class="nav-link">
               <i class="nav-icon  fa fa-image"></i>
               <p>
-                 Exit Questioneers
+                 Exit Questionnaire
               </p>
             </a>
           </li>

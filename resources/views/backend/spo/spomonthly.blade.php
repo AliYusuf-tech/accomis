@@ -48,7 +48,7 @@
                 <div class="form-group">
                   <label>State</label>
 
-                  <input type="text" name="state"  class="form-control select2" style="width: 100%;" id="state" readonly>
+                  <input type="text" name="state"  class="form-control select2" style="width: 100%;" id="state"  readonly>
                 
                   <!-- <select name="state" class="form-control select2" style="width: 100%;" id="state">
                     <option selected="selected">Select State</option>
@@ -106,9 +106,10 @@
 
 
         <!-- SELECT2 EXAMPLE -->
+        @can('spo_role')
         <div class="card card-success">
           <div class="card-header">
-            <h3 class="card-title">SPO Monthly Reports</h3>
+            <h3 class="card-title">Monthly Reports</h3>
 
             <div class="card-tools">
               <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i></button>
@@ -164,7 +165,9 @@
           <!-- /.card-body -->
           @endcan
         </div>
+        @endcan
 
+        @can('admin_role')
 
           <div class="card card-success">
             <div class="card-header">
@@ -184,6 +187,7 @@
                   <th>Meeting Date</th>
                   <th>Attached Report</th>
                   <th>SPO State</th>
+                  <th>Status</th>
                   <th>Action</th>
                 </tr>
                 </thead>
@@ -193,29 +197,17 @@
                   <td>10/04/2021</td>
                   <td><a href="#"><i class="fa fa-file-download"></i></a></td>
                   <td>Kaduna</td>
+                  <td><span class="badge bg-success">Approved</span></td>
                   <td><a href="#" data-toggle="modal" data-target="#exampleModalAdmin"><i class="fa fa-eye"></i></a></td>
                 </tr>
-                <tr>
-                  <td>002</td>
-                  <td>10/04/2021</td>
-                  <td><a href="#"><i class="fa fa-file-download"></i></a></td>
-                  <td>Osun</td>
-                  <td><a href="#" data-toggle="modal" data-target="#exampleModalAdmin"><i class="fa fa-eye"></i></a></td>
-                </tr>
-                <tr>
-                  <td>002</td>
-                  <td>10/04/2021</td>
-                  <td><a href="#"><i class="fa fa-file-download"></i></a></td>
-                  <td>Delta</td>
-                  <td><a href="#" data-toggle="modal" data-target="#exampleModalAdmin"><i class="fa fa-eye"></i></a></td>
-                </tr>
+                
               <tfoot>
                   <tr>
                       <th>id</th>
                       <th>Meeting Date</th>
                       <th>Attached Report</th>
                       <th>SPO State</th>
-
+                      <th>Status</th>
                       <th>Action</th>
                     </tr>
                 </tfoot>
@@ -224,7 +216,7 @@
             <!-- /.card-body -->
 
           </div>
-
+        @endcan
       </div><!-- /.container-fluid -->
     </section>
     <!-- /.content -->

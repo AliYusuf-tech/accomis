@@ -66,7 +66,7 @@ class AuthServiceProvider extends ServiceProvider
 
          //admin cbo access
          Gate::define('admin_spo_cbo', function ($user) {
-            return $user->hasAnyRoles(['Admin','Spo', 'Cbo','Me']);
+            return $user->hasAnyRoles(['Admin','Spo', 'Cbo']);
         });
 
          //admin spo and me access

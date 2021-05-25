@@ -246,8 +246,81 @@
                                                 <td>{{ $rem->date_visit }}</td>
                                                 <td><a href="#"><i class="fa fa-file-download"></i></a></td>
                                                 <td>{{ $rem->cbo }}</td>
-                                                <td><a href="#" data-toggle="modal" data-target="#exampleModalCenter"><i
-                                                            class="fa fa-eye"></i></a></td>
+                                                <td><a href="#" data-toggle="modal" data-target="{{ '#Modal' . $rem->id }}" ><i
+                            class="fa fa-eye"></i></a>
+
+                            <div class="modal fade" id="{{ 'Modal' . $rem->id }}" tabindex="-1"
+                        role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="ModalLabel">Remedial Action Feedback
+                                    </h5>
+                                    <button type="button" class="close" data-dismiss="modal"
+                                        aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <h3 class="card-title">
+                                                <i class="fas fa-text-width"></i>
+
+                                            </h3>
+                                        </div>
+                                        <!-- /.card-header -->
+                                        <div class="card-body">
+                                            <dl class="row">
+                                                <dt class="col-sm-4">CBO Name</dt>
+                                                <dd class="col-sm-8">{{ $rem->cbo }}.
+                                                </dd>
+                                                <dt class="col-sm-4">Issues Identified:</dt>
+                                                <dd class="col-sm-8">{{ $rem->identified_issues }}.
+                                                </dd>
+                                                
+                                                <dt class="col-sm-4">Action Taken:</dt>
+                                                <dd class="col-sm-8"> 
+                                                {{ $rem->action_taken_immediately}}
+                                                </dd>
+
+                                                <dt class="col-sm-4">Resolved?:</dt>
+                                                <dd class="col-sm-8"> 
+                                                {{ $rem->resolved}}
+                                                </dd>
+
+                                                <dt class="col-sm-4">Root Causes:</dt>
+                                                <dd class="col-sm-8"> 
+                                                {{ $rem->root_cause}}
+                                                </dd>
+
+                                                <dt class="col-sm-4">Attached Report:</dt>
+                                                <dd class="col-sm-8"><a href="#"><i class="fa fa-file-download"></i></a>
+                                                </dd>
+                                               
+                                                <dt class="col-sm-4">Date of Visit:</dt>
+                                                <dd class="col-sm-8">{{ $rem->date_visit }}.
+                                                </dd>                                              
+                                                <br>
+                                             
+
+                                            </dl>
+                                        </div>
+                                        <!-- /.card-body -->
+                                    </div>
+                                    <!-- /.card -->
+
+                                    <div class="modal-footer">
+                                        <p>
+                                            <button type="button" class="btn btn-info"
+                                                data-dismiss="modal">Close</button>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </td>
                                             </tr>
                                         @endforeach
                                     @endif
@@ -307,8 +380,81 @@
                                                 <td>{{ $rem->date_visit }}</td>
                                                 <td><a href="#"><i class="fa fa-file-download"></i></a></td>
                                                 <td>{{ $rem->cbo }}</td>
-                                                <td><a href="#" data-toggle="modal" data-target="#exampleModalCenter"><i
-                                                            class="fa fa-eye"></i></a></td>
+                                                <td><a href="#" data-toggle="modal" data-target="{{ '#Modal' . $rem->id }}" ><i
+                            class="fa fa-eye"></i></a>
+
+                            <div class="modal fade" id="{{ 'Modal' . $rem->id }}" tabindex="-1"
+                        role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="ModalLabel">Remedial Action Feedback
+                                    </h5>
+                                    <button type="button" class="close" data-dismiss="modal"
+                                        aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <h3 class="card-title">
+                                                <i class="fas fa-text-width"></i>
+
+                                            </h3>
+                                        </div>
+                                        <!-- /.card-header -->
+                                        <div class="card-body">
+                                            <dl class="row">
+                                                <dt class="col-sm-4">CBO Name</dt>
+                                                <dd class="col-sm-8">{{ $rem->cbo }}.
+                                                </dd>
+                                                <dt class="col-sm-4">Issues Identified:</dt>
+                                                <dd class="col-sm-8">{{ $rem->identified_issues }}.
+                                                </dd>
+                                                
+                                                <dt class="col-sm-4">Action Taken:</dt>
+                                                <dd class="col-sm-8"> 
+                                                {{ $rem->action_taken_immediately}}
+                                                </dd>
+
+                                                <dt class="col-sm-4">Resolved?:</dt>
+                                                <dd class="col-sm-8"> 
+                                                {{ $rem->resolved}}
+                                                </dd>
+
+                                                <dt class="col-sm-4">Root Causes:</dt>
+                                                <dd class="col-sm-8"> 
+                                                {{ $rem->root_cause}}
+                                                </dd>
+
+                                                <dt class="col-sm-4">Attached Report:</dt>
+                                                <dd class="col-sm-8"><a href="#"><i class="fa fa-file-download"></i></a>
+                                                </dd>
+                                               
+                                                <dt class="col-sm-4">Date of Visit:</dt>
+                                                <dd class="col-sm-8">{{ $rem->date_visit }}.
+                                                </dd>                                              
+                                                <br>
+                                             
+
+                                            </dl>
+                                        </div>
+                                        <!-- /.card-body -->
+                                    </div>
+                                    <!-- /.card -->
+
+                                    <div class="modal-footer">
+                                        <p>
+                                            <button type="button" class="btn btn-info"
+                                                data-dismiss="modal">Close</button>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </td>
                                             </tr>
                                         @endforeach
                                     @endif

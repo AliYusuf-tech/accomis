@@ -39,7 +39,7 @@
                 <p>CBOs</p>
               </div>
               <div class="icon">
-                <i class="ion ion-stats-bars"></i>
+                <i class="fa fa-users"></i>
               </div>
               <!-- <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a> -->
             </div>
@@ -54,7 +54,7 @@
                 <p>Wards</p>
               </div>
               <div class="icon">
-                <i class="ion ion-person-add"></i>
+                <i class="fa fa-map-marker"></i>
               </div>
               <!-- <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a> -->
             </div>
@@ -69,7 +69,7 @@
                 <p>Health Facilities</p>
               </div>
               <div class="icon">
-                <i class="ion ion-pie-graph"></i>
+                <i class="fa fa-hospital"></i>
               </div>
               <!-- <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a> -->
             </div>
@@ -84,7 +84,7 @@
                 <p>Tested Malaria Cases</p>
               </div>
               <div class="icon">
-                <i class="ion ion-bag"></i>
+                <i class="fa fa-file"></i>
               </div>
               <!-- <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a> -->
             </div>

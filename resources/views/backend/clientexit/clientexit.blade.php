@@ -387,8 +387,6 @@
                                         <option value="25-36 months">25-36 months</option>
                                         <option value="37-48 months">37-48 months</option>
                                         <option value="49-59 months">49-59 months</option>
-                                        <option value="60 and Above">60 and Above</option>
-
                                     </select>
                                 </div>
                             </div>
@@ -513,8 +511,8 @@
                                     <label>How satisfied are you with the service(s) you received today?</label>
                                     <select class="form-control satisfaction_level" name="satisfaction_level">
                                         <option value="" style="display: none">Select</option>
-                                        <option value="Very dissatisfied">Dissatisfied</option>
-                                        <option value="Very Satisfied">Satisfied</option>
+                                        <option value="dissatisfied">Dissatisfied</option>
+                                        <option value="Satisfied">Satisfied</option>
                                         <option value="Don't Know">Don't Know</option>
                                     </select><br>
 
@@ -607,8 +605,7 @@
                                     <th>Date</th>
                                     <th>Health Facility</th>
                                     <th>Rating</th>
-                                    <th>CBO</th>
-                                    <th>SPO</th>
+                                    <th>Respondant</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
@@ -623,7 +620,80 @@
                                                     class="badge bg-warning">{{ $client->service_satisfaction_level }}</span>
                                             </td>
                                             <td>{{ $client->respondant_name }}</td>
-                                            <td><a><i class="fa fa-eye"></i></a></td>
+                                            <td><a href="#" data-toggle="modal" data-target="{{ '#Modal' . $client->id }}" ><i
+                                            class="fa fa-eye"></i></a>
+                    
+                    
+                    <div class="modal fade" id="{{ 'Modal' . $client->id }}" tabindex="-1"
+                        role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="ModalLabel">Client Exit Details
+                                    </h5>
+                                    <button type="button" class="close" data-dismiss="modal"
+                                        aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <h3 class="card-title">
+                                                <i class="fas fa-text-width"></i>
+
+                                            </h3>
+                                        </div>
+                                        <!-- /.card-header -->
+                                        <div class="card-body">
+                                            <dl class="row">
+                                                <dt class="col-sm-4">Respondant Name</dt>
+                                                <dd class="col-sm-8">{{ $client->respondant_name }}.
+                                                </dd>
+                                                <dt class="col-sm-4">Respondant Occupation:</dt>
+                                                <dd class="col-sm-8">{{ $client->respondant_occupation }}.
+                                                </dd>
+                                                <dt class="col-sm-4">Respondant Education:</dt>
+                                                <dd class="col-sm-8">{{ $client->respondant_education }}.
+                                                </dd>
+                                                <dt class="col-sm-4">Category:</dt>
+                                                <dd class="col-sm-8">{{ $client->respondant_category }}.
+                                                </dd>
+                                                <dt class="col-sm-4">Facility Name:</dt>
+                                                <dd class="col-sm-8">{{ $client->health_facility_of_interview }}.
+                                                </dd>
+                                                
+                                                <dt class="col-sm-4">Service Came For:</dt>
+                                                <dd class="col-sm-8">{{ $client->purpose_of_comming }}.
+                                                </dd>
+                                                <dt class="col-sm-4">Service Received:</dt>
+                                                <dd class="col-sm-8">{{ $client->treatment_received }}.
+                                                </dd>
+                                                <dt class="col-sm-4">Service Rating:</dt>
+                                                <dd class="col-sm-8">{{ $client->service_satisfaction_level }}.
+                                                </dd>
+                                               
+                                                <dt class="col-sm-4">Date of Visit:</dt>
+                                                <dd class="col-sm-8">{{ $client->day."/".$client->month."/".$client->year }}.
+                                                </dd>
+
+                                            </dl>
+                                        </div>
+                                        <!-- /.card-body -->
+                                    </div>
+                                    <!-- /.card -->
+
+                                    <div class="modal-footer">
+                                        <p>
+                                            <button type="button" class="btn btn-info"
+                                                data-dismiss="modal">Close</button>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </td>
                                         </tr>
                                     @endforeach
                             </tbody>
@@ -633,8 +703,7 @@
                                     <th>Date</th>
                                     <th>Health Facility</th>
                                     <th>Rating</th>
-                                    <th>CBO</th>
-                                    <th>SPO</th>
+                                    <th>Respondant</th>
                                     <th>Action</th>
                                 </tr>
                             </tfoot>
@@ -651,7 +720,7 @@
             @can('cbo_role')
             <div class="card card-success">
                     <div class="card-header">
-                        <h3 class="card-title">CBO Client Exit Reports</h3>
+                        <h3 class="card-title">Client Exit Reports</h3>
 
                         <div class="card-tools">
                             <button type="button" class="btn btn-tool" data-card-widget="collapse"><i
@@ -669,8 +738,7 @@
                                     <th>Date</th>
                                     <th>Health Facility</th>
                                     <th>Rating</th>
-                                    <th>CBO</th>
-                                    <th>SPO</th>
+                                    <th>Respondant</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
@@ -685,7 +753,80 @@
                                                     class="badge bg-warning">{{ $client->service_satisfaction_level }}</span>
                                             </td>
                                             <td>{{ $client->respondant_name }}</td>
-                                            <td><a><i class="fa fa-eye"></i></a></td>
+                                            <td><a href="#" data-toggle="modal" data-target="{{ '#Modal' . $client->id }}" ><i
+                                            class="fa fa-eye"></i></a>
+                    
+                    
+                    <div class="modal fade" id="{{ 'Modal' . $client->id }}" tabindex="-1"
+                        role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="ModalLabel">Client Exit Details
+                                    </h5>
+                                    <button type="button" class="close" data-dismiss="modal"
+                                        aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <h3 class="card-title">
+                                                <i class="fas fa-text-width"></i>
+
+                                            </h3>
+                                        </div>
+                                        <!-- /.card-header -->
+                                        <div class="card-body">
+                                            <dl class="row">
+                                                <dt class="col-sm-4">Respondant Name</dt>
+                                                <dd class="col-sm-8">{{ $client->respondant_name }}.
+                                                </dd>
+                                                <dt class="col-sm-4">Respondant Occupation:</dt>
+                                                <dd class="col-sm-8">{{ $client->respondant_occupation }}.
+                                                </dd>
+                                                <dt class="col-sm-4">Respondant Education:</dt>
+                                                <dd class="col-sm-8">{{ $client->respondant_education }}.
+                                                </dd>
+                                                <dt class="col-sm-4">Category:</dt>
+                                                <dd class="col-sm-8">{{ $client->respondant_category }}.
+                                                </dd>
+                                                <dt class="col-sm-4">Facility Name:</dt>
+                                                <dd class="col-sm-8">{{ $client->health_facility_of_interview }}.
+                                                </dd>
+                                                
+                                                <dt class="col-sm-4">Service Came For:</dt>
+                                                <dd class="col-sm-8">{{ $client->purpose_of_comming }}.
+                                                </dd>
+                                                <dt class="col-sm-4">Service Received:</dt>
+                                                <dd class="col-sm-8">{{ $client->treatment_received }}.
+                                                </dd>
+                                                <dt class="col-sm-4">Service Rating:</dt>
+                                                <dd class="col-sm-8">{{ $client->service_satisfaction_level }}.
+                                                </dd>
+                                               
+                                                <dt class="col-sm-4">Date of Visit:</dt>
+                                                <dd class="col-sm-8">{{ $client->day."/".$client->month."/".$client->year }}.
+                                                </dd>
+
+                                            </dl>
+                                        </div>
+                                        <!-- /.card-body -->
+                                    </div>
+                                    <!-- /.card -->
+
+                                    <div class="modal-footer">
+                                        <p>
+                                            <button type="button" class="btn btn-info"
+                                                data-dismiss="modal">Close</button>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </td>
                                         </tr>
                                     @endforeach
                             </tbody>
@@ -695,8 +836,7 @@
                                     <th>Date</th>
                                     <th>Health Facility</th>
                                     <th>Rating</th>
-                                    <th>CBO</th>
-                                    <th>SPO</th>
+                                    <th>Respondant</th>                                   
                                     <th>Action</th>
                                 </tr>
                             </tfoot>

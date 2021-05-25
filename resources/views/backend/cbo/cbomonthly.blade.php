@@ -154,7 +154,7 @@
                         <div class="modal-dialog modal-lg" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h5 class="modal-title" id="ModalLabel">Monthly Minutes
+                                    <h5 class="modal-title" id="ModalLabel">CBO Monthly Minutes
                                     </h5>
                                     <button type="button" class="close" data-dismiss="modal"
                                         aria-label="Close">
@@ -178,16 +178,28 @@
                                                 <dt class="col-sm-4">Lga:</dt>
                                                 <dd class="col-sm-8">{{ $cbo->lga }}.
                                                 </dd>
-                                                <dt class="col-sm-4">Ward Name:</dt>
+                                                <dt class="col-sm-4">CBO Name:</dt>
                                                 <dd class="col-sm-8">{{ $cbo->cbo_name }}.
                                                 </dd>
-                                                <dt class="col-sm-4">Facility Name:</dt>
+                                                <dt class="col-sm-4">Minutes:</dt>
                                                 <dd class="col-sm-8"> 
-                                                {{html_entity_decode($cbo->minutes_of_meeting)}}
+                                                <textarea name="minutes" class="textarea"
+                                                placeholder="Place some text here"
+                                                style="width: 100%; height: 200px; font-size: 14px; 
+                                                line-height: 18px; border: 1px solid #dddddd; padding: 10px;" 
+                                                readonly>{{ $cbo->minutes_of_meeting}}</textarea>
+                                                </dd>
+
+                                                <dt class="col-sm-4">Attached Report:</dt>
+                                                <dd class="col-sm-8"><a href="#"><i class="fa fa-file-download"></i></a>
                                                 </dd>
                                                
                                                 <dt class="col-sm-4">Date of Submission:</dt>
                                                 <dd class="col-sm-8">{{ $cbo->created_at }}.
+                                                </dd>                                              
+                                                <br>
+                                                <dt class="col-sm-4">Status:</dt>
+                                                <dd class="col-sm-8"><a class="btn btn-success">Approved</a>
                                                 </dd>
 
                                             </dl>
