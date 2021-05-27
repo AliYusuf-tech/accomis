@@ -131,7 +131,7 @@
             <!-- small box -->
             <div class="small-box bg-secondary">
               <div class="inner">
-                <h3>0</h3>
+                <h3>3385</h3>
 
                 <p>Remedial Feedback</p>
               </div>
@@ -145,7 +145,7 @@
             <!-- small box -->
             <div class="small-box bg-secondary">
               <div class="inner">
-                <h3>3030</h3>
+                <h3>29400</h3>
 
                 <p>CEI Conducted</p>
               </div>
