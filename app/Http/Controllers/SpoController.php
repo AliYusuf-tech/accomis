@@ -12,6 +12,8 @@ use App\Models\Role;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
 use App\Models\Spo;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class SpoController extends Controller
 {
@@ -53,9 +55,9 @@ class SpoController extends Controller
         if (User::where('email', '=', $request->email)->exists()) {
             Session::flash('error_message', 'A user with this email already exists!');
             return redirect(route('spo.monthly'));
-        }else {
-               // user email found
-               $spo = User::create([
+        } else {
+            // user email found
+            $spo = User::create([
                 'name' => $request->spo_name,
                 'email' => $request->email,
                 'password' => Hash::make($request->state),
@@ -78,7 +80,6 @@ class SpoController extends Controller
                 Session::flash('flash_message', 'Spo Added Successfully');
                 return redirect(route('spo.monthly'));
             }
-
         }
     }
 
@@ -88,10 +89,18 @@ class SpoController extends Controller
             abort('404');
         }
         $spo = SpoMonthly::all();
-        $states = States::where('status', 'active')->get();
+
+        $user = Auth::user();
+        $state = '';
+        $spo_data = DB::table('spos')->where('email', $user->email)
+            ->get();
+
+        foreach ($spo_data as $spo) {
+            $state = $spo->state;
+        }
         return view('backend.spo.spomonthly')->with([
             'spos' => $spo,
-            'states' => $states,
+            'states' => $state,
         ]);
     }
     public function add_spomonthly(Request $request)
@@ -102,6 +111,8 @@ class SpoController extends Controller
         $attachment = $request->attachment->store('photos/attachments');
         $month = date('M');
         $year = date('Y');
+
+
 
         $submit_spo_monthly = SpoMonthly::create([
             'state' => $request->state,
@@ -114,7 +125,7 @@ class SpoController extends Controller
 
         if ($submit_spo_monthly) {
             Session::flash('flash_message', 'Spo Monthly Report Added Successfully');
-            return redirect(route('spo.monthly'));
+            return redirect(route('spo_add_monthly'));
         }
     }
 

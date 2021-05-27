@@ -48,14 +48,9 @@
                 <div class="form-group">
                   <label>State</label>
 
-                  <input type="text" name="state"  class="form-control select2" style="width: 100%;" id="state"  readonly>
-                
-                  <!-- <select name="state" class="form-control select2" style="width: 100%;" id="state">
-                    <option selected="selected">Select State</option>
-                        @foreach ($states as $state)
-                            <option value="{{ $state->name }}">{{ $state->name }}</option>
-                        @endforeach
-                  </select> -->
+                  <input type="text" name="state"  class="form-control select2" style="width: 100%;" id="state" value="{{$states}}"  readonly>
+
+
                 </div>
               </div>
 
@@ -200,7 +195,7 @@
                   <td><span class="badge bg-success">Approved</span></td>
                   <td><a href="#" data-toggle="modal" data-target="#exampleModalAdmin"><i class="fa fa-eye"></i></a></td>
                 </tr>
-                
+
               <tfoot>
                   <tr>
                       <th>id</th>
