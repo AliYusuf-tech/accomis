@@ -266,6 +266,7 @@
         <th>Health Facility</th>
         <th>LGA</th>
         <th>CBO</th>
+        <th>State</th>
         <th>Action</th>
     </tr>
 </tfoot>

@@ -27,42 +27,42 @@ class Lgas_3_TableSeeder extends Seeder
                 'id' => 402,
                 'state_id' => 20,
                 'name' => 'Rimin Gado',
-                'status' => 'active',
+                'status' => 'null',
             ),
             2 =>
             array (
                 'id' => 403,
                 'state_id' => 20,
                 'name' => 'Rogo',
-                'status' => 'active',
+                'status' => 'null',
             ),
             3 =>
             array (
                 'id' => 404,
                 'state_id' => 20,
                 'name' => 'Shanono',
-                'status' => 'active',
+                'status' => 'null',
             ),
             4 =>
             array (
                 'id' => 405,
                 'state_id' => 20,
                 'name' => 'Sumaila',
-                'status' => 'active',
+                'status' => 'null',
             ),
             5 =>
             array (
                 'id' => 406,
                 'state_id' => 20,
                 'name' => 'Takai',
-                'status' => 'active',
+                'status' => 'null',
             ),
             6 =>
             array (
                 'id' => 407,
                 'state_id' => 20,
                 'name' => 'Tarauni',
-                'status' => 'active',
+                'status' => 'null',
             ),
             7 =>
             array (
@@ -76,14 +76,14 @@ class Lgas_3_TableSeeder extends Seeder
                 'id' => 409,
                 'state_id' => 20,
                 'name' => 'Tsanyawa',
-                'status' => 'active',
+                'status' => 'null',
             ),
             9 =>
             array (
                 'id' => 410,
                 'state_id' => 20,
                 'name' => 'Tudun Wada',
-                'status' => 'active',
+                'status' => 'null',
             ),
             10 =>
             array (
@@ -97,21 +97,21 @@ class Lgas_3_TableSeeder extends Seeder
                 'id' => 412,
                 'state_id' => 20,
                 'name' => 'Warawa',
-                'status' => 'active',
+                'status' => 'null',
             ),
             12 =>
             array (
                 'id' => 413,
                 'state_id' => 20,
                 'name' => 'Wudil',
-                'status' => 'active',
+                'status' => 'null',
             ),
             13 =>
             array (
                 'id' => 414,
                 'state_id' => 21,
                 'name' => 'Bakori',
-                'status' => 'active',
+                'status' => 'null',
             ),
             14 =>
             array (
@@ -132,7 +132,7 @@ class Lgas_3_TableSeeder extends Seeder
                 'id' => 417,
                 'state_id' => 21,
                 'name' => 'Baure',
-                'status' => 'active',
+                'status' => 'null',
             ),
             17 =>
             array (
@@ -146,28 +146,28 @@ class Lgas_3_TableSeeder extends Seeder
                 'id' => 419,
                 'state_id' => 21,
                 'name' => 'Charanchi',
-                'status' => 'active',
+                'status' => 'null',
             ),
             19 =>
             array (
                 'id' => 420,
                 'state_id' => 21,
                 'name' => 'Dandume',
-                'status' => 'active',
+                'status' => 'null',
             ),
             20 =>
             array (
                 'id' => 421,
                 'state_id' => 21,
                 'name' => 'Danja',
-                'status' => 'active',
+                'status' => 'null',
             ),
             21 =>
             array (
                 'id' => 422,
                 'state_id' => 21,
                 'name' => 'Dan Musa',
-                'status' => 'active',
+                'status' => 'null',
             ),
             22 =>
             array (
@@ -181,7 +181,7 @@ class Lgas_3_TableSeeder extends Seeder
                 'id' => 424,
                 'state_id' => 21,
                 'name' => 'Dutsi',
-                'status' => 'active',
+                'status' => 'null',
             ),
             24 =>
             array (
@@ -195,7 +195,7 @@ class Lgas_3_TableSeeder extends Seeder
                 'id' => 426,
                 'state_id' => 21,
                 'name' => 'Faskari',
-                'status' => 'active',
+                'status' => 'null',
             ),
             26 =>
             array (
@@ -209,21 +209,21 @@ class Lgas_3_TableSeeder extends Seeder
                 'id' => 428,
                 'state_id' => 21,
                 'name' => 'Ingawa',
-                'status' => 'active',
+                'status' => 'null',
             ),
             28 =>
             array (
                 'id' => 429,
                 'state_id' => 21,
                 'name' => 'Jibia',
-                'status' => 'active',
+                'status' => 'null',
             ),
             29 =>
             array (
                 'id' => 430,
                 'state_id' => 21,
                 'name' => 'Kafur',
-                'status' => 'active',
+                'status' => 'null',
             ),
             30 =>
             array (
@@ -237,7 +237,7 @@ class Lgas_3_TableSeeder extends Seeder
                 'id' => 432,
                 'state_id' => 21,
                 'name' => 'Kankara',
-                'status' => 'active',
+                'status' => 'null',
             ),
             32 =>
             array (
@@ -251,35 +251,35 @@ class Lgas_3_TableSeeder extends Seeder
                 'id' => 434,
                 'state_id' => 21,
                 'name' => 'Katsina',
-                'status' => 'active',
+                'status' => 'null',
             ),
             34 =>
             array (
                 'id' => 435,
                 'state_id' => 21,
                 'name' => 'Kurfi',
-                'status' => 'active',
+                'status' => 'null',
             ),
             35 =>
             array (
                 'id' => 436,
                 'state_id' => 21,
                 'name' => 'Kusada',
-                'status' => 'active',
+                'status' => 'null',
             ),
             36 =>
             array (
                 'id' => 437,
                 'state_id' => 21,
                 'name' => 'Mai\'Adua',
-                'status' => 'active',
+                'status' => 'null',
             ),
             37 =>
             array (
                 'id' => 438,
                 'state_id' => 21,
                 'name' => 'Malumfashi',
-                'status' => 'active',
+                'status' => 'null',
             ),
             38 =>
             array (
@@ -293,21 +293,21 @@ class Lgas_3_TableSeeder extends Seeder
                 'id' => 440,
                 'state_id' => 21,
                 'name' => 'Mashi',
-                'status' => 'active',
+                'status' => 'null',
             ),
             40 =>
             array (
                 'id' => 441,
                 'state_id' => 21,
                 'name' => 'Matazu',
-                'status' => 'active',
+                'status' => 'null',
             ),
             41 =>
             array (
                 'id' => 442,
                 'state_id' => 21,
                 'name' => 'Musawa',
-                'status' => 'active',
+                'status' => 'null',
             ),
             42 =>
             array (
@@ -321,28 +321,28 @@ class Lgas_3_TableSeeder extends Seeder
                 'id' => 444,
                 'state_id' => 21,
                 'name' => 'Sabuwa',
-                'status' => 'active',
+                'status' => 'null',
             ),
             44 =>
             array (
                 'id' => 445,
                 'state_id' => 21,
                 'name' => 'Safana',
-                'status' => 'active',
+                'status' => 'null',
             ),
             45 =>
             array (
                 'id' => 446,
                 'state_id' => 21,
                 'name' => 'Sandamu',
-                'status' => 'active',
+                'status' => 'null',
             ),
             46 =>
             array (
                 'id' => 447,
                 'state_id' => 21,
                 'name' => 'Zango',
-                'status' => 'active',
+                'status' => 'null',
             ),
             47 =>
             array (
@@ -650,7 +650,7 @@ class Lgas_3_TableSeeder extends Seeder
                 'id' => 491,
                 'state_id' => 24,
                 'name' => 'Baruten',
-                'status' => 'active',
+                'status' => 'null',
             ),
             91 =>
             array (
@@ -663,7 +663,7 @@ class Lgas_3_TableSeeder extends Seeder
             array (
                 'id' => 493,
                 'state_id' => 24,
-                'name' => 'Ekiti, Kwara State',
+                'name' => 'Ekiti',
                 'status' => 'active',
             ),
             93 =>
@@ -671,14 +671,14 @@ class Lgas_3_TableSeeder extends Seeder
                 'id' => 494,
                 'state_id' => 24,
                 'name' => 'Ifelodun',
-                'status' => 'active',
+                'status' => 'null',
             ),
             94 =>
             array (
                 'id' => 495,
                 'state_id' => 24,
                 'name' => 'Ilorin East',
-                'status' => 'active',
+                'status' => 'null',
             ),
             95 =>
             array (
@@ -699,28 +699,28 @@ class Lgas_3_TableSeeder extends Seeder
                 'id' => 498,
                 'state_id' => 24,
                 'name' => 'Irepodun',
-                'status' => 'active',
+                'status' => 'null',
             ),
             98 =>
             array (
                 'id' => 499,
                 'state_id' => 24,
                 'name' => 'Isin',
-                'status' => 'active',
+                'status' => 'null',
             ),
             99 =>
             array (
                 'id' => 500,
                 'state_id' => 24,
                 'name' => 'Kaiama',
-                'status' => 'active',
+                'status' => 'null',
             ),
             100 =>
             array (
                 'id' => 501,
                 'state_id' => 24,
                 'name' => 'Moro',
-                'status' => 'active',
+                'status' => 'null',
             ),
             101 =>
             array (
@@ -748,7 +748,7 @@ class Lgas_3_TableSeeder extends Seeder
                 'id' => 505,
                 'state_id' => 24,
                 'name' => 'Pategi',
-                'status' => 'active',
+                'status' => 'null',
             ),
             105 =>
             array (
@@ -986,14 +986,14 @@ class Lgas_3_TableSeeder extends Seeder
                 'id' => 539,
                 'state_id' => 27,
                 'name' => 'Agaie',
-                'status' => 'active',
+                'status' => 'null',
             ),
             139 =>
             array (
                 'id' => 540,
                 'state_id' => 27,
                 'name' => 'Agwara',
-                'status' => 'active',
+                'status' => 'null',
             ),
             140 =>
             array (
@@ -1007,14 +1007,14 @@ class Lgas_3_TableSeeder extends Seeder
                 'id' => 542,
                 'state_id' => 27,
                 'name' => 'Borgu',
-                'status' => 'active',
+                'status' => 'null',
             ),
             142 =>
             array (
                 'id' => 543,
                 'state_id' => 27,
                 'name' => 'Bosso',
-                'status' => 'active',
+                'status' => 'null',
             ),
             143 =>
             array (
@@ -1028,7 +1028,7 @@ class Lgas_3_TableSeeder extends Seeder
                 'id' => 545,
                 'state_id' => 27,
                 'name' => 'Edati',
-                'status' => 'active',
+                'status' => 'null',
             ),
             145 =>
             array (
@@ -1042,14 +1042,14 @@ class Lgas_3_TableSeeder extends Seeder
                 'id' => 547,
                 'state_id' => 27,
                 'name' => 'Gurara',
-                'status' => 'active',
+                'status' => 'null',
             ),
             147 =>
             array (
                 'id' => 548,
                 'state_id' => 27,
                 'name' => 'Katcha',
-                'status' => 'active',
+                'status' => 'null',
             ),
             148 =>
             array (
@@ -1063,7 +1063,7 @@ class Lgas_3_TableSeeder extends Seeder
                 'id' => 550,
                 'state_id' => 27,
                 'name' => 'Lapai',
-                'status' => 'active',
+                'status' => 'null',
             ),
             150 =>
             array (
@@ -1077,21 +1077,21 @@ class Lgas_3_TableSeeder extends Seeder
                 'id' => 552,
                 'state_id' => 27,
                 'name' => 'Magama',
-                'status' => 'active',
+                'status' => 'null',
             ),
             152 =>
             array (
                 'id' => 553,
                 'state_id' => 27,
                 'name' => 'Mariga',
-                'status' => 'active',
+                'status' => 'null',
             ),
             153 =>
             array (
                 'id' => 554,
                 'state_id' => 27,
                 'name' => 'Mashegu',
-                'status' => 'active',
+                'status' => 'null',
             ),
             154 =>
             array (
@@ -1105,7 +1105,7 @@ class Lgas_3_TableSeeder extends Seeder
                 'id' => 556,
                 'state_id' => 27,
                 'name' => 'Moya',
-                'status' => 'active',
+                'status' => 'null',
             ),
             156 =>
             array (
@@ -1119,21 +1119,21 @@ class Lgas_3_TableSeeder extends Seeder
                 'id' => 558,
                 'state_id' => 27,
                 'name' => 'Rafi',
-                'status' => 'active',
+                'status' => 'null',
             ),
             158 =>
             array (
                 'id' => 559,
                 'state_id' => 27,
                 'name' => 'Rijau',
-                'status' => 'active',
+                'status' => 'null',
             ),
             159 =>
             array (
                 'id' => 560,
                 'state_id' => 27,
                 'name' => 'Shiroro',
-                'status' => 'active',
+                'status' => 'null',
             ),
             160 =>
             array (
@@ -1147,14 +1147,14 @@ class Lgas_3_TableSeeder extends Seeder
                 'id' => 562,
                 'state_id' => 27,
                 'name' => 'Tafa',
-                'status' => 'active',
+                'status' => 'null',
             ),
             162 =>
             array (
                 'id' => 563,
                 'state_id' => 27,
                 'name' => 'Wushishi',
-                'status' => 'active',
+                'status' => 'null',
             ),
             163 =>
             array (
@@ -1168,7 +1168,7 @@ class Lgas_3_TableSeeder extends Seeder
                 'id' => 565,
                 'state_id' => 28,
                 'name' => 'Abeokuta South',
-                'status' => 'active',
+                'status' => 'null',
             ),
             165 =>
             array (
@@ -1182,7 +1182,7 @@ class Lgas_3_TableSeeder extends Seeder
                 'id' => 567,
                 'state_id' => 28,
                 'name' => 'Egbado North',
-                'status' => 'active',
+                'status' => 'null',
             ),
             167 =>
             array (
@@ -1196,7 +1196,7 @@ class Lgas_3_TableSeeder extends Seeder
                 'id' => 569,
                 'state_id' => 28,
                 'name' => 'Ewekoro',
-                'status' => 'active',
+                'status' => 'null',
             ),
             169 =>
             array (
@@ -1210,28 +1210,28 @@ class Lgas_3_TableSeeder extends Seeder
                 'id' => 571,
                 'state_id' => 28,
                 'name' => 'Ijebu East',
-                'status' => 'active',
+                'status' => 'null',
             ),
             171 =>
             array (
                 'id' => 572,
                 'state_id' => 28,
                 'name' => 'Ijebu North',
-                'status' => 'active',
+                'status' => 'null',
             ),
             172 =>
             array (
                 'id' => 573,
                 'state_id' => 28,
                 'name' => 'Ijebu North East',
-                'status' => 'active',
+                'status' => 'null',
             ),
             173 =>
             array (
                 'id' => 574,
                 'state_id' => 28,
                 'name' => 'Ijebu Ode',
-                'status' => 'active',
+                'status' => 'null',
             ),
             174 =>
             array (
@@ -1245,14 +1245,14 @@ class Lgas_3_TableSeeder extends Seeder
                 'id' => 576,
                 'state_id' => 28,
                 'name' => 'Imeko Afon',
-                'status' => 'active',
+                'status' => 'null',
             ),
             176 =>
             array (
                 'id' => 577,
                 'state_id' => 28,
                 'name' => 'Ipokia',
-                'status' => 'active',
+                'status' => 'null',
             ),
             177 =>
             array (
@@ -1266,7 +1266,7 @@ class Lgas_3_TableSeeder extends Seeder
                 'id' => 579,
                 'state_id' => 28,
                 'name' => 'Odeda',
-                'status' => 'active',
+                'status' => 'null',
             ),
             179 =>
             array (
@@ -1280,20 +1280,20 @@ class Lgas_3_TableSeeder extends Seeder
                 'id' => 581,
                 'state_id' => 28,
                 'name' => 'Ogun Waterside',
-                'status' => 'active',
+                'status' => 'null',
             ),
             181 =>
             array (
                 'id' => 582,
                 'state_id' => 28,
                 'name' => 'Remo North',
-                'status' => 'active',
+                'status' => 'null',
             ),
             182 =>
             array (
                 'id' => 583,
                 'state_id' => 28,
-                'name' => 'Shagamu',
+                'name' => 'Sagamu',
                 'status' => 'active',
             ),
             183 =>
