@@ -47,6 +47,7 @@ class GeneralAnalysisController extends Controller
             $spos = count(Spo::all());
             $cbos = count(Cbo::all());
             $cats = count(Cat::all());
+            $remedial = count(Remedial::all());
             $client_exits = count(ClientExitQuestionare::all());
             $tested_malaria = count(ClientExitQuestionare::where('malaria_test', 'yes')->get());
             $llin_recipients = count(ClientExitQuestionare::where('llin_reception', 'yes')->get());
@@ -56,6 +57,7 @@ class GeneralAnalysisController extends Controller
             $sp_recepients = count(ClientExitQuestionare::where('sulfadoxin_pyrimethamine_intake', 'yes')->get());
             $smc_recepients = count(ClientExitQuestionare::where('child_smc_reception', 'yes')->get());
             $pregnant_women = count(ClientExitQuestionare::where('respondant_category', 'Female Pregnant')->get());
+            $issues_resolved = count(Remedial::where('resolved', 'Yes')->get());
 
             return view('backend.analysis.adminanalysis')->with([
                 'states'=>$states,
@@ -74,6 +76,8 @@ class GeneralAnalysisController extends Controller
                 'sp_recepients'=>$sp_recepients,
                 'smc_recepients'=>$smc_recepients,
                 'pregnant_women'=>$pregnant_women ,
+                'remedial'=>$remedial,
+                'issues_resolved'=>$issues_resolved,
             ]);
         }
     }
@@ -99,7 +103,7 @@ class GeneralAnalysisController extends Controller
         $sp_recepients = count(ClientExitQuestionare::where('sulfadoxin_pyrimethamine_intake', 'yes')->where('state', $select)->get());
         $smc_recepients = count(ClientExitQuestionare::where('child_smc_reception', 'yes')->where('state', $select)->get());
         $pregnant_women = count(ClientExitQuestionare::where('respondant_category', 'Female Pregnant')->where('state', $select)->get());
-
+        $issues_resolved = count(Remedial::where('resolved', 'Yes')->get());
 
         $json = [
             'lgas'=>$lgas,
@@ -117,7 +121,8 @@ class GeneralAnalysisController extends Controller
             'positive_malaria'=>$positive_malaria,
             'sp_recepients'=>$sp_recepients ,
             'smc_recepients'=>$smc_recepients,
-            'pregnant_women'=>$pregnant_women
+            'pregnant_women'=>$pregnant_women,          
+            'issues_resolved'=>$issues_resolved
         ];
 
         return $json;

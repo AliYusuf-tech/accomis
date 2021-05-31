@@ -48,6 +48,7 @@ class HomeController extends Controller
             $spos = count(Spo::all());
             $cbos = count(Cbo::all());
             $cats = count(Cat::all());
+            $remedial = count(Remedial::all());
             $client_exits = count(ClientExitQuestionare::all());
             $tested_malaria = count(ClientExitQuestionare::where('malaria_test', 'yes')->get());
             $llin_recipients = count(ClientExitQuestionare::where('llin_reception', 'yes')->get());
@@ -57,6 +58,7 @@ class HomeController extends Controller
             $sp_recepients = count(ClientExitQuestionare::where('sulfadoxin_pyrimethamine_intake', 'yes')->get());
             $smc_recepients = count(ClientExitQuestionare::where('child_smc_reception', 'yes')->get());
             $pregnant_women = count(ClientExitQuestionare::where('respondant_category', 'Female Pregnant')->get());
+            $issues_resolved = count(Remedial::where('resolved', 'Yes')->get());
 
             return view('backend.dashboards.admin_dashboard')->with([
                 'states'=>$states,
@@ -75,6 +77,9 @@ class HomeController extends Controller
                 'sp_recepients'=>$sp_recepients,
                 'smc_recepients'=>$smc_recepients,
                 'pregnant_women'=>$pregnant_women ,
+                'remedial'=>$remedial,
+                'issues_resolved'=>$issues_resolved,
+                
             ]);
         }
 
@@ -143,7 +148,7 @@ class HomeController extends Controller
                 'issues_identified'=>$issues_identified,
                 'username'=> $user->name,
                 'state'=>$state,
-
+  
             ]);
         }
     }

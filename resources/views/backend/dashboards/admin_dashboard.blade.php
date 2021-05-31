@@ -158,7 +158,7 @@
             <!-- small box -->
             <div class="small-box bg-success">
               <div class="inner">
-                <h3>0</h3>
+                <h3>{{$remedial ?? '0'}}</h3>
 
                 <p>Issues Identified</p>
               </div>
@@ -173,7 +173,7 @@
             <!-- small box -->
             <div class="small-box bg-success">
               <div class="inner">
-                <h3>0<sup style="font-size: 20px"></sup></h3>
+                <h3>{{$issues_resolved ?? 0}}<sup style="font-size: 20px"></sup></h3>
 
                 <p>Issues Resolved</p>
               </div>
@@ -188,7 +188,7 @@
             <!-- small box -->
             <div class="small-box bg-success">
               <div class="inner">
-                <h3>{{$cats ?? '0'}}</h3>
+                <h3>{{$remedial ?? '0'}}</h3>
 
                 <p>Remedial Feedback Reports</p>
               </div>

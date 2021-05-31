@@ -144,7 +144,7 @@
                     <tr>
                     <td>{{ $loop->iteration }}</td>
                     <td>{{ $cbo->date_of_meeting }}</td>
-                    <td><a href="{{ url('storage/attachments/'.$spo->attachment)}}" target="_blank"><i class="fa fa-file-download"></i></a></td>
+                    <td><a href="{{ url('storage/attachments/'.$cbo->attachment)}}" target="_blank"><i class="fa fa-file-download"></i></a></td>
                     <td>{{$cbo->cbo_name}}</td>
                     <td><a href="#" data-toggle="modal" data-target="{{ '#Modal' . $cbo->id }}" ><i
                             class="fa fa-eye"></i></a>

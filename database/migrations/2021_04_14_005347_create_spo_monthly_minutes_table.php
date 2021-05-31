@@ -19,7 +19,7 @@ class CreateSpoMonthlyMinutesTable extends Migration
             $table->string('state');
             $table->string('date_of_meeting');
             $table->string('attachment');
-            $table->string('minutes_of_meeting');
+            $table->longText('minutes_of_meeting');
             $table->string('month');
             $table->string('year');
             $table->timestamps();
