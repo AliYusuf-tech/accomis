@@ -11,7 +11,7 @@ class SpoMonthly extends Model
 
     protected $table = 'spo_monthly_minutes';
     protected $fillable = [
-        'cbo_name',
+        'name',
         'email',
         'state',
         'lga',

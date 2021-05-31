@@ -36,12 +36,14 @@ $(document).ready(function() {
         }
     });
 
-    $(".dynamic2").change(function() {
+    $(".dynamic2").on("change", function() {
         var select = $(this).attr("id");
-        var value = $(".dynamic2 option:selected").attr("id");
+        var value = $(this).children(":selected").attr("id");
 
         var dependent = "state_id";
+
         url = $(".url").attr("id");
+
 
         if (value != "") {
             $.ajax({
@@ -53,6 +55,7 @@ $(document).ready(function() {
                     dependent: dependent
                 },
                 success: function(result) {
+                    console.log(result);
                     $("#lga2").html(result);
                 },
                 error: function(err) {

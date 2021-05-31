@@ -15,6 +15,7 @@ class CreateSpoMonthlyMinutesTable extends Migration
     {
         Schema::create('spo_monthly_minutes', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
             $table->string('state');
             $table->string('date_of_meeting');
             $table->string('attachment');

@@ -29,6 +29,7 @@
     <section class="content">
       <div class="container-fluid">
         <!-- SELECT2 EXAMPLE -->
+
         @can('spo_role')
         <div class="card card-info">
           <div class="card-header">
@@ -100,8 +101,10 @@
 
 
 
+        </div>
+        @endcan
         <!-- SELECT2 EXAMPLE -->
-        @can('spo_role')
+        @can('admin_spo')
         <div class="card card-success">
           <div class="card-header">
             <h3 class="card-title">Monthly Reports</h3>
@@ -124,27 +127,90 @@
               </tr>
               </thead>
               <tbody>
+
+              @if (count($spos)>0)
+              @foreach ($spos as $spo)
               <tr>
-                <td>001</td>
-                <td>10/04/2021</td>
-                <td><a href="#"><i class="fa fa-file-download"></i></a></td>
-                <td><span class="badge bg-warning">Pending</span></td>
-                <td><a href="#" data-toggle="modal" data-target="#exampleModalCenter"><i class="fa fa-eye"></i></a></td>
+              <td>{{ $loop->iteration }}</td>
+              <td>{{ $spo->date_of_meeting }}</td>
+              <td><a href="{{ url('storage/attachments/'.$spo->attachment)}}" target="_blank"><i class="fa fa-file-download"></i></a></td>
+              <td><span class="badge bg-warning">Pending</span></td>
+              <td><a href="#" data-toggle="modal" data-target="{{ '#Modal' . $spo->id }}" ><i
+                      class="fa fa-eye"></i></a>
+
+                      <div class="modal fade" id="{{ 'Modal' . $spo->id }}" tabindex="-1"
+                  role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
+                  <div class="modal-dialog modal-lg" role="document">
+                      <div class="modal-content">
+                          <div class="modal-header">
+                              <h5 class="modal-title" id="ModalLabel">spo Monthly Minutes
+                              </h5>
+                              <button type="button" class="close" data-dismiss="modal"
+                                  aria-label="Close">
+                                  <span aria-hidden="true">&times;</span>
+                              </button>
+                          </div>
+                          <div class="modal-body">
+                              <div class="card">
+                                  <div class="card-header">
+                                      <h3 class="card-title">
+                                          <i class="fas fa-text-width"></i>
+
+                                      </h3>
+                                  </div>
+                                  <!-- /.card-header -->
+                                  <div class="card-body">
+                                      <dl class="row">
+                                          <dt class="col-sm-4">State</dt>
+                                          <dd class="col-sm-8">{{ $spo->state }}.
+                                          </dd>
+
+                                          <dt class="col-sm-4">Spo Name:</dt>
+                                          <dd class="col-sm-8">{{ $spo->name }}.
+                                          </dd>
+                                          <dt class="col-sm-4">Minutes:</dt>
+                                          <dd class="col-sm-8">
+                                            {!! $spo->minutes_of_meeting !!}
+
+
+                                          <dt class="col-sm-4">Attached Report:</dt>
+                                          <dd class="col-sm-8"><a href="{{ url('storage/attachments/'.$spo->attachment)}}" target="_blank"><i class="fa fa-file-download"></i></a>
+                                          </dd>
+                                          <dt class="col-sm-4"></dt>
+                                          <dd class="col-sm-8"> <embed
+                                            src="{{ url('storage/attachments/'.$spo->attachment)}}"
+                                            style="width:400px; height:300px;"
+                                            frameborder="0"></a>
+                                          </dd>
+
+                                          <dt class="col-sm-4">Date of Submission:</dt>
+                                          <dd class="col-sm-8">{{ $spo->created_at }}.
+                                          </dd>
+                                          <br>
+                                          <dt class="col-sm-4">Status:</dt>
+                                          <dd class="col-sm-8"><a class="btn btn-success">Approved</a>
+                                          </dd>
+
+                                      </dl>
+                                  </div>
+                                  <!-- /.card-body -->
+                              </div>
+                              <!-- /.card -->
+
+                              <div class="modal-footer">
+                                  <p>
+                                      <button type="button" class="btn btn-info"
+                                          data-dismiss="modal">Close</button>
+                                  </p>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              </td>
               </tr>
-              <tr>
-                <td>002</td>
-                <td>10/04/2021</td>
-                <td><a href="#"><i class="fa fa-file-download"></i></a></td>
-                <td><span class="badge bg-success">Approved</span></td>
-                <td><a href="#" data-toggle="modal" data-target="#exampleModalCenter"><i class="fa fa-eye"></i></a></td>
-              </tr>
-              <tr>
-                <td>002</td>
-                <td>10/04/2021</td>
-                <td><a href="#"><i class="fa fa-file-download"></i></a></td>
-                <td><span class="badge bg-danger">Quaried</span></td>
-                <td><a href="#" data-toggle="modal" data-target="#exampleModalCenter"><i class="fa fa-eye"></i></a></td>
-              </tr>
+        @endforeach
+        @endif
             <tfoot>
                 <tr>
                     <th>id</th>
@@ -159,59 +225,7 @@
           </div>
           <!-- /.card-body -->
           @endcan
-        </div>
-        @endcan
 
-        @can('admin_role')
-
-          <div class="card card-success">
-            <div class="card-header">
-              <h3 class="card-title">SPOs Monthly Reports</h3>
-
-              <div class="card-tools">
-                <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i></button>
-                <button type="button" class="btn btn-tool" data-card-widget="remove"><i class="fas fa-times"></i></button>
-              </div>
-            </div>
-            <!-- /.card-header -->
-            <div class="card-body">
-              <table id="example1" class="table table-bordered table-striped">
-                <thead>
-                <tr>
-                  <th>id</th>
-                  <th>Meeting Date</th>
-                  <th>Attached Report</th>
-                  <th>SPO State</th>
-                  <th>Status</th>
-                  <th>Action</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                  <td>001</td>
-                  <td>10/04/2021</td>
-                  <td><a href="#"><i class="fa fa-file-download"></i></a></td>
-                  <td>Kaduna</td>
-                  <td><span class="badge bg-success">Approved</span></td>
-                  <td><a href="#" data-toggle="modal" data-target="#exampleModalAdmin"><i class="fa fa-eye"></i></a></td>
-                </tr>
-
-              <tfoot>
-                  <tr>
-                      <th>id</th>
-                      <th>Meeting Date</th>
-                      <th>Attached Report</th>
-                      <th>SPO State</th>
-                      <th>Status</th>
-                      <th>Action</th>
-                    </tr>
-                </tfoot>
-              </table>
-            </div>
-            <!-- /.card-body -->
-
-          </div>
-        @endcan
       </div><!-- /.container-fluid -->
     </section>
     <!-- /.content -->

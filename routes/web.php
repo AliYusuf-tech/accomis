@@ -79,3 +79,6 @@ Route::post('/healthfacility/excel', [App\Http\Controllers\ExcelImportController
 //Analysis get routes
 Route::get('/genanalysis', [App\Http\Controllers\GeneralAnalysisController::class, 'genanalysis'])->name('genanalysis');
 Route::post('/genanalysis', [App\Http\Controllers\GeneralAnalysisController::class, 'fetchRecords'])->name('genanalysis.fetch');
+
+//file display
+Route::get('image/{filename}',[App\Http\Controllers\ImageController::class, 'displayImage'])->name('displayImage');

@@ -161,7 +161,7 @@
                                         id="state_id" required>
                                         <option style="display:none" value="">Select State</option>
                                         @foreach ($states as $state)
-                                            <option id="{{ $state->id }}" value="{{ $state->name }}">
+                                            <option id="{{$state->id}}" value="{{ $state->name }}">
                                                 {{ $state->name }}</option>
                                         @endforeach
                                     </select>

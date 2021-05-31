@@ -69,8 +69,8 @@ class CboController extends Controller
 
         $user = Auth::user();
         $spouser = Spo::where('email',  $user->email)->get();
-        $state = ""; 
-        
+        $state = "";
+
         foreach ($spouser as $spo_detail) {
             $state = $spo_detail->state;
         }
@@ -85,10 +85,10 @@ class CboController extends Controller
             $cbo = CboMonthly::all();
         }
         if ($role == "Spo") {
-            $state = substr($state, 0, strpos($state, ' '));    
+            $state = substr($state, 0, strpos($state, ' '));
             $cbo = CboMonthly::where('state', $state)->get();
-           
-           
+
+
         }
 
         $cbo1 = Cbo::where('email', $user->email)->get();
@@ -156,7 +156,7 @@ class CboController extends Controller
     public function add_cbo_monthly(Request $request)
     {
 
-        $attachment = $request->attachment->store('photos/attachments');
+        $attachment = $request->attachment->store('public/photos/attachments');
         $month = date('M');
         $year = date('Y');
         $submit_cbo_monthly = CboMonthly::create([
@@ -180,10 +180,7 @@ class CboController extends Controller
     {
         $select = $request->get('select');
         $value = $request->get('value');
-        $dependent = $request->get('dependent');
-        $data = DB::table('lgas')->where($select, $value)
-            ->get();
-
+        $data = DB::table('lgas')->where('state_id', $value)->get();
         $output = '';
         foreach ($data as $row) {
             $output .=
@@ -191,7 +188,7 @@ class CboController extends Controller
             ';
         }
 
-        echo $output;
+        return $output;
     }
 
     public function cbo_fetch(Request $request)

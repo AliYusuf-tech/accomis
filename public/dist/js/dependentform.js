@@ -240,8 +240,8 @@ $(document).ready(function() {
         });
 
         var health_facility_of_interview = "";
-        $(".health_facility_of_interview").on("input", function() {
-            health_facility_of_interview = $(this).val();
+        $(".health_facility_of_interview").on("change", function() {
+            health_facility_of_interview = $(".health_facility_of_interview option:selected").val();
         });
 
         //occupation

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Cbo;
 use Illuminate\Http\Request;
 use App\Models\ClientExitQuestionare;
+use App\Models\HealthFacility;
 use App\Models\Spo;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
@@ -33,9 +34,12 @@ class ClientExitController extends Controller
         if (Gate::denies('admin_spo_cbo')) {
             abort('404');
         }
+        $user = Auth::user();
         $clients = ClientExitQuestionare::all();
+        $health_facilities = HealthFacility::where('CBO_Email', $user->email)->get();
         return view('backend.clientexit.clientexit')->with([
-            'clients' => $clients
+            'clients' => $clients,
+            'health_facilities'=> $health_facilities
         ]);
     }
 

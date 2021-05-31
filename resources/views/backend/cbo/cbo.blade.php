@@ -29,12 +29,14 @@
         <!-- Main content -->
         <section class="content">
             <div class="container-fluid">
-            @can('admin_role')
+
+
                 <form method="POST" action="/cbo/excel" id="form1">
-                    
+                    @csrf
                     <input type="button" class="input btn btn-primary" onclick="$('#form1').submit();" value="parse excel">
                 </form>
-                @endcan
+
+
                 <br>
                 <br>
 
