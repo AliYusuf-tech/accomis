@@ -156,14 +156,25 @@ class CboController extends Controller
     public function add_cbo_monthly(Request $request)
     {
 
-        $attachment = $request->attachment->store('public/photos/attachments');
+        $request->validate([
+            'attachment' => 'required|mimes:pdf|max:2048'
+        ]);
+
+        $file = $request->file('attachment');
+
+        // generate a new filename. getClientOriginalExtension() for the file extension
+        $filename = 'attached-file-' . time() . '.' . $file->getClientOriginalExtension();
+
+        // save to storage/app/photos as the new $filename
+        $file->storeAs('public/attachments', $filename);
+
         $month = date('M');
         $year = date('Y');
         $submit_cbo_monthly = CboMonthly::create([
             'cbo_name' => $request->cbo_name,
             'state' => $request->state,
             'lga' => $request->lga,
-            'attachment' => $attachment,
+            'attachment' => $filename,
             'minutes_of_meeting' => $request->minutes,
             'date_of_meeting' => $request->meeting_date,
             'month' => $month,

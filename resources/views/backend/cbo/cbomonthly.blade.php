@@ -144,7 +144,7 @@
                     <tr>
                     <td>{{ $loop->iteration }}</td>
                     <td>{{ $cbo->date_of_meeting }}</td>
-                    <td><a href="#"><i class="fa fa-file-download"></i></a></td>
+                    <td><a href="{{ url('storage/attachments/'.$spo->attachment)}}" target="_blank"><i class="fa fa-file-download"></i></a></td>
                     <td>{{$cbo->cbo_name}}</td>
                     <td><a href="#" data-toggle="modal" data-target="{{ '#Modal' . $cbo->id }}" ><i
                             class="fa fa-eye"></i></a>
@@ -182,21 +182,27 @@
                                                 <dd class="col-sm-8">{{ $cbo->cbo_name }}.
                                                 </dd>
                                                 <dt class="col-sm-4">Minutes:</dt>
-                                                <dd class="col-sm-8"> 
+                                                <dd class="col-sm-8">
                                                 <textarea name="minutes" class="textarea"
                                                 placeholder="Place some text here"
-                                                style="width: 100%; height: 200px; font-size: 14px; 
-                                                line-height: 18px; border: 1px solid #dddddd; padding: 10px;" 
+                                                style="width: 100%; height: 200px; font-size: 14px;
+                                                line-height: 18px; border: 1px solid #dddddd; padding: 10px;"
                                                 readonly>{{ $cbo->minutes_of_meeting}}</textarea>
                                                 </dd>
 
                                                 <dt class="col-sm-4">Attached Report:</dt>
-                                                <dd class="col-sm-8"><a href="#"><i class="fa fa-file-download"></i></a>
+                                                <dd class="col-sm-8"><a href="{{ url('storage/attachments/'.$cbo->attachment)}}" target="_blank"><i class="fa fa-file-download"></i></a>
                                                 </dd>
-                                               
+                                                <dt class="col-sm-4"></dt>
+                                                <dd class="col-sm-8"> <embed
+                                                  src="{{ url('storage/attachments/'.$cbo->attachment)}}"
+                                                  style="width:400px; height:300px;"
+                                                  frameborder="0"></a>
+                                                </dd>
+
                                                 <dt class="col-sm-4">Date of Submission:</dt>
                                                 <dd class="col-sm-8">{{ $cbo->created_at }}.
-                                                </dd>                                              
+                                                </dd>
                                                 <br>
                                                 <dt class="col-sm-4">Status:</dt>
                                                 <dd class="col-sm-8"><a class="btn btn-success">Approved</a>
