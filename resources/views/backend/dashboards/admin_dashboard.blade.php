@@ -21,18 +21,20 @@
     </div>
     <!-- /.content-header -->
 
+    
     <!-- Main content -->
     <section class="content">
       <div class="container-fluid">
         <!-- Small boxes (Stat box) -->
-        <div class="row">
-          <div class="col-lg-3 col-6">
+
+      <div class="row">
+        <div class="col-lg-2 col-6">
             <!-- small box -->
             <div class="small-box bg-info">
               <div class="inner">
                 <h3>{{$states ?? '0'}}</h3>
 
-                <p>Active State</p>
+                <p>State</p>
               </div>
               <div class="icon">
                 <i class="ion ion-map"></i>
@@ -41,13 +43,13 @@
             </div>
           </div>
           <!-- ./col -->
-          <div class="col-lg-3 col-6">
+          <div class="col-lg-2 col-6">
             <!-- small box -->
             <div class="small-box bg-info">
               <div class="inner">
                 <h3>{{$lgas ?? '0'}}<sup style="font-size: 20px"></sup></h3>
 
-                <p>Active LGA</p>
+                <p>LGA</p>
               </div>
               <div class="icon">
                 <i class="ion ion-map"></i>
@@ -56,13 +58,13 @@
             </div>
           </div>
           <!-- ./col -->
-          <div class="col-lg-3 col-6">
+          <div class="col-lg-2 col-6">
             <!-- small box -->
             <div class="small-box bg-info">
               <div class="inner">
                 <h3>{{$wards ?? '0'}}</h3>
 
-                <p>Active Ward</p>
+                <p>Ward</p>
               </div>
               <div class="icon">
                 <i class="ion ion-map"></i>
@@ -71,13 +73,13 @@
             </div>
           </div>
           <!-- ./col -->
-          <div class="col-lg-3 col-6">
+          <div class="col-lg-2 col-6">
             <!-- small box -->
             <div class="small-box bg-info">
               <div class="inner">
                 <h3>{{$health_facilities ?? '0'}}</h3>
 
-                <p>Active Health Facilities</p>
+                <p>Health Facilities</p>
               </div>
               <div class="icon">
                 <i class="ion ion-medkit"></i>
@@ -86,17 +88,13 @@
             </div>
           </div>
           <!-- ./col -->
-        </div>
-
-
-        <div class="row">
-          <div class="col-lg-3 col-6">
+          <div class="col-lg-2 col-6">
             <!-- small box -->
-            <div class="small-box bg-primary">
+            <div class="small-box bg-info">
               <div class="inner">
                 <h3>{{$spos ?? '0'}}</h3>
 
-                <p>Active SPOs</p>
+                <p>SPOs</p>
               </div>
               <div class="icon">
                 <i class="fa fa-users"></i>
@@ -105,28 +103,32 @@
             </div>
           </div>
           <!-- ./col -->
-          <div class="col-lg-3 col-6">
+          <div class="col-lg-2 col-6">
             <!-- small box -->
-            <div class="small-box bg-primary">
+            <div class="small-box bg-info">
               <div class="inner">
                 <h3>{{$cbos ?? '0'}}<sup style="font-size: 20px"></sup></h3>
 
-                <p>Active CBOs</p>
+                <p>CBOs</p>
               </div>
               <div class="icon">
-                <i class="fa fa-users"></i>
+                <i class="fa fa-building"></i>
               </div>
               <!-- <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a> -->
             </div>
           </div>
+       </div>
+      </div>
+
+    <div class="row">          
           <!-- ./col -->
-          <div class="col-lg-3 col-6">
+          <div class="col-lg-2 col-6">
             <!-- small box -->
             <div class="small-box bg-primary">
               <div class="inner">
                 <h3>{{$cats ?? '0'}}</h3>
 
-                <p>Active CATs</p>
+                <p>CATs</p>
               </div>
               <div class="icon">
                 <i class="fa fa-users"></i>
@@ -135,73 +137,9 @@
             </div>
           </div>
           <!-- ./col -->
-          <div class="col-lg-3 col-6">
+          <div class="col-lg-2 col-6">
             <!-- small box -->
             <div class="small-box bg-primary">
-              <div class="inner">
-                <h3>Nigeria</h3>
-
-                <p>Active Country</p>
-              </div>
-              <div class="icon">
-                <i class="fa fa-globe"></i>
-              </div>
-              <!-- <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a> -->
-            </div>
-          </div>
-          <!-- ./col -->
-        </div>
-        <!-- /.row -->
-
-        <div class="row">
-          <div class="col-lg-3 col-6">
-            <!-- small box -->
-            <div class="small-box bg-success">
-              <div class="inner">
-                <h3>{{$remedial ?? '0'}}</h3>
-
-                <p>Issues Identified</p>
-              </div>
-              <div class="icon">
-                <i class="fa fa-file"></i>
-              </div>
-              <!-- <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a> -->
-            </div>
-          </div>
-          <!-- ./col -->
-          <div class="col-lg-3 col-6">
-            <!-- small box -->
-            <div class="small-box bg-success">
-              <div class="inner">
-                <h3>{{$issues_resolved ?? 0}}<sup style="font-size: 20px"></sup></h3>
-
-                <p>Issues Resolved</p>
-              </div>
-              <div class="icon">
-                <i class="fa fa-file"></i>
-              </div>
-              <!-- <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a> -->
-            </div>
-          </div>
-          <!-- ./col -->
-          <div class="col-lg-3 col-6">
-            <!-- small box -->
-            <div class="small-box bg-success">
-              <div class="inner">
-                <h3>{{$remedial ?? '0'}}</h3>
-
-                <p>Remedial Feedback Reports</p>
-              </div>
-              <div class="icon">
-                <i class="fa fa-file"></i>
-              </div>
-              <!-- <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a> -->
-            </div>
-          </div>
-          <!-- ./col -->
-          <div class="col-lg-3 col-6">
-            <!-- small box -->
-            <div class="small-box bg-success">
               <div class="inner">
                 <h3>{{$client_exits ?? '0'}}</h3>
 
@@ -214,17 +152,13 @@
             </div>
           </div>
           <!-- ./col -->
-        </div>
-
-
-        <div class="row">
-          <div class="col-lg-3 col-6">
+          <div class="col-lg-2 col-6">
             <!-- small box -->
-            <div class="small-box bg-warning">
+            <div class="small-box bg-primary">
               <div class="inner">
-                <h3>{{$tested_malaria ?? '0'}}</h3>
+                <h3>{{$remedial ?? '0'}}</h3>
 
-                <p>Tested Malaria Cases</p>
+                <p>Remedial Feedback</p>
               </div>
               <div class="icon">
                 <i class="fa fa-file"></i>
@@ -233,24 +167,80 @@
             </div>
           </div>
           <!-- ./col -->
-          <div class="col-lg-3 col-6">
+          <div class="col-lg-2 col-6">
             <!-- small box -->
-            <div class="small-box bg-warning">
+            <div class="small-box bg-primary">
               <div class="inner">
-                <h3>{{$llin_recipients ?? '0'}}<sup style="font-size: 20px"></sup></h3>
+                <h3>0</h3>
+
+                <p>Entry FGD</p>
+              </div>
+              <div class="icon">
+                <i class="fa fa-file"></i>
+              </div>
+              <!-- <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a> -->
+            </div>
+          </div>
+          <!-- ./col -->
+          <div class="col-lg-2 col-6">
+            <!-- small box -->
+            <div class="small-box bg-primary">
+              <div class="inner">
+                <h3>0</h3>
+
+                <p>Exit FGD</p>
+              </div>
+              <div class="icon">
+                <i class="fa fa-file"></i>
+              </div>
+              <!-- <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a> -->
+            </div>
+          </div>
+          <!-- ./col -->
+          <div class="col-lg-2 col-6">
+            <!-- small box -->
+            <div class="small-box bg-primary">
+              <div class="inner">
+                <h3>0</h3>
+
+                <p>KII</p>
+              </div>
+              <div class="icon">
+                <i class="fa fa-file"></i>
+              </div>
+              <!-- <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a> -->
+            </div>
+          </div>
+          <!-- ./col -->
+  </div>
+        <!-- /.row -->
+
+       <legend>CEI Extracts</legend>
+
+    <div class="row">
+        
+        <div class="col-md-3 col-sm-6 col-xs-12">
+        
+         
+          <div class="small-box bg-success">
+              <div class="inner">
+                <h3>{{$llin_recipients ?? '0'}}</h3>
 
                 <p>LLIN Recipients</p>
               </div>
               <div class="icon">
                 <i class="fa fa-file"></i>
               </div>
-              <!-- <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a> -->
             </div>
-          </div>
-          <!-- ./col -->
-          <div class="col-lg-3 col-6">
-            <!-- small box -->
-            <div class="small-box bg-warning">
+          <!-- /.info-box -->
+        </div>
+        <!-- /.col -->
+
+        <!-- fix for small devices only -->
+        <div class="clearfix visible-sm-block"></div>
+
+        <div class="col-md-2 col-sm-6 col-xs-12">
+        <div class="small-box bg-success">
               <div class="inner">
                 <h3>{{$act_recipients ?? '0'}}</h3>
 
@@ -259,13 +249,12 @@
               <div class="icon">
                 <i class="fa fa-file"></i>
               </div>
-              <!-- <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a> -->
             </div>
-          </div>
-          <!-- ./col -->
-          <div class="col-lg-3 col-6">
-            <!-- small box -->
-            <div class="small-box bg-warning">
+         
+        </div>
+        <!-- /.col -->
+        <div class="col-md-2 col-sm-6 col-xs-12">
+        <div class="small-box bg-success">
               <div class="inner">
                 <h3>{{$ipt_recipients ?? '0'}}</h3>
 
@@ -274,80 +263,188 @@
               <div class="icon">
                 <i class="fa fa-file"></i>
               </div>
-              <!-- <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a> -->
             </div>
-          </div>
-          <!-- ./col -->
+         
+          <!-- /.info-box -->
         </div>
-
-
-        <!-- Main row -->
-        <div class="row">
-          <div class="col-lg-3 col-6">
-            <!-- small box -->
-            <div class="small-box bg-danger">
+        <!-- /.col -->
+        <div class="col-md-2 col-sm-6 col-xs-12">
+        <div class="small-box bg-success">
               <div class="inner">
-                <h3>{{$positive_malaria ?? '0'}}</h3>
+                <h3>{{$sp_recepients ?? '0'}}</h3>
 
-                <p>Positive Malaria Cases</p>
+                <p>SP Recipients</p>
               </div>
               <div class="icon">
                 <i class="fa fa-file"></i>
               </div>
-              <!-- <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a> -->
             </div>
-          </div>
          
-         
-          <div class="col-lg-3 col-6">
-            <!-- small box -->
-            <div class="small-box bg-warning">
-              <div class="inner">
-                <h3>{{$pregnant_women ?? '0'}}</h3>
+        </div>
+        <!-- /.col -->
 
-                <p>P.W Tested For Malaria</p>
-              </div>
-              <div class="icon">
-                <i class="fa fa-file"></i>
-              </div>
-              <!-- <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a> -->
-            </div>
-          </div>
-          <!-- ./col -->
-           <!-- ./col -->
-           <div class="col-lg-3 col-6">
-            <!-- small box -->
-            <div class="small-box bg-warning">
+        <div class="col-md-3 col-sm-6 col-xs-12">
+        <div class="small-box bg-success">
               <div class="inner">
-                <h3>{{$sp_recepients ?? '0'}}<sup style="font-size: 20px"></sup></h3>
-
-                <p>Antenatal Care Service</p>
-              </div>
-              <div class="icon">
-                <i class="fa fa-file"></i>
-              </div>
-              <!-- <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a> -->
-            </div>
-          </div>
-           <!-- ./col -->
-           <div class="col-lg-3 col-6">
-            <!-- small box -->
-            <div class="small-box bg-warning">
-              <div class="inner">
-                <h3>0</h3>
+                <h3>{{$sp_recepients ?? '0'}}</h3>
 
                 <p>SMC Recipients</p>
               </div>
               <div class="icon">
                 <i class="fa fa-file"></i>
               </div>
-              <!-- <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a> -->
             </div>
-          </div>
-          <!-- ./col -->
+          
         </div>
+        <!-- /.col -->
+
+        <div class="col-md-4 col-sm-6 col-xs-12">
+        <div class="small-box bg-success">
+              <div class="inner">
+                <h3>{{$pregnant_women ?? '0'}}</h3>
+
+                <p>Pregnant Women Tested For Malaria</p>
+              </div>
+              <div class="icon">
+                <i class="fa fa-file"></i>
+              </div>
+            </div>
+         
+        </div>
+        <!-- /.col -->
+        <div class="col-md-4 col-sm-6 col-xs-12">
+        <div class="small-box bg-success">
+              <div class="inner">
+                <h3>{{$pregnant_women ?? '0'}}</h3>
+
+                <p>Pregnant Women Who Tested +ve</p>
+              </div>
+              <div class="icon">
+                <i class="fa fa-file"></i>
+              </div>
+            </div>
+         
+        </div>
+       
+        <!-- /.col -->
+        <div class="col-md-4 col-sm-6 col-xs-12">
+        <div class="small-box bg-success">
+              <div class="inner">
+                <h3>0</h3>
+
+                <p>Total Malaria Test Conducted</p>
+              </div>
+              <div class="icon">
+                <i class="fa fa-file"></i>
+              </div>
+            </div>
+         
+       </div>
+       
+
+      </div>
+  <!-- Main row -->
+  <legend>Remedial Feedback Extracts</legend>
+      <div class="row">
+       
+        <div class="col-md-4 col-sm-6 col-xs-12">
+        <div class="small-box bg-secondary">
+              <div class="inner">
+                <h3>0</h3>
+
+                <p>Total Issues Identified</p>
+              </div>
+              <div class="icon">
+                <i class="fa fa-file"></i>
+              </div>
+            </div>
+         
+       </div>
+       <div class="col-md-4 col-sm-6 col-xs-12">
+       <div class="small-box bg-secondary">
+              <div class="inner">
+                <h3>0</h3>
+
+                <p>Total Issues Resolved</p>
+              </div>
+              <div class="icon">
+                <i class="fa fa-file"></i>
+              </div>
+            </div>
+         
+       </div>
+       <div class="col-md-4 col-sm-6 col-xs-12">
+       <div class="small-box bg-secondary">
+              <div class="inner">
+                <h3>0</h3>
+
+                <p>Unresolved Issues</p>
+              </div>
+              <div class="icon">
+                <i class="fa fa-file"></i>
+              </div>
+            </div>
+         
+       </div>
+       
+     
+      
+      </div>
         <!-- /.row (main row) -->
-        
+       <legend>Other Activities</legend>
+      <div class="row">
+       
+        <div class="col-md-3 col-sm-6 col-xs-12">
+          <div class="info-box">
+            <span class="info-box-icon bg-yellow"><i class="fa fa-users"></i></span>
+
+            <div class="info-box-content">
+              <span class="info-box-text">Entry FGD Conducted</span>
+              <span class="info-box-number">0</span>
+            </div>
+            <!-- /.info-box-content -->
+          </div>
+          <!-- /.info-box -->
+       </div>
+       <div class="col-md-3 col-sm-6 col-xs-12">
+          <div class="info-box">
+            <span class="info-box-icon bg-yellow"><i class="fa fa-users"></i></span>
+
+            <div class="info-box-content">
+              <span class="info-box-text">Exit FGD Conducted</span>
+              <span class="info-box-number">0</span>
+            </div>
+            <!-- /.info-box-content -->
+          </div>
+          <!-- /.info-box -->
+       </div>
+       <div class="col-md-3 col-sm-6 col-xs-12">
+          <div class="info-box">
+            <span class="info-box-icon bg-yellow"><i class="fa fa-users"></i></span>
+
+            <div class="info-box-content">
+              <span class="info-box-text">Community KII Conducted</span>
+              <span class="info-box-number">0</span>
+            </div>
+            <!-- /.info-box-content -->
+          </div>
+          <!-- /.info-box -->
+       </div>
+
+       <div class="col-md-3 col-sm-6 col-xs-12">
+          <div class="info-box">
+            <span class="info-box-icon bg-yellow"><i class="fa fa-hospital"></i></span>
+
+            <div class="info-box-content">
+              <span class="info-box-text">Facility KII Conducted</span>
+              <span class="info-box-number">0</span>
+            </div>
+            <!-- /.info-box-content -->
+          </div>
+          <!-- /.info-box -->
+       </div>
+      
+      </div> 
         <div class="row">
           <div class="col-md-6">
             <!-- AREA CHART -->
@@ -475,7 +572,10 @@
           <!-- /.col (RIGHT) -->
         </div>
       </div><!-- /.container-fluid -->
+    
+    
     </section>
+    
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->

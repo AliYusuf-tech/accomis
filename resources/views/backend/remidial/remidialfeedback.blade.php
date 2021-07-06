@@ -88,32 +88,52 @@
                                     </div>
                                 </div>
 
-                                <div class="col-md-8">
+                                <div class="col-md-6">
                                     <div class="form-group">
                                         <label>Date Visit</label>
                                         <input type="date" name="date_visit" class="form-control" placeholder="" required>
 
                                     </div>
                                 </div>
-                                <div class="col-md-4">
-                                    <label>Tracker Type</label>
+                                <div class="col-md-6">
+                                    <label>Activity</label>
                                     <div class="form-group clearfix">
                                         <div class="icheck-primary d-inline">
                                             <input type="radio" id="radioPrimary2" name="tracker_type"
                                                 value="Focus Group Discussion" required>
                                             <label for="radioPrimary2">
-                                                Focus Group Discussion
+                                                Entry FGD
                                             </label>
 
                                         </div>
 
                                     </div>
                                     <div class="form-group clearfix">
-                                        <div class="icheck-danger d-inline">
-                                            <input type="radio" id="radiodanger3" name="tracker_type" value="Client Exit"
+                                        <div class="icheck-success d-inline">
+                                            <input type="radio" id="radiosuccess5" name="tracker_type" value="Exit FGD"
                                                 required>
-                                            <label for="radiodanger3">
+                                            <label for="radiosuccess5">
+                                                Exit FGD
+                                            </label>
+                                        </div>
+
+                                    </div>
+                                    <div class="form-group clearfix">
+                                        <div class="icheck-info d-inline">
+                                            <input type="radio" id="radioinfo3" name="tracker_type" value="Client Exit"
+                                                required>
+                                            <label for="radioinfo3">
                                                 Client Exit
+                                            </label>
+                                        </div>
+
+                                    </div>
+                                    <div class="form-group clearfix">
+                                        <div class="icheck-secondary d-inline">
+                                            <input type="radio" id="radiosecondary4" name="tracker_type" value="KII"
+                                                required>
+                                            <label for="radiosecondary4">
+                                                Key Informants Interview
                                             </label>
                                         </div>
 
@@ -122,13 +142,31 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label>Key Findings/Identified Issues</label>
-                                        <select name="key_findings" id="" class="form-control">
+                                        <!-- <select name="key_findings" id="" class="form-control">
                                             <option value="LLIN Not Available">LLIN Not Available</option>
                                             <option value="No Medical Personnel">No Medical Personnel</option>
                                             <option value="No Road Network">No Road Network</option>
                                             <option value="Poor Logistics">Poor Logistics</option>
 
-                                        </select>
+                                        </select> -->
+                                        
+                        <div class="custom-control custom-checkbox">
+                          <input class="custom-control-input" name="key_findings" type="checkbox" id="customCheckbox1" value="LLIN Not Available">
+                          <label for="customCheckbox1" class="custom-control-label">LLIN Not Available</label>
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                          <input class="custom-control-input" name="key_findings" type="checkbox" id="customCheckbox2" value="No Medical Personnel">
+                          <label for="customCheckbox2" class="custom-control-label">No Medical Personnel</label>
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                          <input class="custom-control-input" name="key_findings" type="checkbox" id="customCheckbox3" value="No Road Network">
+                          <label for="customCheckbox3" class="custom-control-label">No Road Network</label>
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                          <input class="custom-control-input custom-control-input-danger" name="key_findings" type="checkbox" id="customCheckbox4" value="Others">
+                          <label for="customCheckbox4" class="custom-control-label">Others</label>
+                        </div>
+                        
 
                                     </div>
                                 </div>
@@ -166,7 +204,7 @@
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-group">
-                                        <label>Responsibility</label>
+                                        <label>Responsibile Person</label>
                                         <input type="text" name="responsibility" class="form-control" placeholder=""
                                             required>
 
@@ -216,7 +254,7 @@
 
                     <div class="card card-success">
                         <div class="card-header">
-                            <h3 class="card-title">SPO/Admin Feedback View</h3>
+                            <h3 class="card-title">Remedial Feedbacks</h3>
 
                             <div class="card-tools">
                                 <button type="button" class="btn btn-tool" data-card-widget="collapse"><i

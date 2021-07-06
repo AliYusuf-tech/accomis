@@ -41,7 +41,7 @@
                             <div class="row">
                                 <div class="col-md-4">
                                     <div class="form-group">
-                                        <label>Name of Respondant</label>
+                                        <label>Name of Respondent</label>
                                         <input type="text" name="res_name" class="form-control res_name" placeholder="">
 
                                     </div>
@@ -159,7 +159,7 @@
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-group" id="what_did_you_come_for">
-                                        <label>Which Service did you come for?</label>
+                                        <label>What Service did you come for?</label>
                                         <select class="form-control what_did_you_come_for" name="what_did_you_come_for"
                                             required>
                                             <option value="" style="display: none">Select</option>
@@ -264,10 +264,44 @@
                                         <label>(If Response is YES) Frequency</label>
                                         <select class="form-control llin_frequency" name="llin_frequency">
                                             <option value="" style="display: none">Select</option>
-                                            <option value="Once">Once</option>
-                                            <option value="Twice">Twice</option>
-                                            <option value="Three Times">Three Times</option>
-                                            <option value="More than three times">More than three times</option>
+                                            <option value="Today">Today</option>
+                                            <option value="2 Weeks Ago">2 Weeks Ago</option>
+                                            <option value="More than 1 Month Ago">More than 1 Month Ago</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4 llin_true">
+                                    <div class="form-group" id="llin_frequency">
+                                        <label>Do you Sleep inside the LLIN?</label>
+                                        <select class="form-control llin_frequency" name="llin_frequency">
+                                            <option value="" style="display: none">Select</option>
+                                            <option value="Yes">Yes</option>
+                                            <option value="No">No</option>                                           
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4 llin_true">
+                                    <div class="form-group" id="llin_frequency">
+                                        <label>If Yes to Prev Qs, How Often do you sleep in it</label>
+                                        <select class="form-control llin_frequency" name="llin_frequency">
+                                            <option value="" style="display: none">Select</option>
+                                            <option value="Frequently">Frequently</option>
+                                            <option value="Infrequently">Infrequently</option>                                           
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4 llin_true">
+                                    <div class="form-group" id="llin_frequency">
+                                        <label>If No to Prev Qs, Why?</label>
+                                        <select class="form-control llin_frequency" name="llin_frequency">
+                                            <option value="" style="display: none">Select</option>
+                                            <option value="I don't Know how to hang it">I don't Know how to hang it</option>
+                                            <option value="It Causes Heat">It Causes Heat</option>       
+                                            <option value="It causes rashes">It causes rashes</option>   
+                                            <option value="Other">Other</option>                                       
                                         </select>
                                     </div>
                                 </div>
@@ -430,6 +464,17 @@
                                         <input type="text" name="" class="form-control malaria_reason field7"
                                             placeholder="Why (If No to Above)">
                                     </p>
+                                </div>
+                                <div class="col-md-4 malaria_false">
+                                    <div class="form-group" id="malaria_test_period">
+                                        <label>If Yes to Prv Qs:What was the Result?</label>
+                                        <select class="form-control malaria_test_period" name="malaria_test_period">
+                                            <option value="" style="display: none">Select</option>
+                                            <option value="Positive">Positive</option>
+                                            <option value="Negative">Negative</option>
+                                            <option value="Not Sure">Not Sure</option>
+                                        </select>
+                                    </div>
                                 </div>
                                 <div class="col-md-4 malaria_false">
                                     <div class="form-group" id="malaria_test_period">
